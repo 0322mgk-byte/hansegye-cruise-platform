@@ -1,0 +1,19 @@
+import type { HeroData } from '@/data/types';
+
+export const heroData: HeroData = {
+  ctaText: "일정 확인하기",
+  cruiseLine: "코스타 크루즈 디아데마호",
+  departureDate: "2026년 07월 29일 출발",
+  duration: "8박 11일",
+  nights: "8박",
+  description: "북유럽 크루즈 8박 11일의 상세 일정을 안내해 드립니다\n일자별 주요 일정과 기항지 정보를 지금 바로 확인하세요",
+  mobileDescription: "북유럽 크루즈 {departureDate}\n주요 일정과 기항지 정보를 지금 바로 확인하세요",
+  videoSources: [
+    { src: "/products/north-europe-cruise/hero-video/north-europe-video1.webm", type: "video/webm" },
+    { src: "/products/north-europe-cruise/hero-video/north-europe-video1.mp4", type: "video/mp4" },
+  ],
+  mobileVideoSources: [
+    { src: "/products/north-europe-cruise/hero-video/mobile-north-europe-video1.webm", type: "video/webm" },
+    { src: "/products/north-europe-cruise/hero-video/mobile-north-europe-video1.mp4", type: "video/mp4" },
+  ],
+};

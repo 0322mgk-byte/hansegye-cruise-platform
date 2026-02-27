@@ -1,0 +1,63 @@
+import type { FeaturesData } from '@/data/types';
+
+export const featuresData: FeaturesData = {
+  title: "숙박 시설 안내",
+  description: "바다 위의 호텔, 객실별 상세 시설 확인하기",
+  moreText: "자세히 보기",
+  modalPrefix: "객실 안내",
+  rooms: [
+    {
+      name: "인사이드",
+      image: "/products/north-europe-cruise/section4/inside.jpg",
+      subtitle: "합리적인 가격의 인테리어룸",
+      description: "가장 저렴한 가격의 객실인 인테리어룸은 합리적인 여행을 즐기기에 완벽한 장소입니다.",
+      amenities: [
+        { iconName: "Maximize2", label: "객실 크기: 약 14m² (약 4.2평)", fullWidth: true },
+        { iconName: "BedDouble", label: "편안한 퀸 or 트윈 베드" },
+        { iconName: "Tv", label: "스마트 HDTV (위성 수신)" },
+        { iconName: "Bath", label: "개인 전용 욕실" },
+        { iconName: "Refrigerator", label: "미니바 / 냉장고" },
+        { iconName: "Lock", label: "전자 금고" },
+        { iconName: "Wind", label: "헤어드라이어 및 욕실 용품" },
+        { iconName: "DoorClosed", label: "옷장" },
+        { iconName: "Armchair", label: "개별 에어컨" },
+      ],
+    },
+    {
+      name: "오션뷰",
+      image: "/products/north-europe-cruise/section4/esterna_1392x636.webp",
+      subtitle: "푸른 바다를 품은 오션뷰 룸",
+      description: "그림 같은 풍경과 자연 채광이 가득한 오션뷰 룸은 광활한 바다의 아름다운 경치를 자랑합니다.",
+      amenities: [
+        { iconName: "Maximize2", label: "객실 크기: 약 17.7m² (약 5.4평)", fullWidth: true },
+        { iconName: "AppWindow", label: "멋진 바다의 풍경을 볼 수 있는 큰 창문" },
+        { iconName: "BedDouble", label: "편안한 퀸 or 트윈 베드" },
+        { iconName: "Tv", label: "스마트 HDTV (위성 수신)" },
+        { iconName: "Bath", label: "개인 전용 욕실" },
+        { iconName: "Refrigerator", label: "미니바 / 냉장고" },
+        { iconName: "Lock", label: "전자 금고" },
+        { iconName: "Wind", label: "헤어드라이어 및 욕실 용품" },
+        { iconName: "DoorClosed", label: "옷장" },
+        { iconName: "Armchair", label: "개별 에어컨" },
+      ],
+    },
+    {
+      name: "발코니",
+      image: "/products/north-europe-cruise/section4/balcone_1392x636.webp",
+      subtitle: "아름다운 바다를 한 눈에 볼 수 있는 야외 공간",
+      description: "인상적인 바다 뷰를 자랑하는 이 객실은 바다가 한눈에 들어오는 프라이빗 발코니 공간을 제공합니다.",
+      amenities: [
+        { iconName: "Maximize2", label: "객실 크기: 약 17.2m² + 발코니 약 3.3~4.2m²", fullWidth: true },
+        { iconName: "Armchair", label: "테이블, 의자를 포함한 프라이빗 발코니" },
+        { iconName: "AppWindow", label: "바닥부터 천장까지 슬라이딩 도어" },
+        { iconName: "BedDouble", label: "편안한 퀸 or 트윈 베드" },
+        { iconName: "Tv", label: "스마트 HDTV (위성 수신)" },
+        { iconName: "Bath", label: "개인 전용 욕실" },
+        { iconName: "Refrigerator", label: "미니바 / 냉장고" },
+        { iconName: "Lock", label: "전자 금고" },
+        { iconName: "Wind", label: "헤어드라이어 및 욕실 용품" },
+        { iconName: "DoorClosed", label: "옷장" },
+      ],
+    },
+  ],
+};

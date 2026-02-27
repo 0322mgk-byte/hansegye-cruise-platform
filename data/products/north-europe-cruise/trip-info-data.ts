@@ -1,0 +1,67 @@
+import type { TripInfoData } from '@/data/types';
+
+export const tripInfoData: TripInfoData = {
+  title: "여행 주요 일정",
+  subtitle: "덴마크, 독일, 노르웨이 북유럽 크루즈 8박 11일",
+  labels: {
+    schedule: "여행 일정",
+    departKorea: "한국 출발",
+    arriveLocal: "현지 도착",
+    departLocal: "현지 출발",
+    arriveKorea: "한국 도착",
+    arriveLayover: "경유지 도착",
+    departLayover: "경유지 출발",
+    routeRegion: "여행 지역",
+    reservationStatus: "예약 현황",
+    reservationCountUnit: "명",
+    escort: "인솔자",
+    meetingPlace: "미팅 장소",
+  },
+  flights: {
+    outbound: [
+      {
+        airline: "에미레이트 항공 EK323",
+        flightCode: "",
+        departureTime: "23:55",
+        departureDate: "07/29 (수)",
+        arrivalTime: "04:25",
+        arrivalDate: "07/30 (목)",
+        duration: "총 9시간 30분 소요",
+      },
+      {
+        airline: "에미레이트 항공",
+        flightCode: "",
+        departureTime: "08:45",
+        departureDate: "07/30 (목)",
+        arrivalTime: "13:35",
+        arrivalDate: "07/30 (목)",
+        duration: "총 6시간 50분 소요",
+      },
+    ],
+    inbound: [
+      {
+        airline: "에미레이트 항공",
+        flightCode: "",
+        departureTime: "15:30",
+        departureDate: "08/07 (금)",
+        arrivalTime: "23:55",
+        arrivalDate: "08/07 (금)",
+        duration: "총 6시간 25분 소요",
+      },
+      {
+        airline: "에미레이트 항공",
+        flightCode: "",
+        departureTime: "03:40",
+        departureDate: "08/08 (토)",
+        arrivalTime: "17:00",
+        arrivalDate: "08/08 (토)",
+        duration: "총 8시간 20분 소요",
+      },
+    ],
+  },
+  routeCities: ["함부르크", "코펜하겐", "해상", "헬레쉴트", "게이랑에르", "베르겐", "스타방에르", "해상", "함부르크"],
+  reservationStatus: "출발확정",
+  reservationCount: "16",
+  escortInfo: "인솔자 1명이 동행합니다.",
+  meetingPlace: "인천 공항 집결",
+};
