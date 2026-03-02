@@ -34,7 +34,11 @@
       "Bash(git mv:*)",
       "Bash(sed:*)",
       "Bash(do sed:*)",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "Bash(git branch:*)",
+      "Bash(git status:*)",
+      "Bash(vercel:*)",
+      "Bash(rm:*)"
     ]
   }
 }

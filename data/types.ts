@@ -481,6 +481,12 @@ export interface ProductMeta {
   ogImage: string;
   ogTitle: string;
   ogDescription: string;
+  // Homepage card display fields
+  cardDepartureLabel: string;
+  cardTitle: string;
+  cardShipName: string;
+  cardRoute: string;
+  cardPrice: string;
 }
 
 export interface ProductDefinition {

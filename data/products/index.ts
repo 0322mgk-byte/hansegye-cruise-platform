@@ -2,8 +2,9 @@ import type { ProductDefinition, ProductMeta } from '@/data/types';
 import { alaskaCruise } from './alaska-cruise';
 import { northEuropeCruise } from './north-europe-cruise';
 import { westernMediterraneanCruise } from './western-mediterranean-cruise';
+import { arabiaCruise } from './arabia-cruise';
 
-const products: ProductDefinition[] = [alaskaCruise, northEuropeCruise, westernMediterraneanCruise];
+const products: ProductDefinition[] = [alaskaCruise, northEuropeCruise, westernMediterraneanCruise, arabiaCruise];
 
 export function getAllProductMetas(): ProductMeta[] {
   return products.map(p => p.meta);

@@ -22,6 +22,11 @@ export const westernMediterraneanCruise: ProductDefinition = {
     ogImage: '/products/western-mediterranean-cruise/og.png',
     ogTitle: 'MSC 씨뷰 서부 지중해 크루즈 9박 10일',
     ogDescription: '로마, 바르셀로나, 마르세유를 한 번에! MSC 씨뷰 서부 지중해 크루즈',
+    cardDepartureLabel: '26년 6월 6일 출발',
+    cardTitle: '서부 지중해 크루즈 9박 10일',
+    cardShipName: 'MSC 씨뷰호 (MSC Seaview)',
+    cardRoute: '이탈리아 > 스페인 > 프랑스',
+    cardPrice: '5,790,000원~',
   },
   data: {
     hero: heroData,

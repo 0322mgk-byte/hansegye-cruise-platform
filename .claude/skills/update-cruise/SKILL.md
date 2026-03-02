@@ -1,309 +1,238 @@
 ---
 name: update-cruise
-description: 크루즈 일정표 데이터 업데이트 스킬. 사용자가 새로운 크루즈 일정표(텍스트, 이미지, 또는 복사한 데이터)를 제공하면 기존 UI/레이아웃/컴포넌트 코드는 일절 건드리지 않고 `data/sections/` 내 개별 데이터 파일만 업데이트한다. 새로운 기항지 관광정보, 선박 제원, 시설 안내 등은 서브에이전트를 통해 인터넷에서 자동 조사하여 반영한다. 사용자가 '일정 업데이트', '일정표 변경', '새 크루즈 일정', '스케줄 교체', '일정 수정', '새로운 일정표 데이터', '크루즈 데이터 업데이트' 등을 요청하거나, 크루즈 일정표 텍스트/이미지를 제공하며 업데이트를 요청할 때 반드시 이 스킬을 사용한다. /update-cruise 명령어로도 트리거된다.
+description: >
+  사용자가 제공한 크루즈 일정 데이터로 TypeScript 데이터 파일을 생성하여 새로운 크루즈 상품 페이지를 만드는 스킬.
+  사용자가 크루즈 일정표(텍스트 또는 이미지)를 제공하고 새 크루즈 상품 페이지 생성, 크루즈 목적지 추가,
+  크루즈 일정 데이터 파일 생성을 요청할 때 이 스킬을 사용한다.
+  "새로운 지중해 크루즈 추가해줘", "이 크루즈 일정으로 페이지 만들어줘", "이 일정표로 새 상품 만들어줘"
+  같은 요청이나, 사용자가 크루즈 일정 데이터를 붙여넣기/업로드할 때 트리거된다.
 ---
 
-# 크루즈 일정표 데이터 업데이트 스킬
+# update-cruise
+
+**데이터 파일만 생성**하여 새로운 크루즈 상품 페이지를 만든다 — UI 컴포넌트, 레이아웃, 스타일링 코드는 절대 수정하지 않는다.
 
 ## 핵심 원칙
 
-이 스킬의 존재 이유는 단 하나: **데이터만 바꿔 끼우기**. UI 컴포넌트는 이미 완성되어 있고, `data/sections/` 내 개별 데이터 파일만 새 일정에 맞게 교체하면 웹페이지가 자동으로 새 일정을 표시한다.
+이 프로젝트는 데이터와 프레젠테이션이 분리된 구조이다. 컴포넌트는 `data/products/{slug}/`의 데이터를 읽어 동적으로 렌더링한다.
 
-1. **수정 대상은 `data/sections/` 내 개별 파일** — `app/components/` 내 UI 파일은 절대 수정하지 않는다
-2. **`data/types.ts`의 타입을 반드시 준수** — 타입 정의는 수정하지 않는다. 새 데이터가 기존 타입에 맞지 않으면 사용자에게 확인한다
-3. **기존 형식을 정확히 보존** — 같은 구조, 같은 패턴, 같은 스타일로 데이터를 작성한다
+### 레퍼런스 복사 → 특정 필드만 교체 (가장 중요한 원칙)
 
-## 파일 구조
+새 크루즈 추가란 **알래스카 레퍼런스의 13개 파일을 실제로 읽어서 복사한 뒤, 참조 문서에 명시된 필드만 교체**하는 것이다. 템플릿이나 요약본에서 생성하지 않는다.
 
-데이터는 섹션별로 분리되어 있다. **변경이 필요한 파일만 읽고 수정**하면 된다.
+- 참조 문서에 "교체할 필드"로 명시된 것만 교체한다
+- 명시되지 않은 필드는 레퍼런스의 값을 그대로 유지한다
+- UI에 표시되는 라벨 텍스트(`labels`, `notices`, `infoSections` 등)는 레퍼런스 그대로 보존한다
+
+### 파일별 수정 범위:
+
+| 마커 | 의미 | 파일 |
+|------|------|------|
+| 🔄 복사+교체 | 레퍼런스 복사 후 지정 필드만 교체 | hero, trip-info, schedule-labels, product-info |
+| 🔧 구조조정 | 일수/기항지에 맞게 구조 변경 | schedule-days, schedule-modals |
+| 🔬 조사반영 | Agent S/P 조사 결과로 내용 교체 | intro, features, details |
+| 🔒 그대로복사 | 레퍼런스에서 100% 그대로 복사 | pricing, trip-summary, static-data |
+| 🆕 자동생성 | 구조에 맞게 새로 생성 | index.ts |
+
+**레퍼런스 상품:** `data/products/alaska-cruise/` (각 파일 생성 전에 반드시 해당 레퍼런스 파일을 실제로 읽는다)
+**타입 정의:** `data/types.ts`
+
+---
+
+## 실행 흐름
+
+### 1단계: 사용자 데이터 파싱
+
+사용자가 제공한 일정(텍스트 또는 이미지)에서 다음 정보를 추출:
+- 선박명 및 크루즈 선사
+- 출발일 및 기간 (N박 N일)
+- 항공사 및 항공편 정보 (직항 vs 경유)
+- 기항지 도시 및 해상일
+- **각 일차별 개별 관광지/체험 이름 목록** (이름이 붙은 관광명소, 박물관, 사원, 전망대, 체험 투어 등을 모두 추출 — 이 목록이 tourist-spot 카드와 모달의 생성 근거가 됨)
+- 가격 데이터 (제공된 경우)
+- 기항지 선택 관광 정보 (제공된 경우)
+
+### 2단계: 서브에이전트 인터넷 조사 (병렬 실행)
+
+**기항지별 병렬 에이전트 아키텍처**를 사용한다. 선박 조사 1개 + 기항지별 조사 N개를 모두 동시에 실행:
 
 ```
-data/
-├── types.ts                              ← 타입 정의 (수정 금지)
-├── cruise-data.ts                        ← barrel file (수정 금지, import/re-export만)
-└── sections/
-    ├── hero-data.ts                      ← 🔄 교체
-    ├── trip-info-data.ts                 ← 🔄 교체
-    ├── intro-data.ts                     ← 🔬 선박 변경 시만
-    ├── features-data.ts                  ← 🔬 선박 변경 시만
-    ├── details-data.ts                   ← 🔬 선박 변경 시만
-    ├── schedule-labels-data.ts           ← 🔄 일부 교체 (선박명, dateRange, durationLabel)
-    ├── schedule-days-data.ts             ← 🔧 구조 조정 (가장 큰 변경)
-    ├── schedule-modals-data.ts           ← 🔧 구조 조정 (모달 교체)
-    ├── pricing-data.ts                   ← ❓ 사용자 확인 필요
-    ├── product-info-data.ts              ← ❓ 사용자 확인 필요
-    ├── trip-summary-data.ts              ← ❓ 사용자 확인 필요
-    └── static-data.ts                    ← 🔒 보존 (체크리스트, 헤더, 푸터, 모바일바)
+[모두 병렬 실행]
+├── Agent S: 선박 조사 (제원 + 시설 + 객실)
+├── Agent P-1: 기항지 1 조사 (예: 두바이 — 도시 개요 + 관광지 3개)
+├── Agent P-2: 기항지 2 조사 (예: 무스카트 — 도시 개요 + 관광지 2개)
+├── Agent P-3: 기항지 3 조사 (예: 도하 — 도시 개요 + 관광지 2개)
+└── Agent P-4: 기항지 4 조사 (예: 아부다비 — 도시 개요 + 관광지 3개)
 ```
 
-## 실행 워크플로우
+각 기항지 에이전트가 해당 도시의 개요 + 모든 개별 관광지를 함께 조사한다. 같은 도시의 관광지는 교통, 문화, 지리 등 공유 컨텍스트가 있어 하나의 에이전트가 처리하는 것이 품질과 효율 면에서 최적이다.
 
-### Phase 1: 파싱 — 새 일정에서 핵심 정보 추출
+**해상일(sea day)**은 별도 에이전트를 배정하지 않는다. Agent S의 선박 시설 조사 결과를 활용하여 생성한다.
 
-사용자가 제공한 일정표(텍스트/이미지)에서 다음 정보를 추출한다:
+**Agent S — 선박 조사:**
+크루즈 선박을 인터넷에서 조사하여 수집:
+- 선박 제원: 톤수, 길이, 승무원, 높이(미터), 갑판 수(층), 승객 정원, 첫 항해, 객실 수
+- 시설 설명: 엔터테인먼트, 아웃도어 & 레저, 힐링 & 웰니스 (3개 카테고리)
+- 객실 스펙: 인사이드/오션뷰/발코니 객실 크기, 침대 타입, 어메니티
+- YouTube 선박 투어 영상 ID (찾을 수 있는 경우)
 
-- **기본 정보**: 출발일, 크루즈사, 선박명, 일수(N박 M일)
-- **항공편**: 항공사, 편명, 출발/도착 시간, 경유지 유무, 소요시간
-- **기항지 목록**: 전체 루트 (예: 함부르크 → 코펜하겐 → 해상 → ...)
-- **일자별 일정**: 각 날짜별 방문지, 주요 활동, 출항/입항 시간
-
-추출 후 사용자에게 파싱 결과를 요약 보여주고 확인받는다. 빠진 정보가 있으면 질문한다.
-
-### Phase 2: 기존 데이터 확인
-
-변경이 필요한 파일만 선택적으로 읽는다:
-
-1. `data/types.ts`를 읽어 타입 구조를 확인한다
-2. 변경 대상 파일만 읽는다:
-   - 항상 읽는 파일: `hero-data.ts`, `trip-info-data.ts`, `schedule-labels-data.ts`
-   - 일정 변경 시: `schedule-days-data.ts`, `schedule-modals-data.ts`
-   - 선박 변경 시: `intro-data.ts`, `features-data.ts`, `details-data.ts`
-   - 가격 변경 시: `pricing-data.ts`
-3. 현재 데이터와 새 일정의 차이점을 파악한다:
-   - 선박이 바뀌었는가?
-   - 일수가 변경되었는가?
-   - 기항지가 완전히 달라졌는가?
-   - 경유지가 추가/삭제되었는가?
-
-**중요: `data/cruise-data.ts`(barrel file)과 `static-data.ts`는 읽을 필요 없다.**
-
-### Phase 3: 조사 — 서브에이전트 병렬 활용
-
-새 일정에서 변경된 부분에 대해 서브에이전트(Task tool, subagent_type: "general-purpose")를 **병렬로** 생성하여 조사한다. 한 번에 모든 서브에이전트를 동시 실행해야 효율적이다.
-
-#### 조사가 필요한 경우와 서브에이전트 프롬프트
-
-**기항지 관광정보** (도시가 바뀐 경우에만):
+Agent S 프롬프트 템플릿:
 ```
-[도시명]에 대한 크루즈 기항지 관광정보를 한국어로 조사해줘.
-
-1. 도시 개요 설명 (2-3문장)
-2. 주요 관광명소 3-5개 (각각: 한국어 이름, 설명 2-3문장)
-3. 기본 정보 테이블:
-   - 도시: "[대륙] [나라] [도시명]"
-   - 인구: "약 X명"
-   - 주요 관광지: "명소1, 명소2, 명소3"
-   - 기후: "[여행 월] 평균 X°C (특징)"
-4. Google Maps 검색 쿼리 (영문, + 구분)
-5. Google Maps Embed URL
-
-각 관광명소에 대해서도 개별적으로:
-- 한국어 제목 (형식: "도시의 특징, 명소명")
-- 설명 (3-4문장, 한국어, 역사적/문화적 맥락 포함)
-- infoTable 데이터 (위치, 입장료, 오픈시간 등)
-- Google Maps 검색 쿼리와 Embed URL
+크루즈 선박 "{선박명}"에 대한 상세 정보를 인터넷에서 검색해줘.
+필요한 정보:
+1. 선박 제원 (8항목, 반드시 구분하여 조사):
+   - 총 톤수 (예: 113,561톤)
+   - 길이 (예: 289.86m)
+   - 승무원 수 (예: 약 1,200명)
+   - 선박 높이 — 미터 단위 (예: 59.44m, 74m) ※ 갑판 수와 별도
+   - 승객 정원 (예: 3,080명)
+   - 갑판/층 수 (예: 19층, 20층) ※ 선박 높이와 별도
+   - 첫 항해 연도 (예: 2007. 4. 11 또는 2018년)
+   - 총 객실 수 (예: 1,539개)
+2. 선내 시설 3개 카테고리:
+   - 엔터테인먼트: 극장, 공연, 카지노, 바
+   - 아웃도어 & 레저: 수영장, 스포츠 코트, 워터파크, 조깅 트랙
+   - 힐링 & 웰니스: 스파, 피트니스 센터, 사우나, 자쿠지
+   각 카테고리별 subtitle(1줄)과 description(2-3문장, 한국어)을 작성
+3. 객실 타입 (인사이드, 오션뷰, 발코니):
+   각각: 면적(m²), 침대 구성, TV 크기, 냉장고 유무, 욕실 설비
+4. 선박 투어 YouTube 영상 ID (찾을 수 있다면)
+구조화된 형식으로 반환.
 ```
 
-**선박 제원** (선박이 바뀐 경우에만):
-```
-[크루즈사] [선박명] 크루즈 선박의 상세 제원을 한국어로 조사해줘.
+**Agent P-{N} — 기항지별 조사 (기항지 수만큼 병렬 생성):**
+각 기항지 도시마다 1개의 에이전트를 배정한다. 해당 도시의 개요 + 그 도시 내 모든 관광지/체험을 함께 조사:
 
-1. 선박 개요 설명 (3-4문장)
-2. 제원 테이블: 톤수, 길이, 승무원수, 높이, 승객정원, 규모(층수), 첫항해일, 객실수
-3. 주요 시설 목록 (레스토랑, 바, 카지노, 스파, 수영장, 극장 등)
-4. 객실 타입별 정보:
-   - 인사이드: 크기(m²), 주요 어메니티
-   - 오션뷰: 크기(m²), 주요 어메니티
-   - 발코니: 크기(m²), 주요 어메니티
-5. YouTube 선박 소개 영상 videoId (있으면)
-6. 시설 카테고리별 설명 (엔터테인먼트, 아웃도어&레저, 힐링&웰니스)
+Agent P 프롬프트 템플릿:
 ```
+"{도시명}"의 관광 정보를 인터넷에서 검색해줘.
 
-**기항지 선택관광** (새 일정에 기항지 투어 정보가 있는 경우에만):
-```
-[크루즈사]에서 운영하는 [기항지명] 기항지 선택 관광(Shore Excursion) 프로그램을 조사해줘.
+■ 도시 개요:
+- 도시명 한국어/영문
+- 관광 목적지로서의 도시 설명 2-3단락 (한국어)
+- Google Maps 검색 쿼리
 
-각 투어별로:
-- name: 투어 이름 (한국어)
-- tourCode: 투어 코드
-- duration: 예상 소요시간
-- price: 예상 비용 (성인 기준)
-- highlight: 핵심 설명 (2-3문장, 한국어)
-- note: 참고사항 (있으면)
+■ 개별 관광지 ({관광지 수}개):
+{해당 도시의 관광지 목록 — 예: "미래 박물관, 팜 주메이라 전망대, 사막 사파리 투어"}
+각 관광지에 대해:
+1. 관광지명 한국어 및 영문
+2. 관광지 설명 2-3단락 (한국어)
+3. 정보 테이블: 도시/국가, 주소, 홈페이지, 연락처, 입장료, 운영시간
+4. Google Maps 검색 쿼리 (예: "Museum of the Future,Dubai,UAE")
+5. Google Maps 임베드 URL
+구조화된 형식으로 반환.
 ```
 
-### Phase 4: 데이터 업데이트
+### 3단계: 데이터 파일 13개 생성
 
-각 섹션 파일을 **개별적으로** 업데이트한다. 아래 규칙을 **반드시** 따른다.
+`data/products/{slug}/` 디렉토리를 생성하고 다음 순서로 파일 생성:
 
-#### 🔄 교체 파일 (새 일정에서 추출하여 교체)
+| # | 파일 | 마커 | 작업 방식 | 참조 문서 |
+|---|------|------|----------|----------|
+| 1 | `hero-data.ts` | 🔄 | 레퍼런스 복사 → 지정 필드 교체 | `references/data-structure.md` Section 1 |
+| 2 | `trip-info-data.ts` | 🔄 | 레퍼런스 복사 → 항공편/기항지 교체 | `references/data-structure.md` Section 2 |
+| 3 | `intro-data.ts` | 🔬 | 레퍼런스 구조 복사 → Agent S 내용 반영 | `references/data-structure.md` Section 3 |
+| 4 | `features-data.ts` | 🔬 | 레퍼런스 구조 복사 → Agent S 내용 반영 | `references/data-structure.md` Section 4 |
+| 5 | `details-data.ts` | 🔬 | 레퍼런스 구조 복사 → Agent S specs value 교체 | `references/data-structure.md` Section 5 |
+| 6 | `schedule-labels-data.ts` | 🔄 | 레퍼런스 복사 → 선박명/날짜만 교체 | `references/data-structure.md` Section 6 |
+| 7 | `schedule-days-data.ts` | 🔧 | 일수에 맞게 구조 변경 | `references/timeline-items.md` |
+| 8 | `schedule-modals-data.ts` | 🔧 | 기항지에 맞게 모달 구성 | `references/timeline-items.md` |
+| 9 | `pricing-data.ts` | 🔒 | **레퍼런스 그대로 복사** (가격 미제공 시) | `references/data-structure.md` Section 9 |
+| 10 | `product-info-data.ts` | 🔄 | 레퍼런스 복사 → 항공사/선박/기항지명만 교체 | `references/data-structure.md` Section 10 |
+| 11 | `trip-summary-data.ts` | 🔒 | 레퍼런스에서 **그대로 복사** | `references/example-patterns.md` Section 4 |
+| 12 | `static-data.ts` | 🔒 | 레퍼런스에서 **그대로 복사** | `references/example-patterns.md` Section 5 |
+| 13 | `index.ts` | 🆕 | 자동 생성 | `references/example-patterns.md` Section 6 |
 
-| 파일 | 업데이트 대상 |
-|------|-------------|
-| `sections/hero-data.ts` | `cruiseLine`, `departureDate`, `duration`, `nights`, `description`, `mobileDescription` |
-| `sections/trip-info-data.ts` | `subtitle`, `flights.outbound`, `flights.inbound`, `routeCities`, `reservationStatus`, `reservationCount`, `escortInfo`, `meetingPlace` |
-| `sections/schedule-labels-data.ts` | `defaultSeaSublabel` (선박명 반영), `scheduleMeta.dateRange`, `scheduleMeta.durationLabel` |
+**중요:** 각 파일 생성 전에 반드시 **알래스카 레퍼런스의 해당 파일을 실제로 읽고**, 참조 문서에서 교체할 필드 목록을 확인한다. 레퍼런스를 읽지 않고 템플릿에서 생성하면 안 된다.
 
-**tripInfo.flights 경유지 처리**:
-- 직항인 경우: `outbound` 배열에 FlightLeg 1개
-- 경유가 있는 경우: `outbound` 배열에 FlightLeg 2개 (1구간 + 2구간)
-- `inbound`도 동일 규칙 적용
+### 4단계: 등록 및 검증
 
-#### 🔧 구조 조정 파일
+1. `data/products/index.ts` (중앙 레지스트리)에 새 상품 추가
+2. `public/shared/placeholder.png` 존재 확인 (없으면 생성 — 400x300 회색 PNG)
+3. `npm run build` 실행하여 TypeScript 타입 에러 검증
+4. 새 상품 URL 안내: `/products/{slug}`
 
-**`sections/schedule-days-data.ts`** — 일수에 맞게 유동 대응:
-- 새 일정이 8박 11일이면 DayScheduleData 11개 생성
-- 각 day의 구조는 기존 패턴을 따른다:
-  - **1일차 (출국일)**: location-marker → text(출발) → location-marker(도착) → text(입국) → tourist-spot 카드들 → hotel
-  - **승선일**: location-marker → text → info-card(승선안내) → text → meal → tourist-spot(선박정보) → meal → hotel
-  - **해상일**: location-marker("전일 해상") → text(해상 설명) → cruise-at-sea → meal×3 → hotel
-  - **기항지일**: location-marker → meal → text(도착) → tourist-spot(도시정보) → text → shore-excursion(있으면) → meal → departure-notice → hotel
-  - **하선일**: location-marker → meal → text(하선) → info-card(하선안내) → text → departure-notice
-  - **귀국일**: meal → location-marker → text(도착) → closing-message
+---
 
-**`sections/schedule-modals-data.ts`** — 새 기항지에 맞게 모달 교체:
-- 기존 tourist-spot 모달을 제거하고 새 기항지 모달로 교체
-- ship-info 모달: 선박이 바뀌면 새 선박 정보로 교체
-- cruise-at-sea 모달: 선박명 반영하여 업데이트
-- **info 모달 (boarding, disembarkation)**: 절대 수정 금지 — 단, 승선안내 모달의 title에서 선박명만 교체
+## 핵심 규칙
 
-**shore-excursion 처리**:
-- 새 일정에 기항지 선택관광이 없는 경우: 해당 모달과 timeline item을 **주석처리** (완전 삭제 금지)
-- 주석 형식: `/* COMMENTED_OUT: shore-excursion for [기항지명] - 현재 일정에 포함되지 않음 */`
-- 나중에 다시 추가할 수 있도록 주석으로 보존한다
+### 관광지 카드 세분화 (가장 중요한 규칙)
+사용자가 제공한 일정에서 **이름이 붙은 관광지/체험**마다 개별 `tourist-spot` 카드를 생성한다. 기항지 관광일의 카드 구성은 반드시 다음과 같다:
 
-#### 🔬 조사 후 업데이트 파일 (선박이 바뀐 경우에만)
+1. **도시 개요 카드 1개** — `title: '[관광 정보] {도시명}'` 형식. 도시 전체를 소개.
+2. **개별 관광지 카드 N개** — 사용자 데이터에 이름이 나온 각 관광명소/체험마다 1개씩. `title`은 설명적 제목 사용 (예: `'미완의 걸작, 사그라다 파밀리아 [입장]'`).
 
-| 파일 | 업데이트 내용 |
-|------|-------------|
-| `sections/intro-data.ts` | `title`, `description`은 유지. `facilities` 배열을 새 선박 시설로 교체 |
-| `sections/features-data.ts` | `rooms` 배열을 새 선박 객실 타입으로 교체. amenities 포함 |
-| `sections/details-data.ts` | `specs` 배열을 새 선박 제원으로 교체. `youtube` 영상도 교체 |
+각 tourist-spot 카드에는 대응하는 모달 데이터도 `schedule-modals-data.ts`에 반드시 함께 생성해야 한다.
 
-선박이 바뀌지 않았으면 이 파일들은 읽지도 않고 그대로 보존한다.
+**카드로 만드는 항목:** 이름이 있는 관광명소, 박물관, 사원, 전망대, 체험 투어 (사막 사파리, 유람선 등)
+**카드로 만들지 않는 항목 (text 타입 사용):** "자유시간", "쇼핑몰 방문", "항구 복귀", "공항 이동" 등
 
-#### 🔒 보존 파일 (절대 수정 금지)
+예시 — 사용자 데이터:
+> 두바이 미래 박물관 [외관], 팜 주메이라 전망대 [내부], 사막 사파리 투어
 
-| 파일 | 이유 |
+→ 생성할 카드 4개:
+1. `[관광 정보] 두바이` — 도시 개요 (modalId: `dubai`)
+2. `두바이 미래 박물관` — 개별 카드 (modalId: `museumofthefuture`)
+3. `팜 주메이라 전망대` — 개별 카드 (modalId: `palmjumeirah`)
+4. `사막 사파리 투어` — 개별 카드 (modalId: `desertsafari`)
+
+### 이미지/영상 처리
+컴포넌트가 `images[0]`에 직접 접근하여 빈 배열 사용 시 크래시가 발생하므로, 반드시 플레이스홀더 사용:
+
+| 필드 타입 | 값 |
+|-----------|-----|
+| `images: string[]` | `["/shared/placeholder.png"]` |
+| `image: string` | `"/shared/placeholder.png"` |
+| `videoSources` | `[]` (빈 배열은 안전) |
+| `mobileVideoSources` | `[]` (빈 배열은 안전) |
+| `thumbnailImage` | `"/shared/placeholder.png"` |
+| `ogImage` | `""` (빈 문자열) |
+
+### 동적 일수 생성
+`scheduleDaysData` 배열의 항목 수 = UI 아코디언 개수. 크루즈가 8박 11일이면 `DayScheduleData` 객체 11개를 생성한다.
+
+### 직항 vs 경유 항공편
+`references/data-structure.md` Section 2의 분기 로직 참조. 직항은 배열에 FlightLeg 1개, 경유는 FlightLeg 2개 + `arriveLayover`/`departLayover` 라벨 필드 추가.
+
+### 승선/하선 수속 안내 (Info Cards)
+승선(`modalId: "boarding"`) 및 하선(`modalId: "disembarkation"`) info-card와 해당 info 모달은 알래스카 레퍼런스에서 그대로 복사한다. title 필드의 선박명만 변경. `references/example-patterns.md` Section 7 참조.
+
+### 기항지 선택 관광
+사용자가 선택 관광 데이터를 제공한 경우에만 `shore-excursion` 타임라인 아이템과 모달을 포함한다. 제공하지 않으면 해당 카드를 완전히 제외.
+
+### meta 자동 생성
+| 필드 | 규칙 |
 |------|------|
-| `data/cruise-data.ts` | barrel file, import/re-export만 담당 |
-| `data/types.ts` | 타입 정의 |
-| `sections/static-data.ts` | 체크리스트, 헤더, 푸터, 모바일바 — 일정과 무관 |
+| `slug` | 크루즈명 영문 변환 + `-cruise` |
+| `name` | `{선박명} {지역} 크루즈 {N박 N일}` (한국어) |
+| `shortDescription` | 기항지 도시 나열 (` · ` 구분) |
+| `ogTitle`, `ogDescription` | `""` (빈 값 — 사용자가 나중에 설정) |
+| `thumbnailImage` | `"/shared/placeholder.png"` |
+| `ogImage` | `""` (빈 값 — 사용자가 나중에 설정) |
+| `cardDepartureLabel` | `"YY년 M월 D일 출발"` (예: `"26년 1월 10일 출발"`) |
+| `cardTitle` | `"{지역} 크루즈 {N박 N일}"` — 선박명 제외 (예: `"아라비아 크루즈 7박 9일"`) |
+| `cardShipName` | `"{한글 선박명} ({영문 선박명})"` (예: `"코스타 토스카나호 (Costa Toscana)"`) |
+| `cardRoute` | 아래 경로 요약 규칙 참조 |
+| `cardPrice` | `"{최저가격}원~"` — 천 단위 콤마 포함 (예: `"5,790,000원~"`) pricing-data의 첫 번째 roomTab 최저가 사용 |
 
-**`sections/schedule-modals-data.ts` 내 info 모달** (boarding, disembarkation)도 보존 대상이다. 단 title의 선박명만 교체.
+### 홈페이지 카드 경로 요약 규칙 (`cardRoute`)
+일정 순서(1일차→마지막 일차)를 기준으로 나열하되, 해상일은 제외한다. 귀환(출발지 복귀)은 생략한다.
 
-#### ❓ 사용자 확인 필요 파일
+**국가 3개 이상:** 국가명으로 나열
+- 예: `"독일 > 덴마크 > 노르웨이"`, `"UAE > 오만 > 카타르"`
 
-| 파일 | 조건 |
-|------|------|
-| `sections/pricing-data.ts` | 새 일정에 가격 데이터 포함 시 교체. 없으면 AskUserQuestion으로 질문 |
-| `sections/trip-summary-data.ts` | 크루즈사가 바뀌면 취소 규정 확인 필요 |
-| `sections/product-info-data.ts` | 포함/불포함 사항이 달라질 수 있으므로 확인 필요 |
+**국가 2개 이하:** 기항 도시명으로 나열
+- 예: `"밴쿠버 > 주노 > 스캐그웨이 > 엔디캇 암 > 케치칸"`
 
-### Phase 5: 검증
+### 스케줄 라벨
+알래스카 레퍼런스에서 `scheduleLabelsData`를 복사하고 선박명 관련 텍스트만 수정. `scheduleMeta`는 새 크루즈의 날짜 범위와 기간을 반영한다.
 
-1. TypeScript 타입 체크: `npx tsc --noEmit`
-2. 빌드 테스트: `npm run build`
-3. 에러 발생 시 즉시 수정
-4. 변경 사항 요약을 사용자에게 보고:
-   - 변경된 파일 목록
-   - 새로 추가된 기항지/모달
-   - 주석처리된 항목
-   - 이미지 경로 중 실제 파일이 없는 것 (사용자가 별도 준비 필요)
+---
 
-## 이미지 경로 규칙
+## 참조 문서
 
-이미지 파일 자체는 이 스킬에서 생성하지 않는다. 경로 패턴만 지정한다.
+데이터 파일 생성 전에 **알래스카 레퍼런스 파일을 실제로 읽고**, 다음 참조 문서에서 교체할 필드 목록을 확인:
 
-- 기존 패턴: `/sectrion6/dayN/[폴더명]/[파일명].webp` (주의: sectrion6는 오타가 아닌 기존 폴더명)
-- 새 일정 이미지가 아직 없는 경우: 기존 placeholder 이미지를 임시 사용하고 사용자에게 알린다
-- tourist-spot 카드의 images 배열: 최소 3개 경로 지정
-
-## 데이터 작성 스타일 가이드
-
-기존 sections 파일들의 스타일을 정확히 따른다:
-
-- 모든 텍스트는 한국어로 작성
-- tourist-spot의 description: "\n"으로 단락 구분
-- 모달의 descriptions: 문자열 배열, 각 항목이 한 단락
-- infoTable: 빈 값은 빈 문자열 `""`로 남긴다
-- departure-notice의 details: 문자열 배열
-- 선박명이 들어가는 모든 곳에 새 선박명을 일관되게 반영
-- modalId는 영문 소문자, 공백 없이 (예: "hamburg", "copenhagen", "bergen")
-- shore-excursion의 modalId: "shoreexcursion_[기항지영문]" 형식
-- 각 파일은 `import type { ... } from '../types';`로 시작하고 named export를 사용한다
-
-## day 구조 패턴 레퍼런스
-
-각 일차의 items 배열 구성 패턴을 기존 데이터에서 정확히 따른다. 아래는 대표 패턴이다:
-
-### 출국일 (1일차)
-```
-location-marker("인천") → text(출발) → location-marker(도착도시) → text(입국)
-→ tourist-spot 카드들(도시, 명소1, 명소2, ...) → hotel
-```
-
-### 승선일
-```
-location-marker(출발항) → text(체크인) → info-card(승선안내) → text(안전훈련)
-→ meal(중식) → location-marker("해상") → text(출항)
-→ tourist-spot(선박정보) → meal(석식) → hotel(선박명)
-```
-
-### 전일 해상
-```
-location-marker("전일 해상") → text(해상 설명) → cruise-at-sea(선내활동)
-→ meal(조식) → meal(중식) → meal(석식) → hotel(선박명)
-```
-
-### 기항지일 (하선 관광)
-```
-location-marker(기항지) → meal(조식) → text(도착/하선)
-→ tourist-spot(기항지 정보) → text(자유시간) → shore-excursion(선택관광)
-→ meal(중식 또는 석식) → departure-notice(출항) → hotel(선박명)
-```
-
-### 하선일
-```
-location-marker(도착항) → meal(조식) → text(하선) → info-card(하선안내)
-→ text(공항 이동) → departure-notice(귀국편)
-```
-
-### 귀국일
-```
-meal(조식/기내식) → location-marker("인천") → text(도착) → closing-message
-```
-
-## 경유지 항공편 처리
-
-경유가 있는 경우 FlightLeg를 2개로 분리한다 (`sections/trip-info-data.ts`):
-
-```typescript
-flights: {
-  outbound: [
-    {
-      airline: "에미레이트 항공",
-      flightCode: "EK323",
-      departureTime: "23:55",
-      departureDate: "07/29 (수)",
-      arrivalTime: "04:25",
-      arrivalDate: "07/30 (목)",
-      duration: "총 9시간 30분 소요",
-    },
-    {
-      airline: "에미레이트 항공",
-      flightCode: "EK323",
-      departureTime: "08:45",
-      departureDate: "07/30 (목)",
-      arrivalTime: "13:35",
-      arrivalDate: "07/30 (목)",
-      duration: "총 6시간 50분 소요",
-    },
-  ],
-  // ...
-}
-```
-
-TripInfo 컴포넌트는 FlightLeg 배열의 길이에 따라 자동으로 경유지 표시를 처리한다.
-
-## 주의사항
-
-- `data/types.ts`는 절대 수정하지 않는다
-- `data/cruise-data.ts` (barrel file)는 절대 수정하지 않는다
-- `app/components/` 내 파일은 절대 수정하지 않는다
-- `sections/static-data.ts`는 절대 수정하지 않는다
-- 변경이 필요 없는 파일은 읽지도 않는다 — 필요한 파일만 읽고 수정한다
-- 모든 modalId는 고유해야 한다 — 중복 금지
-- tourist-spot timeline item의 modalId와 modals 배열의 id가 반드시 일치해야 한다
-- `schedule-days-data.ts`의 shore-excursion item과 `schedule-modals-data.ts`의 shore-excursion modal을 함께 주석처리한다
-- 빌드 에러가 나면 반드시 수정 후 다시 검증한다
+- **`references/data-structure.md`** — 파일별 "교체할 필드" 목록과 "보존할 필드" 목록. 이 문서에 명시된 필드만 교체하고, 나머지는 레퍼런스 그대로 유지한다.
+- **`references/timeline-items.md`** — TimelineItem 10가지 타입 + ModalData 5가지 타입 예제 포함. 관광지 카드 세분화 규칙 포함.
+- **`references/example-patterns.md`** — 알래스카 레퍼런스에서 그대로 복사할 패턴 (static-data, trip-summary, pricing-data, 승선/하선 안내 모달)
