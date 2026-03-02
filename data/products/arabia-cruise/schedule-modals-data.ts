@@ -24,7 +24,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: '오픈시간', value: '' },
     ],
     googleMapQuery: 'Dubai,UAE',
-    googleMapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462562.65159522237!2d54.89784062652893!3d25.07575945005498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2z65GQ67CU7J20!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr',
+    googleMapEmbed: 'https://maps.google.com/maps?q=Dubai,UAE&t=&z=15&ie=UTF8&iwloc=&output=embed',
   },
   {
     type: 'tourist-spot',
@@ -45,7 +45,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: '오픈시간', value: '' },
     ],
     googleMapQuery: 'Muscat,Oman',
-    googleMapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d232917.8587544!2d58.295!3d23.598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e91ffc32e8b5555%3A0xb12e2c59e8e1b3ed!2sMuscat%2C%20Oman!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae',
+    googleMapEmbed: 'https://maps.google.com/maps?q=Muscat,Oman&t=&z=15&ie=UTF8&iwloc=&output=embed',
   },
   {
     type: 'tourist-spot',
@@ -66,7 +66,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: '오픈시간', value: '' },
     ],
     googleMapQuery: 'Doha,Qatar',
-    googleMapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d232917.8587544!2d51.453!3d25.286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45c534ffdce87f%3A0x44d9319f78cfd4b1!2sDoha%2C%20Qatar!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae',
+    googleMapEmbed: 'https://maps.google.com/maps?q=Doha,Qatar&t=&z=15&ie=UTF8&iwloc=&output=embed',
   },
   {
     type: 'tourist-spot',
@@ -87,7 +87,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: '오픈시간', value: '' },
     ],
     googleMapQuery: 'Abu Dhabi,UAE',
-    googleMapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d232917.8587544!2d54.644!3d24.453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e440f723ef2b9%3A0xc7cc2e9341971108!2sAbu%20Dhabi%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae',
+    googleMapEmbed: 'https://maps.google.com/maps?q=Abu+Dhabi,UAE&t=&z=15&ie=UTF8&iwloc=&output=embed',
   },
 
   // ═══════════════════════════════════════════
@@ -113,7 +113,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: '오픈시간', value: '매일 09:30~21:00' },
     ],
     googleMapQuery: 'Museum of the Future,Dubai,UAE',
-    googleMapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.8!2d55.2805!3d25.2204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f4282cb82e1c7%3A0x4c0a35b7e89805aa!2sMuseum%20of%20the%20Future!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae',
+    googleMapEmbed: 'https://maps.google.com/maps?q=Museum+of+the+Future,Dubai,UAE&t=&z=15&ie=UTF8&iwloc=&output=embed',
   },
   {
     type: 'tourist-spot',
@@ -134,7 +134,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: '오픈시간', value: '매일 08:00~20:00' },
     ],
     googleMapQuery: 'The View at The Palm,Palm Jumeirah,Dubai,UAE',
-    googleMapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.5!2d55.1380!3d25.1970!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6a5e7f12b1e5%3A0x62f7e3e1f8a7c0c1!2sThe%20View%20at%20The%20Palm!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae',
+    googleMapEmbed: 'https://maps.google.com/maps?q=The+View+at+The+Palm,Palm+Jumeirah,Dubai,UAE&t=&z=15&ie=UTF8&iwloc=&output=embed',
   },
   {
     type: 'tourist-spot',
@@ -155,7 +155,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: '오픈시간', value: '이브닝 사파리: 15:00~21:00' },
     ],
     googleMapQuery: 'Desert Safari Dubai,Al Awir,Dubai,UAE',
-    googleMapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57750.0!2d55.4!3d25.05!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5e4b0f1f0001%3A0x1a2b3c4d5e6f7890!2sDubai%20Desert%20Conservation%20Reserve!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae',
+    googleMapEmbed: 'https://maps.google.com/maps?q=Desert+Safari+Dubai,Al+Awir,Dubai,UAE&t=&z=15&ie=UTF8&iwloc=&output=embed',
   },
 
   // ═══════════════════════════════════════════
@@ -180,7 +180,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: '오픈시간', value: '24시간 / 상점: 10:00~22:00' },
     ],
     googleMapQuery: 'Al Seef,Dubai Creek,Dubai,UAE',
-    googleMapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.5!2d55.2960!3d25.2585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xd5ef1c1fa79d8f04!2sAl%20Seef!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae',
+    googleMapEmbed: 'https://maps.google.com/maps?q=Al+Seef,Dubai+Creek,Dubai,UAE&t=&z=15&ie=UTF8&iwloc=&output=embed',
   },
   {
     type: 'tourist-spot',
@@ -200,7 +200,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: '오픈시간', value: '24시간 / 박물관: 08:00~20:00' },
     ],
     googleMapQuery: 'Al Fahidi Historical Neighbourhood,Dubai,UAE',
-    googleMapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.8!2d55.2970!3d25.2635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43348c4f4c15%3A0x7de423ef952f1f0c!2sAl%20Fahidi%20Historical%20Neighbourhood!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae',
+    googleMapEmbed: 'https://maps.google.com/maps?q=Al+Fahidi+Historical+Neighbourhood,Dubai,UAE&t=&z=15&ie=UTF8&iwloc=&output=embed',
   },
   {
     type: 'tourist-spot',
@@ -220,7 +220,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: '오픈시간', value: '매일 09:00~21:00' },
     ],
     googleMapQuery: 'Dubai Frame,Zabeel Park,Dubai,UAE',
-    googleMapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.5!2d55.3005!3d25.2350!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5cdb3b0cb08f%3A0x4f9b3e4a2f63c4e5!2sDubai%20Frame!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae',
+    googleMapEmbed: 'https://maps.google.com/maps?q=Dubai+Frame,Zabeel+Park,Dubai,UAE&t=&z=15&ie=UTF8&iwloc=&output=embed',
   },
   {
     type: 'tourist-spot',
@@ -240,7 +240,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: '오픈시간', value: '매일 05:00~24:00' },
     ],
     googleMapQuery: 'Abra Water Taxi Station,Dubai Creek,Dubai,UAE',
-    googleMapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.5!2d55.2955!3d25.2665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f434ef23e7dd7%3A0x2e5b0a3c8f1d5e2a!2sBur%20Dubai%20Abra%20Station!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae',
+    googleMapEmbed: 'https://maps.google.com/maps?q=Abra+Water+Taxi+Station,Dubai+Creek,Dubai,UAE&t=&z=15&ie=UTF8&iwloc=&output=embed',
   },
   {
     type: 'tourist-spot',
@@ -260,7 +260,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: '오픈시간', value: '토~목 10:00~22:00, 금 16:00~22:00' },
     ],
     googleMapQuery: 'Gold Souq,Deira,Dubai,UAE',
-    googleMapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.0!2d55.2960!3d25.2718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f4343b3c0a4c5%3A0x1a3b5c7d9e0f1234!2sGold%20Souk!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae',
+    googleMapEmbed: 'https://maps.google.com/maps?q=Gold+Souq,Deira,Dubai,UAE&t=&z=15&ie=UTF8&iwloc=&output=embed',
   },
   {
     type: 'tourist-spot',
@@ -280,7 +280,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: '오픈시간', value: '상점: 10:00~23:00' },
     ],
     googleMapQuery: 'Souk Madinat Jumeirah,Dubai,UAE',
-    googleMapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.0!2d55.1855!3d25.1335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6b7c3e1f2345%3A0xa1b2c3d4e5f67890!2sSouk%20Madinat%20Jumeirah!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae',
+    googleMapEmbed: 'https://maps.google.com/maps?q=Souk+Madinat+Jumeirah,Dubai,UAE&t=&z=15&ie=UTF8&iwloc=&output=embed',
   },
   {
     type: 'tourist-spot',
@@ -300,7 +300,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: '오픈시간', value: '투어 매일 10:00~19:00' },
     ],
     googleMapQuery: 'Burj Al Arab,Dubai,UAE',
-    googleMapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.2!2d55.1853!3d25.1412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6a576f635331%3A0x53abe44f0f3dc0e6!2sBurj%20Al%20Arab!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae',
+    googleMapEmbed: 'https://maps.google.com/maps?q=Burj+Al+Arab,Dubai,UAE&t=&z=15&ie=UTF8&iwloc=&output=embed',
   },
 
   // ═══════════════════════════════════════════
@@ -326,7 +326,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: '오픈시간', value: '화~일 10:00~18:30, 월요일 휴관' },
     ],
     googleMapQuery: 'Louvre Abu Dhabi,Saadiyat Island,Abu Dhabi,UAE',
-    googleMapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.0!2d54.3983!3d24.5336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e65e54b3d368b%3A0x6c7505e3f7a0e4a7!2sLouvre%20Abu%20Dhabi!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae',
+    googleMapEmbed: 'https://maps.google.com/maps?q=Louvre+Abu+Dhabi,Saadiyat+Island,Abu+Dhabi,UAE&t=&z=15&ie=UTF8&iwloc=&output=embed',
   },
   {
     type: 'tourist-spot',
@@ -347,7 +347,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: '오픈시간', value: '매일 11:00~18:30' },
     ],
     googleMapQuery: 'Qasr Al Watan,Abu Dhabi,UAE',
-    googleMapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.5!2d54.3168!3d24.4624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e6600af4b5b07%3A0x4d34e3b8f3a5c0e4!2sQasr%20Al%20Watan!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae',
+    googleMapEmbed: 'https://maps.google.com/maps?q=Qasr+Al+Watan,Abu+Dhabi,UAE&t=&z=15&ie=UTF8&iwloc=&output=embed',
   },
   {
     type: 'tourist-spot',
@@ -368,7 +368,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: '오픈시간', value: '토~목 09:00~21:00, 금 09:00~12:00·15:00~21:00' },
     ],
     googleMapQuery: 'Sheikh Zayed Grand Mosque,Abu Dhabi,UAE',
-    googleMapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3632.0!2d54.4743!3d24.4128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e441f42415109%3A0x56b2edf44fe1401e!2sSheikh%20Zayed%20Grand%20Mosque!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae',
+    googleMapEmbed: 'https://maps.google.com/maps?q=Sheikh+Zayed+Grand+Mosque,Abu+Dhabi,UAE&t=&z=15&ie=UTF8&iwloc=&output=embed',
   },
 
   // ═══════════════════════════════════════════
@@ -393,7 +393,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: '오픈시간', value: '주간 시간대 외부 관람 권장' },
     ],
     googleMapQuery: 'Zabeel Palace,Dubai,UAE',
-    googleMapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.5!2d55.3050!3d25.2280!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5cf8e0b4c8d5%3A0x2a3b4c5d6e7f8901!2sZabeel%20Palace!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae',
+    googleMapEmbed: 'https://maps.google.com/maps?q=Zabeel+Palace,Dubai,UAE&t=&z=15&ie=UTF8&iwloc=&output=embed',
   },
   {
     type: 'tourist-spot',
@@ -413,7 +413,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: '오픈시간', value: '09:00~22:00' },
     ],
     googleMapQuery: 'Palm Monorail Gateway Station,Palm Jumeirah,Dubai,UAE',
-    googleMapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.5!2d55.1480!3d25.1120!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6a4c3e2d1b09%3A0x4a5b6c7d8e9f0123!2sPalm%20Monorail%20Gateway%20Station!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae',
+    googleMapEmbed: 'https://maps.google.com/maps?q=Palm+Monorail+Gateway+Station,Palm+Jumeirah,Dubai,UAE&t=&z=15&ie=UTF8&iwloc=&output=embed',
   },
   {
     type: 'tourist-spot',
@@ -433,7 +433,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: '오픈시간', value: '24시간 / 상점: 10:00~23:00' },
     ],
     googleMapQuery: 'JBR The Walk,Jumeirah Beach Residence,Dubai,UAE',
-    googleMapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.5!2d55.1320!3d25.0780!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6b5e5c3a2d17%3A0x8e9f0a1b2c3d4e5f!2sThe%20Walk%20-%20JBR!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae',
+    googleMapEmbed: 'https://maps.google.com/maps?q=JBR+The+Walk,Jumeirah+Beach+Residence,Dubai,UAE&t=&z=15&ie=UTF8&iwloc=&output=embed',
   },
 
   // ═══════════════════════════════════════════

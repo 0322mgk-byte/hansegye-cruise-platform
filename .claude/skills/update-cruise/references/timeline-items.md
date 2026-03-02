@@ -198,14 +198,79 @@ Final message on the last day.
 ## Day Composition Patterns
 
 ### First Day (Departure from Korea)
+
+**핵심 원칙: 사용자 일정의 ▣ 항목을 details 배열에 그대로 매핑한다.**
+
+사용자가 제공한 일정표에서 각 `[시간] 제목` 아래의 `▣ ...` 항목들이 해당 text 아이템의 `details` 배열 원소가 된다.
+AI가 임의로 항목을 추가/삭제/이동하지 않는다.
+
+**예시 — 사용자 데이터:**
+```
+[10:30] 인천 국제공항 미팅
+▣ 출발 2시간 전까지 공항 미팅 장소 집결
+
+[13:40] 인천 국제공항 출발 - 이스탄불 향발
+▣ 교통편 : 대한항공
+▣ 비행시간 : 약 12시간 10분 소요
+▣ 시차 : 한국보다 6시간 느립니다.
+▣ 항공 시간 및 편수는 변경될 수 있습니다.
+
+[19:40] 이스탄불 공항 도착
+
+호텔 이동 및 휴식
+```
+
+**→ 생성 결과:**
 ```typescript
 items: [
   { type: 'location-marker', label: '인천' },
-  { type: 'text', time: '...', text: '인천 국제공항 미팅', details: [...] },
-  { type: 'text', time: '...', text: '인천 국제공항 출발', details: [...], warning: '...' },
+  {
+    type: 'text',
+    time: '10:30',
+    text: '인천 국제공항 미팅',
+    details: [
+      '출발 2시간 전까지 공항 미팅 장소 집결',
+    ],
+  },
+  {
+    type: 'text',
+    time: '13:40',
+    text: '인천 국제공항 출발 - 이스탄불 향발',
+    details: [
+      '교통편 : 대한항공',
+      '비행시간 : 약 12시간 10분 소요',
+      '시차 : 한국보다 6시간 느립니다.',
+      '항공 시간 및 편수는 변경될 수 있습니다.',
+    ],
+    warning: '기내 좌석 배정은 항공사의 고유 권한입니다. 인솔자와 여행사의 권한이 없으므로 고객님이 원하시는 좌석으로 배정이 불가할 수 있음을 양해 부탁드립니다.',
+  },
   { type: 'meal', text: '석식 (기내식)' },
+  { type: 'location-marker', label: '이스탄불', extraMarginTop: true },
+  {
+    type: 'text',
+    time: '19:40',
+    text: '이스탄불 공항 도착',
+  },
+  { type: 'text', text: '호텔 이동 및 휴식' },
+  { type: 'hotel', name: '호텔로 이동 및 휴식', note: '4성급 호텔 예정' },
 ]
 ```
+
+**구성 규칙:**
+
+| 아이템 | 생성 조건 | details 규칙 |
+|--------|----------|-------------|
+| 미팅 | 사용자가 미팅 시간을 제공한 경우에만 | 사용자가 제공한 ▣ 항목 그대로 |
+| 출발 | 필수 | 사용자가 제공한 ▣ 항목 그대로 |
+| 도착 | 같은 날 도착하는 경우 | 사용자가 ▣ 항목을 제공한 경우에만 details 포함, 없으면 details 생략 |
+| 호텔 | 도착 후 호텔 숙박 시 | note에 호텔 등급 정보 (사용자 제공 시) |
+
+**출발 아이템 warning (고정 문구):**
+```
+'기내 좌석 배정은 항공사의 고유 권한입니다. 인솔자와 여행사의 권한이 없으므로 고객님이 원하시는 좌석으로 배정이 불가할 수 있음을 양해 부탁드립니다.'
+```
+
+**식사 아이템:** 사용자 데이터에 식사 정보가 명시되어 있으면 해당 위치에 meal 아이템을 넣는다. 위치도 사용자 데이터 순서를 따른다.
 
 ### Port Day (Sightseeing)
 사용자 데이터에 이름이 나온 관광지/체험마다 개별 tourist-spot 카드를 생성한다.
@@ -303,8 +368,20 @@ items: [
     { label: '오픈시간', value: '' },
   ],
   googleMapQuery: 'Vancouver,BC,Canada',
-  googleMapEmbed: 'https://www.google.com/maps/embed?pb=...',
+  googleMapEmbed: 'https://maps.google.com/maps?q=Vancouver,BC,Canada&t=&z=15&ie=UTF8&iwloc=&output=embed',
 }
+```
+
+**googleMapEmbed 자동 생성 규칙:**
+tourist-spot 모달에는 반드시 지도를 포함한다. `googleMapQuery`의 공백을 `+`로 치환하여 아래 형식으로 자동 생성:
+```
+https://maps.google.com/maps?q={query}&t=&z=15&ie=UTF8&iwloc=&output=embed
+```
+
+| 모달 타입 | 지도 포함 |
+|-----------|----------|
+| tourist-spot | **YES** |
+| cruise-at-sea / ship-info / shore-excursion / info | NO |
 ```
 
 ### 2. shore-excursion Modal

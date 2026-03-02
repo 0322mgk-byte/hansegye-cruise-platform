@@ -3,8 +3,10 @@ import { alaskaCruise } from './alaska-cruise';
 import { northEuropeCruise } from './north-europe-cruise';
 import { westernMediterraneanCruise } from './western-mediterranean-cruise';
 import { arabiaCruise } from './arabia-cruise';
+import { southernMediterraneanCruise } from './southern-mediterranean-cruise';
+import { okinawaTaiwanCruise } from './okinawa-taiwan-cruise';
 
-const products: ProductDefinition[] = [alaskaCruise, northEuropeCruise, westernMediterraneanCruise, arabiaCruise];
+const products: ProductDefinition[] = [alaskaCruise, northEuropeCruise, westernMediterraneanCruise, arabiaCruise, southernMediterraneanCruise, okinawaTaiwanCruise];
 
 export function getAllProductMetas(): ProductMeta[] {
   return products.map(p => p.meta);

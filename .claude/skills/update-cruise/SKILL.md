@@ -119,7 +119,6 @@ Agent P 프롬프트 템플릿:
 2. 관광지 설명 2-3단락 (한국어)
 3. 정보 테이블: 도시/국가, 주소, 홈페이지, 연락처, 입장료, 운영시간
 4. Google Maps 검색 쿼리 (예: "Museum of the Future,Dubai,UAE")
-5. Google Maps 임베드 URL
 구조화된 형식으로 반환.
 ```
 
@@ -156,6 +155,15 @@ Agent P 프롬프트 템플릿:
 
 ## 핵심 규칙
 
+### 사용자 일정 데이터 직접 매핑
+사용자가 제공한 일정표의 텍스트 아이템(`[시간] 제목` + `▣ 세부항목`)은 AI가 임의로 재구성하지 않고 **그대로 매핑**한다:
+- 각 `[시간] 제목`은 `text` 타입 아이템의 `time`과 `text` 필드가 된다
+- 각 `▣ ...`은 해당 아이템의 `details` 배열 원소가 된다
+- 사용자가 `▣` 항목을 제공하지 않은 텍스트 아이템은 `details` 필드를 생략한다
+- AI가 임의로 details 항목을 추가/삭제/이동하지 않는다
+
+이 원칙은 1일차(출발일), 마지막 일차(귀국일) 등 모든 일차의 text 아이템에 적용된다. 상세 매핑 규칙은 `references/timeline-items.md`의 "First Day" 패턴 참조.
+
 ### 관광지 카드 세분화 (가장 중요한 규칙)
 사용자가 제공한 일정에서 **이름이 붙은 관광지/체험**마다 개별 `tourist-spot` 카드를 생성한다. 기항지 관광일의 카드 구성은 반드시 다음과 같다:
 
@@ -175,6 +183,29 @@ Agent P 프롬프트 템플릿:
 2. `두바이 미래 박물관` — 개별 카드 (modalId: `museumofthefuture`)
 3. `팜 주메이라 전망대` — 개별 카드 (modalId: `palmjumeirah`)
 4. `사막 사파리 투어` — 개별 카드 (modalId: `desertsafari`)
+
+### Google Maps 지도 자동 생성
+tourist-spot 모달에는 반드시 지도를 포함한다. `googleMapQuery`로부터 `googleMapEmbed`를 **자동 생성**한다:
+
+```
+googleMapEmbed: 'https://maps.google.com/maps?q={googleMapQuery의 공백을 +로 치환}&t=&z=15&ie=UTF8&iwloc=&output=embed'
+```
+
+예시:
+```typescript
+googleMapQuery: 'Hagia Sophia,Istanbul,Turkey',
+googleMapEmbed: 'https://maps.google.com/maps?q=Hagia+Sophia,Istanbul,Turkey&t=&z=15&ie=UTF8&iwloc=&output=embed',
+```
+
+| 모달 타입 | 지도 포함 |
+|-----------|----------|
+| tourist-spot (도시 개요 + 개별 관광지) | **YES** — 반드시 포함 |
+| cruise-at-sea | NO |
+| ship-info | NO |
+| shore-excursion | NO |
+| info (승선/하선) | NO |
+
+Agent P에게 embed URL 조사를 요청하지 않는다 — `googleMapQuery`만 조사하면 embed URL은 자동 생성된다.
 
 ### 이미지/영상 처리
 컴포넌트가 `images[0]`에 직접 접근하여 빈 배열 사용 시 크래시가 발생하므로, 반드시 플레이스홀더 사용:

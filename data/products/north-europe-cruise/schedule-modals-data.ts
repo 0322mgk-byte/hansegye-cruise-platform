@@ -25,7 +25,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "기후", value: "7-8월 평균 18°C (해양성 기후, 여름에도 선선)" },
     ],
     googleMapQuery: "Hamburg,Germany",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d75589.29880507686!2d9.9019376!3d53.5510846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b161837e1813b9%3A0x4263df27bd63aa0!2z7ZWo67aA66W07YGs!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Hamburg,Germany&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -49,7 +49,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "연락처", value: "" },
     ],
     googleMapQuery: "Hamburger+Rathaus,Hamburg,Germany",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d9.9927!3d53.5503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b18f11a8589741%3A0x4864d0e3d1d839e0!2sHamburg%20City%20Hall!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Hamburger+Rathaus,Hamburg,Germany&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -73,7 +73,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "연락처", value: "" },
     ],
     googleMapQuery: "St+Michaelis+Kirche,Hamburg,Germany",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d9.9789!3d53.5484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b18f1076e4c5c1%3A0x5765a709d936e0a9!2sSt.%20Michaels%20Church!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=St+Michaelis+Kirche,Hamburg,Germany&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -97,7 +97,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "연락처", value: "" },
     ],
     googleMapQuery: "Alter+Elbtunnel,Hamburg,Germany",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d9.9665!3d53.5458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b18f6c1d3e1a89%3A0x3f6a7c9e5d3f8b0a!2sAlter%20Elbtunnel!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Alter+Elbtunnel,Hamburg,Germany&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -121,7 +121,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "연락처", value: "" },
     ],
     googleMapQuery: "Planten+un+Blomen,Hamburg,Germany",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5000!2d9.9822!3d53.5607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b18f44c5e1b3a7%3A0x4263df27bd63bb0!2sPlanten%20un%20Blomen!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Planten+un+Blomen,Hamburg,Germany&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
 
   // 코펜하겐 (Copenhagen) - Day 4
@@ -146,7 +146,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "기후", value: "8월 평균 18°C (온화하고 쾌적)" },
     ],
     googleMapQuery: "Copenhagen,Denmark",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d72000!2d12.5655!3d55.6759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652533c5c803d23%3A0x4dd7edde69467b8!2z7L2U7Y6Y7ZWY6rKQ!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Copenhagen,Denmark&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -170,7 +170,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "연락처", value: "" },
     ],
     googleMapQuery: "The+Little+Mermaid,Copenhagen,Denmark",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d12.5991!3d55.6929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46525314b1e3aefb%3A0x37cbe297f7a62c78!2z7J247Ja06rO17KO8IOuPmeyCsQ!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=The+Little+Mermaid,Copenhagen,Denmark&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -194,7 +194,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "연락처", value: "" },
     ],
     googleMapQuery: "Gefion+Fountain,Copenhagen,Denmark",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d12.5976!3d55.6893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46525310eab72ec3%3A0x2c49e5a9e4e7f2b0!2z6rKM7ZS87Jio67aE7IiY!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Gefion+Fountain,Copenhagen,Denmark&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -218,7 +218,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "연락처", value: "" },
     ],
     googleMapQuery: "Amalienborg+Palace,Copenhagen,Denmark",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d12.5893!3d55.6841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652531280f6eaf3%3A0xa0baa8e15f0aad5!2z7JWE66eQ66as7JeU67O0IOq2gOyghA!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Amalienborg+Palace,Copenhagen,Denmark&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -242,7 +242,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "연락처", value: "" },
     ],
     googleMapQuery: "Nyhavn,Copenhagen,Denmark",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d12.5908!3d55.6799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652531329a4baa5%3A0xd9444444443fe81!2z64S07ZWY7Jq0!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Nyhavn,Copenhagen,Denmark&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
 
   // 게이랑에르 (Geirangerfjord) - Day 6

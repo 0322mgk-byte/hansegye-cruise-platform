@@ -25,7 +25,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "오픈시간", value: "" },
     ],
     googleMapQuery: "Vancouver,BC,Canada",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83327.34089692409!2d-123.19394895!3d49.2577143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673f143a94fb3%3A0xbb9196ea9b81f38b!2z67Cg7L-g67KMLCBC66eA7Yuw7Iuc7Lu464Gg67mE7JWEIOyjvCwg7LqQ64KY64uk!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Vancouver,BC,Canada&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -50,7 +50,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "오픈시간", value: "상시 개방" },
     ],
     googleMapQuery: "Gastown,Vancouver,BC,Canada",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10410!2d-123.1058!3d49.2844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486717f41ba3855%3A0xcfba5e6689bae30a!2sGastown!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Gastown,Vancouver,BC,Canada&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -75,7 +75,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "오픈시간", value: "상시 개방" },
     ],
     googleMapQuery: "Canada+Place,Vancouver,BC,Canada",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d-123.1143764!3d49.2890081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486719d24e2e021%3A0xb7057fe085c86109!2z7LqQ64KY64ukIO2UjOugiOydtOyKpA!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Canada+Place,Vancouver,BC,Canada&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -102,7 +102,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "오픈시간", value: "06:00 ~ 22:00" },
     ],
     googleMapQuery: "Stanley+Park,Vancouver,BC,Canada",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10408.5!2d-123.1416!3d49.3043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548671832a35e18b%3A0x1fbd40096f5d6c43!2sStanley%20Park!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Stanley+Park,Vancouver,BC,Canada&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -127,7 +127,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "오픈시간", value: "상시 개방" },
     ],
     googleMapQuery: "Chinatown,Vancouver,BC,Canada",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1500!2d-123.1058197!3d49.2801149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486717a491aa187%3A0x4cd3d8c1acdbacba!2sChinatown!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Chinatown,Vancouver,BC,Canada&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -207,7 +207,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "기후", value: "8월 평균 10°C (바람이 강할 수 있음)" },
     ],
     googleMapQuery: "Endicott+Arm,Alaska,USA",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80000!2d-133.43!3d57.675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x540468f16ef846e5%3A0x3e66b7d739fa3d0!2sEndicott%20Arm!5e0!3m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Endicott+Arm,Alaska,USA&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -232,7 +232,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "기후", value: "8월 평균 14°C (온화, 비 잦음)" },
     ],
     googleMapQuery: "Ketchikan,Alaska,USA",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20000!2d-131.6461!3d55.342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x540198773a045391%3A0x6ea09e3c5e3b6c0a!2sKetchikan%2C%20AK%2C%20USA!5e0!3m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Ketchikan,Alaska,USA&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
 
   // Shore Excursion Modals

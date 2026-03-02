@@ -25,7 +25,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "기후", value: "6월 평균 26~28°C (맑고 건조한 지중해성 기후)" },
     ],
     googleMapQuery: "Rome,Italy",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190897.4!2d12.4829!3d41.8933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6196f9928ebb%3A0xb90f770693656e38!2sRome%2C%20Italy!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Rome,Italy&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -47,7 +47,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "오픈시간", value: "매일 09:00 ~ 19:00 (하절기 기준, 마지막 입장 1시간 전)" },
     ],
     googleMapQuery: "Colosseum,Rome,Italy",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.5!2d12.49221!3d41.89021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f61b283413fa7%3A0xe6c39c2be8d60b0!2sColosseum!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Colosseum,Rome,Italy&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -69,7 +69,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "오픈시간", value: "상시 개방 (24시간)" },
     ],
     googleMapQuery: "Trevi+Fountain+Rome+Italy",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.0!2d12.48327!3d41.90097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6045dc9c5eef%3A0x19cde0895c0bbfa7!2sTrevi%20Fountain!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Trevi+Fountain+Rome+Italy&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -91,7 +91,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "오픈시간", value: "상시 개방 (24시간) / 계단에서의 음식 취식 금지" },
     ],
     googleMapQuery: "Spanish+Steps+Rome+Italy",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.6!2d12.48248!3d41.90584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f60c13c4afdb3%3A0xe19b3f6d8e1fc38a!2sSpanish%20Steps!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Spanish+Steps+Rome+Italy&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -113,7 +113,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "오픈시간", value: "매일 09:00 ~ 19:00 (하절기 기준)" },
     ],
     googleMapQuery: "Roman+Forum+Rome+Italy",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.7!2d12.48541!3d41.89239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6045c4ca1ca9%3A0xbf1b67cf2b0fb97a!2sRoman%20Forum!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Roman+Forum+Rome+Italy&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
 
   // ─── Day 3: Palermo Tourist Spot Modals ───
@@ -139,7 +139,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "기후", value: "6월 평균 26°C (맑고 건조한 지중해성 기후)" },
     ],
     googleMapQuery: "Palermo,Sicily,Italy",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96700.3!2d13.2809!3d38.1157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1319ef8f889b1b57%3A0x8337b47e5da95e73!2sPalermo%2C%20PA%2C%20Italy!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Palermo,Sicily,Italy&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -161,7 +161,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "오픈시간", value: "상시 개방" },
     ],
     googleMapQuery: "Quattro+Canti+Palermo+Sicily+Italy",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d13.36209!3d38.11538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1319ef8b05c7bda3%3A0x6c476a5fca3e5f40!2sQuattro%20Canti%2C%20Palermo!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Quattro+Canti+Palermo+Sicily+Italy&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -183,7 +183,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "오픈시간", value: "화~일 09:30 ~ 17:30 (가이드 투어 기준, 월요일 휴관)" },
     ],
     googleMapQuery: "Teatro+Massimo+Palermo+Sicily+Italy",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d13.35214!3d38.11985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1319ef8a2c1e1b3b%3A0x8e3e4b2fc5e1a234!2sTeatr%20Massimo%2C%20Palermo!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Teatro+Massimo+Palermo+Sicily+Italy&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -205,7 +205,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "오픈시간", value: "월~토 09:30 ~ 17:00 / 일 09:00 ~ 13:00" },
     ],
     googleMapQuery: "Palermo+Cathedral+Sicily+Italy",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d13.35268!3d38.11454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1319ef8b3e3e3e3b%3A0x7e2e4b2fc5e1a123!2sPalermo+Cathedral!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Palermo+Cathedral+Sicily+Italy&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
 
   // ─── Day 5: Ibiza Tourist Spot Modals ───
@@ -231,7 +231,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "기후", value: "6월 평균 26°C (맑고 건조한 지중해성 기후)" },
     ],
     googleMapQuery: "Ibiza,Spain",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48840.0!2d1.4257!3d38.9067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1295a03e820db54f%3A0x75b93af81e01ef83!2sIbiza%2C%20Balearic%20Islands%2C%20Spain!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Ibiza,Spain&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -253,7 +253,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "오픈시간", value: "월~토 09:30 ~ 13:30, 17:00 ~ 20:00 / 일 10:30 ~ 13:30" },
     ],
     googleMapQuery: "Cathedral+of+Ibiza+Spain",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d1.43927!3d38.90721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1295a02c7c7c7c7b%3A0x4c5d6e7f8a9b0c1d!2sCathedral%20of%20Ibiza!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Cathedral+of+Ibiza+Spain&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -275,7 +275,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "오픈시간", value: "상시 개방 (성문: 24시간)" },
     ],
     googleMapQuery: "Dalt+Vila+Ibiza+Spain",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d1.43773!3d38.90633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1295a02d0c8c8c8b%3A0x5d6e7f8a9b0c1d2e!2sDalt%20Vila%2C%20Ibiza!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Dalt+Vila+Ibiza+Spain&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
 
   // ─── Day 6: Barcelona Tourist Spot Modals ───
@@ -301,7 +301,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "기후", value: "6월 평균 25°C (맑고 건조, 지중해성 기후)" },
     ],
     googleMapQuery: "Barcelona,Spain",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96081.07594437966!2d2.077274!3d41.3947688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49816718e30e5%3A0x44b0fb3d4f47660a!2sBarcelona%2C%20Spain!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Barcelona,Spain&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -323,7 +323,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "오픈시간", value: "09:30 ~ 20:30 (3월 말~10월 말 / 사전 예약 필수)" },
     ],
     googleMapQuery: "Park+Guell+Barcelona+Spain",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d2.15275!3d41.41452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f8b5f67acb%3A0x5c8b4c0a3cbbf1a0!2sPark%20G%C3%BCell!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Park+Guell+Barcelona+Spain&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -345,7 +345,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "오픈시간", value: "월~토 09:00 ~ 20:00 / 일 10:30 ~ 20:00 (4~9월 기준)" },
     ],
     googleMapQuery: "Sagrada+Familia+Barcelona+Spain",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d2.17442!3d41.40363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a29c4c9e3b3d%3A0x3e6a3a7c5f1a5b2c!2sSagrada%20Fam%C3%ADlia!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Sagrada+Familia+Barcelona+Spain&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -367,7 +367,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "오픈시간", value: "매일 09:00 ~ 22:00 (마지막 입장 20:45)" },
     ],
     googleMapQuery: "Casa+Batllo+Barcelona+Spain",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d2.16505!3d41.39164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2e15ebef3b3%3A0x1f1a2b3c4d5e6f7a!2sCasa%20Batll%C3%B3!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Casa+Batllo+Barcelona+Spain&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -389,7 +389,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "오픈시간", value: "매일 09:00 ~ 20:30 (3월~11월 초 기준)" },
     ],
     googleMapQuery: "Casa+Mila+La+Pedrera+Barcelona+Spain",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d2.16164!3d41.39534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2dc3b2e0b5f%3A0x2e7f1a0b3c4d5e6a!2sCasa%20Mil%C3%A0%20-%20La%20Pedrera!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Casa+Mila+La+Pedrera+Barcelona+Spain&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
 
   // ─── Day 7: Marseille Tourist Spot Modals ───
@@ -415,7 +415,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "기후", value: "6월 평균 22~27°C (맑고 건조한 지중해성 기후)" },
     ],
     googleMapQuery: "Marseille,France",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d185576.7936699!2d5.2295!3d43.2965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9bf4344da5333%3A0x40819a5fd979a70!2sMarseille%2C%20France!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Marseille,France&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -438,7 +438,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "오픈시간", value: "매일 07:00 ~ 19:15 (하절기 연장 운영)" },
     ],
     googleMapQuery: "Notre-Dame+de+la+Garde+Marseille+France",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2904.5!2d5.37028!3d43.28396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9c0c3b3b3b3b3%3A0x1a2b3c4d5e6f7a8b!2sNotre-Dame+de+la+Garde%2C+Marseille!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Notre-Dame+de+la+Garde+Marseille+France&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -461,7 +461,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "오픈시간", value: "상시 개방 (생선 시장: 매일 오전 08:00 ~ 13:00)" },
     ],
     googleMapQuery: "Vieux-Port+Marseille+France",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.8!2d5.36978!3d43.29517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9c0b4a4a4a4a4%3A0x2b3c4d5e6f7a8b9c!2sVieux-Port+de+Marseille!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Vieux-Port+Marseille+France&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -484,7 +484,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "오픈시간", value: "화~일 09:00 ~ 18:30 (월요일 휴관, 미사 시간 관람 제한)" },
     ],
     googleMapQuery: "Cathedrale+de+la+Major+Marseille+France",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.5!2d5.36208!3d43.29828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9c0b5b5b5b5b5%3A0x3c4d5e6f7a8b9c0d!2sCath%C3%A9drale+de+la+Major%2C+Marseille!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Cathedrale+de+la+Major+Marseille+France&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
 
   // ─── Day 8: Genoa Tourist Spot Modals ───
@@ -510,7 +510,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "기후", value: "6월 평균 22~26°C (온화한 지중해성 기후)" },
     ],
     googleMapQuery: "Genoa,Italy",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d94034.9!2d8.8778!3d44.4056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d341b4b8b3de79%3A0xfff4c0d6278e4406!2sGenoa%2C%20GE%2C%20Italy!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Genoa,Italy&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -532,7 +532,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "오픈시간", value: "월~토 08:00 ~ 12:00, 15:00 ~ 19:00 / 일·공휴일 08:00 ~ 12:30" },
     ],
     googleMapQuery: "Cattedrale+di+San+Lorenzo+Genova+Italy",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d8.93067!3d44.40762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d3410e4b1f1b1b%3A0xa1b2c3d4e5f6a7b8!2sCattedrale%20di%20San%20Lorenzo%2C%20Genova!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Cattedrale+di+San+Lorenzo+Genova+Italy&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -554,7 +554,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "오픈시간", value: "토요일 10:00 ~ 18:00 (외부 관람: 상시)" },
     ],
     googleMapQuery: "Palazzo+San+Giorgio+Genova+Italy",
-    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d8.92654!3d44.40886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d3410e1c2d3d3c%3A0xb2c3d4e5f6a7b8c9!2sPalazzo%20San%20Giorgio%2C%20Genova!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr",
+    googleMapEmbed: "https://maps.google.com/maps?q=Palazzo+San+Giorgio+Genova+Italy&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
 
   // ─── Ship Info Modal ───
