@@ -269,7 +269,7 @@ export default function Pricing({ data }: PricingProps) {
                                         <tbody>
                                             {infoSections.map((section, sIdx) => (
                                                 <tr key={sIdx} className={sIdx < infoSections.length - 1 ? "border-b border-gray-300" : ""}>
-                                                    <td className="bg-gray-50 font-semibold text-gray-700 px-4 py-4 w-36 align-middle text-center border-r border-gray-300 text-base">
+                                                    <td className="bg-gray-50 font-semibold text-gray-700 px-4 py-4 w-36 align-middle text-center border-r border-gray-300 text-base whitespace-pre-line">
                                                         {section.title}
                                                     </td>
                                                     <td className="bg-white px-5 py-4 leading-relaxed text-gray-600">

@@ -58,7 +58,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: 'tourist-spot',
         modalId: 'istanbul',
-        title: '[관광 정보] 이스탄불',
+        title: '[관광 정보] 이스탄불 (Istanbul)',
         shortTitle: '이스탄불',
         images: ['/shared/placeholder.png'],
         description: '보스포루스 해협을 사이에 두고 유럽과 아시아 두 대륙에 걸쳐 있는 세계 유일의 대륙 횡단 도시로, 약 1,600년간 세 제국의 수도였습니다.',
@@ -98,14 +98,15 @@ export const scheduleDaysData: DayScheduleData[] = [
             heading: '3. 승선 후 유의사항 (After Boarding)',
             items: [
               {
-                text: '승선 후 안내에 따라 지정된 장소에서 위급 상황 대처 교육을 이수해야 합니다.',
-                bold: '필수 안전 교육(Safety Drill):',
+                text: '필수 안전 교육(Safety Drill): 승선 후 안내에 따라 지정된 장소에서 위급 상황 대처 교육을 이수해야 합니다.',
+              },
+              {
+                text: '미이수 시 발생하는 실제 상황 (필독)',
                 subItems: [
-                  { text: '미이수 시 발생하는 실제 상황 (필독)', isWarning: true },
-                  { text: '선사 시스템은 실시간으로 미이수자를 파악합니다. 교육을 마칠 때까지 이름이 공공연하게 방송되거나, 승무원이 선실로 직접 찾아와 참여를 독촉합니다.', bold: '끝까지 찾아내는 실시간 추적:' },
-                  { text: '교육 미완료 시 선상 카드(SeaPass 등)가 정지됩니다. 이 경우 바(Bar)에서 음료 주문, 면세점 쇼핑, 카지노 이용 및 유료 레스토랑 예약 등 배 안의 모든 결제와 서비스 이용이 거부될 수 있습니다.', bold: '선상 카드 및 모든 유료 서비스 정지:' },
-                  { text: '국제 해상법(SOLAS)에 의거, 끝내 불응할 경우 선장은 승객을 다음 기항지에서 강제로 내리게 할 권한이 있습니다.', bold: '선장 권한에 의한 \'강제 하선\' 조치:' },
-                  { text: '규정 위반으로 인한 하선이므로 잔여 일정 환불이 전혀 안 되며, 집으로 돌아가는 항공편 비용도 본인이 직접 부담해야 하는 가장 심각한 상황이 발생할 수 있습니다.', isWarning: true, bold: '환불 및 보상 불가:' },
+                  { text: '끝까지 찾아내는 실시간 추적: 선사 시스템은 실시간으로 미이수자를 파악합니다. 교육을 마칠 때까지 이름이 공공연하게 방송되거나, 승무원이 선실로 직접 찾아와 참여를 독촉합니다.' },
+                  { text: '선상 카드 및 모든 유료 서비스 정지: 교육 미완료 시 선상 카드(SeaPass 등)가 정지됩니다. 이 경우 바(Bar)에서 음료 주문, 면세점 쇼핑, 카지노 이용 및 유료 레스토랑 예약 등 배 안의 모든 결제와 서비스 이용이 거부될 수 있습니다.' },
+                  { text: '선장 권한에 의한 \'강제 하선\' 조치: 국제 해상법(SOLAS)에 의거, 끝내 불응할 경우 선장은 승객을 다음 기항지에서 강제로 내리게 할 권한이 있습니다.' },
+                  { text: '환불 및 보상 불가: 규정 위반으로 인한 하선이므로 잔여 일정 환불이 전혀 안 되며, 집으로 돌아가는 항공편 비용도 본인이 직접 부담해야 하는 가장 심각한 상황이 발생할 수 있습니다.', isWarning: true },
                 ],
               },
               { text: '선사에서 운영하는 기항지 투어(영어 진행)는 조기 마감될 수 있으므로 승선 첫날 신청하시기를 권장합니다. (변경/취소 시 수수료 발생 가능)', bold: '기항지 선택 관광:' },
@@ -145,7 +146,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: 'tourist-spot',
         modalId: 'mykonos',
-        title: '[관광 정보] 미코노스',
+        title: '[관광 정보] 미코노스 (Mykonos)',
         shortTitle: '미코노스',
         images: ['/shared/placeholder.png'],
         description: '에게해 중앙에 위치한 키클라데스 제도의 섬으로, 새하얀 회벽의 건축물과 좁은 미로 같은 골목길이 매력적인 그리스 대표 관광지입니다.',
@@ -155,7 +156,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: 'tourist-spot',
         modalId: 'littlevenice',
-        title: '일몰 명소 1순위, 리틀 베니스',
+        title: '[관광 정보] 리틀 베니스 (Little Venice)',
         shortTitle: '리틀 베니스',
         images: ['/shared/placeholder.png'],
         description: '바다 바로 위에 알록달록한 집들이 돌출되어 세워진 미코노스의 상징적 해안 지구로, 에게해의 석양을 감상하기에 최적의 장소입니다.',
@@ -165,7 +166,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: 'tourist-spot',
         modalId: 'mykonoswindmills',
-        title: '미코노스의 상징, 카토 밀리 풍차',
+        title: '[관광 정보] 카토 밀리 풍차 (Kato Mili)',
         shortTitle: '미코노스 풍차',
         images: ['/shared/placeholder.png'],
         description: '미코노스 타운 남쪽 언덕 위에 나란히 서 있는 7기의 풍차로, 16세기부터 곡물을 빻는 데 사용된 섬의 가장 유명한 랜드마크입니다.',
@@ -175,7 +176,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: 'tourist-spot',
         modalId: 'paraportiani',
-        title: '순백의 건축물, 파라포르티아니 교회',
+        title: '[관광 정보] 파라포르티아니 교회 (Paraportiani)',
         shortTitle: '파라포르티아니 교회',
         images: ['/shared/placeholder.png'],
         description: '5개의 개별 예배당이 하나로 합쳐진 독특한 복합 건축물로, 1425년에 시작되어 200년에 걸쳐 완성된 키클라데스 건축의 정수입니다.',
@@ -216,7 +217,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: 'tourist-spot',
         modalId: 'heraklion',
-        title: '[관광 정보] 크레타 헤라클리온',
+        title: '[관광 정보] 크레타 헤라클리온 (Heraklion)',
         shortTitle: '헤라클리온',
         images: ['/shared/placeholder.png'],
         description: '고대 미노아 문명의 심장부이자 크레타 최대 도시로, 크노소스 궁전과 그리스 신화의 흔적을 만날 수 있는 역사의 보고입니다.',
@@ -259,7 +260,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: 'tourist-spot',
         modalId: 'rhodes',
-        title: '[관광 정보] 로도스',
+        title: '[관광 정보] 로도스 (Rhodes)',
         shortTitle: '로도스',
         images: ['/shared/placeholder.png'],
         description: '유네스코 세계문화유산으로 지정된 중세 도시를 품은 역사의 섬으로, 성 요한 기사단의 요새와 고대 그리스의 흔적이 공존합니다.',
@@ -302,7 +303,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: 'tourist-spot',
         modalId: 'santorini',
-        title: '[관광 정보] 산토리니',
+        title: '[관광 정보] 산토리니 (Santorini)',
         shortTitle: '산토리니',
         images: ['/shared/placeholder.png'],
         description: '에게해의 보석이라 불리는 화산섬으로, 하얀 집과 파란 돔이 이어지는 절경과 세계 3대 일몰 명소로 유명합니다.',
@@ -354,7 +355,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: 'tourist-spot',
         modalId: 'athens',
-        title: '[관광 정보] 아테네',
+        title: '[관광 정보] 아테네 (Athens)',
         shortTitle: '아테네',
         images: ['/shared/placeholder.png'],
         description: '서양 문명의 발상지이자 민주주의의 요람으로, 약 3,400년의 역사를 간직한 그리스의 수도입니다.',
@@ -364,7 +365,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: 'tourist-spot',
         modalId: 'panathenaic',
-        title: '근대 올림픽의 발상지, 파나티나이코 스타디움',
+        title: '[관광 정보] 파나티나이코 스타디움 (Panathenaic Stadium)',
         shortTitle: '올림픽 경기장',
         images: ['/shared/placeholder.png'],
         description: '1896년 제1회 근대 올림픽이 개최된 역사적인 경기장으로, 세계에서 유일하게 전체가 대리석으로 만들어진 경기장입니다.',
@@ -374,7 +375,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: 'tourist-spot',
         modalId: 'acropolis',
-        title: '서양 문명의 상징, 아테네 아크로폴리스 [입장]',
+        title: '[관광 정보] 아크로폴리스 (Acropolis)',
         shortTitle: '아크로폴리스',
         images: ['/shared/placeholder.png'],
         description: '해발 156m의 석회암 언덕 위에 세워진 고대 그리스 최고의 성채로, 파르테논 신전을 비롯한 유네스코 세계문화유산입니다.',
@@ -384,7 +385,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: 'tourist-spot',
         modalId: 'syntagma',
-        title: '그리스 민주주의의 심장, 신타그마 광장과 국회의사당',
+        title: '[관광 정보] 신타그마 광장 (Syntagma Square)',
         shortTitle: '신타그마 광장',
         images: ['/shared/placeholder.png'],
         description: '현대 아테네의 중심 광장으로, 무명용사의 비와 에브조네스 근위병 교대식이 유명한 그리스 정치의 상징적 장소입니다.',
@@ -484,7 +485,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: 'tourist-spot',
         modalId: 'istanbul',
-        title: '[관광 정보] 이스탄불',
+        title: '[관광 정보] 이스탄불 (Istanbul)',
         shortTitle: '이스탄불',
         images: ['/shared/placeholder.png'],
         description: '보스포루스 해협을 사이에 두고 유럽과 아시아 두 대륙에 걸쳐 있는 세계 유일의 대륙 횡단 도시로, 약 1,600년간 세 제국의 수도였습니다.',
@@ -494,7 +495,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: 'tourist-spot',
         modalId: 'hagiasophia',
-        title: '1,500년 역사의 건축물, 하기아 소피아',
+        title: '[관광 정보] 하기아 소피아 (Hagia Sophia)',
         shortTitle: '하기아 소피아',
         images: ['/shared/placeholder.png'],
         description: '537년 비잔틴 황제 유스티니아누스 1세가 건립한 세계 건축사의 걸작으로, 약 1,000년간 세계 최대의 성당이었습니다.',
@@ -504,7 +505,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: 'tourist-spot',
         modalId: 'bluemosque',
-        title: '푸른 타일의 이슬람 사원, 블루 모스크',
+        title: '[관광 정보] 블루 모스크 (Blue Mosque)',
         shortTitle: '블루 모스크',
         images: ['/shared/placeholder.png'],
         description: '20,000장 이상의 이즈니크 타일로 장식된 오스만 제국의 대표적인 이슬람 사원으로, 세계 유일의 6개 미나렛을 갖추고 있습니다.',
@@ -514,7 +515,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: 'tourist-spot',
         modalId: 'topkapipalace',
-        title: '오스만 제국 술탄들의 거처, 톱카프 궁전',
+        title: '[관광 정보] 톱카프 궁전 (Topkapi Palace)',
         shortTitle: '톱카프 궁전',
         images: ['/shared/placeholder.png'],
         description: '약 400년간 오스만 제국 술탄들의 공식 거처이자 행정 중심지로, 보스포루스 해협을 내려다보는 장엄한 궁전 복합체입니다.',
@@ -524,7 +525,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: 'tourist-spot',
         modalId: 'hippodrome',
-        title: '고대 로마 전차 경기장, 히포드롬 광장',
+        title: '[관광 정보] 히포드롬 광장 (Hippodrome)',
         shortTitle: '히포드롬 광장',
         images: ['/shared/placeholder.png'],
         description: '약 10만 명을 수용했던 고대 전차 경기장으로, 이집트 오벨리스크와 뱀 기둥 등 고대 유물이 보존되어 있습니다.',

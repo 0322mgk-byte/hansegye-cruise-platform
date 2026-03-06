@@ -35,7 +35,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: "tourist-spot",
         modalId: "taiwan",
-        title: "[관광 정보] 대만",
+        title: "[관광 정보] 대만 (Taiwan)",
         shortTitle: "대만",
         images: ["/shared/placeholder.png"],
         description: "대만 북부는 타이베이를 중심으로 예류지질공원, 스펀, 지우펀 등 자연경관과 역사가 어우러진 매력적인 당일 여행지가 펼쳐지는 곳입니다.",
@@ -45,7 +45,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: "tourist-spot",
         modalId: "yehliu",
-        title: "파도와 바람이 깎아 만든 여왕 바위, 예류지질공원",
+        title: "[관광 정보] 예류지질공원 (Yehliu Geopark)",
         shortTitle: "예류지질공원",
         images: ["/shared/placeholder.png"],
         description: "약 1,700m 길이의 곶 위에 수천만 년에 걸친 해식·풍식 작용이 빚어낸 기암괴석이 줄지어 서 있는 세계적인 지질 명소입니다.",
@@ -55,7 +55,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: "tourist-spot",
         modalId: "shifen",
-        title: "기찻길 위 천등 소원 명소, 스펀",
+        title: "[관광 정보] 스펀 (Shifen)",
         shortTitle: "스펀",
         images: ["/shared/placeholder.png"],
         description: "기찻길 위에서 직접 천등에 소원을 적어 하늘로 날리는 체험으로 유명한 핑시 산간 지역의 철도 마을입니다.",
@@ -65,7 +65,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: "tourist-spot",
         modalId: "jiufen",
-        title: "홍등이 가득한 계단, 지우펀",
+        title: "[관광 정보] 지우펀 (Jiufen)",
         shortTitle: "지우펀",
         images: ["/shared/placeholder.png"],
         description: "붉은 홍등이 빼곡히 걸린 계단식 골목이 '센과 치히로의 행방불명'의 배경을 연상시키는 옛 금광 마을입니다.",
@@ -116,14 +116,15 @@ export const scheduleDaysData: DayScheduleData[] = [
             heading: "3. 승선 후 유의사항 (After Boarding)",
             items: [
               {
-                text: "승선 후 안내에 따라 지정된 장소에서 위급 상황 대처 교육을 이수해야 합니다.",
-                bold: "필수 안전 교육(Safety Drill):",
+                text: "필수 안전 교육(Safety Drill): 승선 후 안내에 따라 지정된 장소에서 위급 상황 대처 교육을 이수해야 합니다.",
+              },
+              {
+                text: "미이수 시 발생하는 실제 상황 (필독)",
                 subItems: [
-                  { text: "미이수 시 발생하는 실제 상황 (필독)", isWarning: true },
-                  { text: "선사 시스템은 실시간으로 미이수자를 파악합니다. 교육을 마칠 때까지 이름이 공공연하게 방송되거나, 승무원이 선실로 직접 찾아와 참여를 독촉합니다.", bold: "끝까지 찾아내는 실시간 추적:" },
-                  { text: "교육 미완료 시 선상 카드(SeaPass 등)가 정지됩니다. 이 경우 바(Bar)에서 음료 주문, 면세점 쇼핑, 카지노 이용 및 유료 레스토랑 예약 등 배 안의 모든 결제와 서비스 이용이 거부될 수 있습니다.", bold: "선상 카드 및 모든 유료 서비스 정지:" },
-                  { text: "국제 해상법(SOLAS)에 의거, 끝내 불응할 경우 선장은 승객을 다음 기항지에서 강제로 내리게 할 권한이 있습니다.", bold: "선장 권한에 의한 '강제 하선' 조치:" },
-                  { text: "규정 위반으로 인한 하선이므로 잔여 일정 환불이 전혀 안 되며, 집으로 돌아가는 항공편 비용도 본인이 직접 부담해야 하는 가장 심각한 상황이 발생할 수 있습니다.", isWarning: true, bold: "환불 및 보상 불가:" },
+                  { text: "끝까지 찾아내는 실시간 추적: 선사 시스템은 실시간으로 미이수자를 파악합니다. 교육을 마칠 때까지 이름이 공공연하게 방송되거나, 승무원이 선실로 직접 찾아와 참여를 독촉합니다." },
+                  { text: "선상 카드 및 모든 유료 서비스 정지: 교육 미완료 시 선상 카드(SeaPass 등)가 정지됩니다. 이 경우 바(Bar)에서 음료 주문, 면세점 쇼핑, 카지노 이용 및 유료 레스토랑 예약 등 배 안의 모든 결제와 서비스 이용이 거부될 수 있습니다." },
+                  { text: "선장 권한에 의한 '강제 하선' 조치: 국제 해상법(SOLAS)에 의거, 끝내 불응할 경우 선장은 승객을 다음 기항지에서 강제로 내리게 할 권한이 있습니다." },
+                  { text: "환불 및 보상 불가: 규정 위반으로 인한 하선이므로 잔여 일정 환불이 전혀 안 되며, 집으로 돌아가는 항공편 비용도 본인이 직접 부담해야 하는 가장 심각한 상황이 발생할 수 있습니다.", isWarning: true },
                 ],
               },
               { text: "선사에서 운영하는 기항지 투어(영어 진행)는 조기 마감될 수 있으므로 승선 첫날 신청하시기를 권장합니다. (변경/취소 시 수수료 발생 가능)", bold: "기항지 선택 관광:" },
@@ -170,7 +171,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: "tourist-spot",
         modalId: "miyakojima",
-        title: "[관광 정보] 미야코지마",
+        title: "[관광 정보] 미야코지마 (Miyakojima)",
         shortTitle: "미야코지마",
         images: ["/shared/placeholder.png"],
         description: "일본 오키나와현 남서쪽 해상에 자리한 산호초 섬으로, '동양의 몰디브'라는 별명답게 에메랄드빛 투명한 바닷물과 일본 최고 수준의 백사장 해변이 줄지어 있습니다.",
@@ -204,7 +205,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: "tourist-spot",
         modalId: "naha",
-        title: "[관광 정보] 나하",
+        title: "[관광 정보] 나하 (Naha)",
         shortTitle: "나하",
         images: ["/shared/placeholder.png"],
         description: "오키나와현의 수도 나하는 류큐 왕국 500년의 역사와 문화를 간직한 도시로, 세계문화유산 슈리성과 활기 넘치는 국제거리가 대표 명소입니다.",
@@ -214,7 +215,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: "tourist-spot",
         modalId: "dmmkariyushi",
-        title: "살아있는 체험형 수족관, DMM카리유시 수족관",
+        title: "[관광 정보] DMM카리유시 수족관 (DMMKariyushi Aquarium)",
         shortTitle: "DMM카리유시 수족관",
         images: ["/shared/placeholder.png"],
         description: "최신 영상기술과 실제 생물 전시를 결합한 차세대 체험형 수족관으로, 약 190종 5,000점 이상의 생물을 만날 수 있습니다.",
@@ -224,7 +225,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: "tourist-spot",
         modalId: "iiasokinawa",
-        title: "오키나와 남부 최대 쇼핑몰, 이아스 이온몰",
+        title: "[관광 정보] 이아스 이온몰 (IIAS Okinawa Toyosaki)",
         shortTitle: "이아스 이온몰",
         images: ["/shared/placeholder.png"],
         description: "약 150개 이상의 점포가 입점한 오키나와 남부 최대 규모의 복합 쇼핑몰로, DMM카리유시 수족관과 같은 건물에 위치하고 있습니다.",
@@ -234,7 +235,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: "tourist-spot",
         modalId: "shuricastle",
-        title: "500년 역사 류큐 왕국의 거성, 슈리성",
+        title: "[관광 정보] 슈리성 (Shuri Castle)",
         shortTitle: "슈리성",
         images: ["/shared/placeholder.png"],
         description: "14세기 말 창건되어 약 500년간 류큐 왕국의 정치·외교·문화 중심지 역할을 한 유네스코 세계문화유산입니다.",
@@ -245,7 +246,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: "tourist-spot",
         modalId: "kokusaistreet",
-        title: "나하 시내 쇼핑, 맛집 거리, 국제거리",
+        title: "[관광 정보] 국제거리 (Kokusai Street)",
         shortTitle: "국제거리",
         images: ["/shared/placeholder.png"],
         description: "나하 시내 중심부를 관통하는 약 1.6km 길이의 '기적의 1마일'로, 약 600여 개의 상점과 레스토랑이 밀집한 오키나와 최대의 번화가입니다.",
@@ -278,7 +279,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: "tourist-spot",
         modalId: "ishigaki",
-        title: "[관광 정보] 이시가키",
+        title: "[관광 정보] 이시가키 (Ishigaki)",
         shortTitle: "이시가키",
         images: ["/shared/placeholder.png"],
         description: "야에야마 제도의 중심 섬으로, 투명한 에메랄드빛 바다와 풍부한 산호초, 맹그로브 숲이 어우러진 천혜의 자연환경이 매력적인 아열대 섬입니다.",
@@ -288,7 +289,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: "tourist-spot",
         modalId: "limestonecave",
-        title: "20만년 전 형성된 거대한 종유동굴",
+        title: "[관광 정보] 이시가키 종유동 (Ishigaki Limestone Cave)",
         shortTitle: "이시가키 종유동",
         images: ["/shared/placeholder.png"],
         description: "약 20만 년 전 해저의 산호초가 지각변동에 의해 융기하면서 형성된 일본 최남단의 관광 종유동굴로, 총 연장 약 3.2km 중 660m 구간이 공개되어 있습니다.",
@@ -298,7 +299,7 @@ export const scheduleDaysData: DayScheduleData[] = [
       {
         type: "tourist-spot",
         modalId: "yaimavillage",
-        title: "이시가키 전통과 자연의 민속촌, 야이마무라",
+        title: "[관광 정보] 야이마무라 민속촌 (Yaima Village)",
         shortTitle: "야이마무라 민속촌",
         images: ["/shared/placeholder.png"],
         description: "국가 유형문화재로 등록된 붉은 기와지붕의 전통 민가가 복원된 일본 최남단의 테마파크로, 류큐 전통 문화 체험과 다람쥐원숭이와의 교감을 즐길 수 있습니다.",

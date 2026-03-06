@@ -18,11 +18,9 @@ export const detailsData: DetailsData = {
     endSeconds: 30,
   },
   videoSources: [
-    { src: "/products/north-europe-cruise/hero-video/north-europe-video2-details.webm", type: "video/webm" },
-    { src: "/products/north-europe-cruise/hero-video/north-europe-video2-details.mp4", type: "video/mp4" },
+    { src: "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/hero-video/north-europe-video2-details.mp4", type: "video/mp4" },
   ],
   mobileVideoSources: [
-    { src: "/products/north-europe-cruise/hero-video/mobile-north-europe-video2.webm", type: "video/webm" },
-    { src: "/products/north-europe-cruise/hero-video/mobile-north-europe-video2.mp4", type: "video/mp4" },
+    { src: "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/hero-video/mobile-north-europe-video2.mp4", type: "video/mp4" },
   ],
 };

@@ -12,7 +12,7 @@ export const featuresData: FeaturesData = {
       subtitle: "합리적인 가격의 인테리어룸",
       description: "가장 합리적인 가격의 객실로, 편안한 침대와 인터랙티브 HD TV, 미니바, 전자 금고, 네스프레소 커피 머신 등을 갖추고 있습니다.",
       amenities: [
-        { iconName: "Maximize2", label: "객실 크기: 약 12~15m²", fullWidth: true },
+        { iconName: "Maximize2", label: "객실 크기: 약 12~15m² (약 3.6~4.5평)", fullWidth: true },
         { iconName: "BedDouble", label: "더블 베드 (트윈 전환 가능)" },
         { iconName: "Refrigerator", label: "미니바" },
         { iconName: "Tv", label: "인터랙티브 HD 평면 TV" },
@@ -31,7 +31,7 @@ export const featuresData: FeaturesData = {
       subtitle: "푸른 바다를 품은 오션뷰 룸",
       description: "바다를 향한 창문이 있어 자연 채광과 푸른 바다 경관을 즐길 수 있는 객실입니다. 인터랙티브 HD TV, 미니바, 네스프레소 커피 머신 등 편의시설을 갖추고 있습니다.",
       amenities: [
-        { iconName: "Maximize2", label: "객실 크기: 약 12~22m²" },
+        { iconName: "Maximize2", label: "객실 크기: 약 12~22m² (약 3.6~6.7평)" },
         { iconName: "AppWindow", label: "바다 전망 창문" },
         { iconName: "BedDouble", label: "더블 베드 (트윈 전환 가능)" },
         { iconName: "Refrigerator", label: "미니바" },
@@ -51,7 +51,7 @@ export const featuresData: FeaturesData = {
       subtitle: "아름다운 바다를 한 눈에 볼 수 있는 야외 공간",
       description: "전용 발코니에서 탁 트인 바다 전망을 감상할 수 있는 프리미엄 객실입니다. 소파와 인터랙티브 HD TV, 미니바, 네스프레소 커피 머신 등 풍부한 편의시설을 제공합니다.",
       amenities: [
-        { iconName: "Maximize2", label: "객실 크기: 약 17m² + 발코니 약 4m²", fullWidth: true },
+        { iconName: "Maximize2", label: "객실 크기: 약 17m² + 발코니 약 4m² (총 약 6.4평)", fullWidth: true },
         { iconName: "Armchair", label: "의자와 테이블을 포함한 전용 발코니" },
         { iconName: "AppWindow", label: "바닥부터 천장까지 슬라이딩 도어" },
         { iconName: "BedDouble", label: "더블 베드 (트윈 전환 가능)" },

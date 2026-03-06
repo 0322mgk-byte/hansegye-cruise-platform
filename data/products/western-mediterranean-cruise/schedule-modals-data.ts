@@ -8,9 +8,9 @@ export const scheduleModalsData: ModalData[] = [
     id: "rome",
     title: "[관광정보] 로마 (ROME)",
     images: [
-      "/products/western-mediterranean-cruise/sectrion6/day1/Rome/rome_1.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day1/Rome/rome_2.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day1/Rome/rome_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day1/Rome/rome_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day1/Rome/rome_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day1/Rome/rome_3.webp",
     ],
     descriptions: [
       "영원한 도시, 로마.",
@@ -30,11 +30,11 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "colosseum",
-    title: "고대 로마의 상징, 콜로세움 (COLOSSEUM)",
+    title: "[관광정보] 콜로세움 (COLOSSEO)",
     images: [
-      "/products/western-mediterranean-cruise/sectrion6/day9/Colosseum/colosseum_1.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day9/Colosseum/colosseum_2.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day9/Colosseum/colosseum_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day9/Colosseum/colosseum_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day9/Colosseum/colosseum_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day9/Colosseum/colosseum_3.webp",
     ],
     descriptions: [
       "서기 70~80년에 완공된 고대 로마 최대의 원형 경기장으로, 최대 8만 명을 수용하던 웅장한 건물입니다.",
@@ -52,11 +52,11 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "trevifountain",
-    title: "동전을 던지면 소원이 이루어지는, 트레비 분수 (TREVI FOUNTAIN)",
+    title: "[관광정보] 트레비 분수 (FONTANA DI TREVI)",
     images: [
-      "/products/western-mediterranean-cruise/sectrion6/day9/Trevi-Fountain/trevi_1.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day9/Trevi-Fountain/trevi_2.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day9/Trevi-Fountain/trevi_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day9/Trevi-Fountain/trevi_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day9/Trevi-Fountain/trevi_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day9/Trevi-Fountain/trevi_3.webp",
     ],
     descriptions: [
       "1762년 완성된 높이 26m, 너비 49m의 로마에서 가장 크고 세계에서 가장 유명한 바로크 양식 분수입니다.",
@@ -74,11 +74,11 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "spanishsteps",
-    title: "로마의 휴일 배경, 스페인 광장 (SPANISH STEPS)",
+    title: "[관광정보] 스페인 광장 (PIAZZA DI SPAGNA)",
     images: [
-      "/products/western-mediterranean-cruise/sectrion6/day9/Spanish-Steps/spanish_1.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day9/Spanish-Steps/spanish_2.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day9/Spanish-Steps/spanish_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day9/Spanish-Steps/spanish_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day9/Spanish-Steps/spanish_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day9/Spanish-Steps/spanish_3.webp",
     ],
     descriptions: [
       "1723~1725년에 건설된 총 135개의 계단으로 이루어진 로마의 대표적인 만남의 장소입니다.",
@@ -96,11 +96,11 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "romanforum",
-    title: "로마 제국의 심장, 포로 로마노 (ROMAN FORUM)",
+    title: "[관광정보] 포로 로마노 (FORO ROMANO)",
     images: [
-      "/products/western-mediterranean-cruise/sectrion6/day9/Roman-Forum/romanforum_1.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day9/Roman-Forum/romanforum_2.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day9/Roman-Forum/romanforum_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day9/Roman-Forum/romanforum_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day9/Roman-Forum/romanforum_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day9/Roman-Forum/romanforum_3.webp",
     ],
     descriptions: [
       "기원전 7세기부터 고대 로마의 정치·종교·상업의 중심지 역할을 해온 광장 유적입니다.",
@@ -122,9 +122,9 @@ export const scheduleModalsData: ModalData[] = [
     id: "palermo",
     title: "[관광정보] 팔레르모 (PALERMO)",
     images: [
-      "/products/western-mediterranean-cruise/sectrion6/day3/Palermo/palermo_1.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day3/Palermo/palermo_2.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day3/Palermo/palermo_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day3/Palermo/palermo_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day3/Palermo/palermo_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day3/Palermo/palermo_3.webp",
     ],
     descriptions: [
       "지중해의 심장, 시칠리아섬의 주도 팔레르모.",
@@ -144,11 +144,11 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "quattrocanti",
-    title: "팔레르모의 기하학적 중심, 콰트로 칸티 (QUATTRO CANTI)",
+    title: "[관광정보] 콰트로 칸티 (QUATTRO CANTI)",
     images: [
-      "/products/western-mediterranean-cruise/sectrion6/day3/Quattro-Canti/quattrocanti_1.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day3/Quattro-Canti/quattrocanti_2.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day3/Quattro-Canti/quattrocanti_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day3/Quattro-Canti/quattrocanti_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day3/Quattro-Canti/quattrocanti_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day3/Quattro-Canti/quattrocanti_3.webp",
     ],
     descriptions: [
       "1608년부터 1620년 사이 완성된 팔레르모 구시가지의 기하학적 중심부입니다.",
@@ -166,11 +166,11 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "teatromassimo",
-    title: "유럽 3대 오페라 극장, 마시모 극장 (TEATRO MASSIMO)",
+    title: "[관광정보] 마시모 극장 (TEATRO MASSIMO)",
     images: [
-      "/products/western-mediterranean-cruise/sectrion6/day3/Teatro-Massimo/massimo_1.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day3/Teatro-Massimo/massimo_2.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day3/Teatro-Massimo/massimo_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day3/Teatro-Massimo/massimo_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day3/Teatro-Massimo/massimo_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day3/Teatro-Massimo/massimo_3.webp",
     ],
     descriptions: [
       "1897년 개관한 마시모 극장은 이탈리아 최대, 유럽 3위 규모의 오페라 하우스입니다.",
@@ -188,11 +188,11 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "palermocathedral",
-    title: "팔레르모의 역사가 담긴, 팔레르모 대성당 (PALERMO CATHEDRAL)",
+    title: "[관광정보] 팔레르모 대성당 (CATTEDRALE DI PALERMO)",
     images: [
-      "/products/western-mediterranean-cruise/sectrion6/day3/Palermo-Cathedral/cathedral_1.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day3/Palermo-Cathedral/cathedral_2.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day3/Palermo-Cathedral/cathedral_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day3/Palermo-Cathedral/cathedral_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day3/Palermo-Cathedral/cathedral_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day3/Palermo-Cathedral/cathedral_3.webp",
     ],
     descriptions: [
       "1185년 노르만 대주교 구알티에로 오파밀리오가 건립한 팔레르모 역사의 축소판입니다.",
@@ -214,9 +214,9 @@ export const scheduleModalsData: ModalData[] = [
     id: "ibiza",
     title: "[관광정보] 이비자 (IBIZA)",
     images: [
-      "/products/western-mediterranean-cruise/sectrion6/day5/Ibiza/ibiza_1.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day5/Ibiza/ibiza_2.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day5/Ibiza/ibiza_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day5/Ibiza/ibiza_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day5/Ibiza/ibiza_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day5/Ibiza/ibiza_3.webp",
     ],
     descriptions: [
       "지중해의 보석, 스페인 이비자.",
@@ -236,11 +236,11 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "ibizacathedral",
-    title: "이비자 구시가지의 심장, 산타 마리아 대성당 (CATHEDRAL OF IBIZA)",
+    title: "[관광정보] 산타 마리아 대성당 (CATEDRAL DE SANTA MARÍA)",
     images: [
-      "/products/western-mediterranean-cruise/sectrion6/day5/Ibiza-Cathedral/cathedral_1.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day5/Ibiza-Cathedral/cathedral_2.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day5/Ibiza-Cathedral/cathedral_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day5/Ibiza-Cathedral/cathedral_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day5/Ibiza-Cathedral/cathedral_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day5/Ibiza-Cathedral/cathedral_3.webp",
     ],
     descriptions: [
       "1235년 이비자 정복 직후 기존 이슬람 모스크 자리에 세워진 가톨릭 성당으로, 약 800년의 역사를 간직하고 있습니다.",
@@ -258,11 +258,11 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "ibizadaltivila",
-    title: "유네스코 세계유산, 이비자 성채 구시가지 (DALT VILA)",
+    title: "[관광정보] 이비자 성채 (DALT VILA)",
     images: [
-      "/products/western-mediterranean-cruise/sectrion6/day5/Ibiza-Dalt-Vila/daltivila_1.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day5/Ibiza-Dalt-Vila/daltivila_2.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day5/Ibiza-Dalt-Vila/daltivila_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day5/Ibiza-Dalt-Vila/daltivila_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day5/Ibiza-Dalt-Vila/daltivila_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day5/Ibiza-Dalt-Vila/daltivila_3.webp",
     ],
     descriptions: [
       "다알트빌라(Dalt Vila)는 이탈리아어로 '높은 마을'을 의미하며, 기원전 7세기 페니키아인들이 터를 잡은 이래 로마, 무어, 아라곤 등 여러 문명의 지배를 거치며 켜켜이 쌓인 역사의 흔적이 고스란히 남아 있습니다.",
@@ -284,9 +284,9 @@ export const scheduleModalsData: ModalData[] = [
     id: "barcelona",
     title: "[관광정보] 바르셀로나 (BARCELONA)",
     images: [
-      "/products/western-mediterranean-cruise/sectrion6/day6/Barcelona/barcelona_1.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day6/Barcelona/barcelona_2.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day6/Barcelona/barcelona_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day6/Barcelona/barcelona_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day6/Barcelona/barcelona_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day6/Barcelona/barcelona_3.webp",
     ],
     descriptions: [
       "지중해가 품은 예술과 건축의 도시, 바르셀로나.",
@@ -306,11 +306,11 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "parkguell",
-    title: "가우디의 환상 정원, 구엘 공원 (PARK GÜELL)",
+    title: "[관광정보] 구엘 공원 (PARK GÜELL)",
     images: [
-      "/products/western-mediterranean-cruise/sectrion6/day6/Park-Guell/parkguell_1.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day6/Park-Guell/parkguell_2.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day6/Park-Guell/parkguell_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day6/Park-Guell/parkguell_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day6/Park-Guell/parkguell_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day6/Park-Guell/parkguell_3.webp",
     ],
     descriptions: [
       "안토니 가우디가 후원자 에우세비 구엘의 의뢰를 받아 1900년부터 1914년까지 조성한 자연과 건축의 완벽한 융합 공간입니다. 원래는 60개 주택 단지를 위한 계획 도시로 설계되었으나 상업적으로 실패하고 1926년 바르셀로나 시립 공원으로 탈바꿈했습니다.",
@@ -328,11 +328,11 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "sagradafamilia",
-    title: "미완의 걸작, 사그라다 파밀리아 성가족 성당 (SAGRADA FAMÍLIA)",
+    title: "[관광정보] 사그라다 파밀리아 (SAGRADA FAMÍLIA)",
     images: [
-      "/products/western-mediterranean-cruise/sectrion6/day6/Sagrada-Familia/sagrada_1.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day6/Sagrada-Familia/sagrada_2.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day6/Sagrada-Familia/sagrada_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day6/Sagrada-Familia/sagrada_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day6/Sagrada-Familia/sagrada_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day6/Sagrada-Familia/sagrada_3.webp",
     ],
     descriptions: [
       "1882년 착공 이후 140년이 넘도록 건설 중인 가우디 최대의 역작으로, 완공 시 높이 172.5m에 달하는 18개의 탑이 하늘을 향해 솟아오를 예정입니다. 가우디는 1926년 세상을 떠날 때까지 생애의 절반 이상을 이 성당에 바쳤으며, \"나의 고객은 서두르지 않는다\"는 말을 남겼습니다.",
@@ -350,11 +350,11 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "casabatllo",
-    title: "용의 등뼈 건물, 까사 바트요 (CASA BATLLÓ)",
+    title: "[관광정보] 까사 바트요 (CASA BATLLÓ)",
     images: [
-      "/products/western-mediterranean-cruise/sectrion6/day6/Casa-Batllo/casabatllo_1.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day6/Casa-Batllo/casabatllo_2.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day6/Casa-Batllo/casabatllo_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day6/Casa-Batllo/casabatllo_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day6/Casa-Batllo/casabatllo_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day6/Casa-Batllo/casabatllo_3.webp",
     ],
     descriptions: [
       "1904년부터 1906년 사이 가우디가 기존 건물을 리모델링하여 완성한 건축 예술의 결정체로, 파세이그 드 그라시아(Passeig de Gràcia) 대로에서 단연 눈길을 사로잡는 존재입니다. 물결치는 듯한 외벽, 부서진 타일 조각(트렌카디스)으로 뒤덮인 파란색·초록색 파사드, 그리고 용의 등뼈를 닮은 지붕이 특징입니다.",
@@ -372,11 +372,11 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "casamila",
-    title: "채석장이라 불리는 가우디의 아파트, 까사 밀라 (CASA MILÀ - LA PEDRERA)",
+    title: "[관광정보] 까사 밀라 (CASA MILÀ)",
     images: [
-      "/products/western-mediterranean-cruise/sectrion6/day6/Casa-Mila/casamila_1.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day6/Casa-Mila/casamila_2.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day6/Casa-Mila/casamila_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day6/Casa-Mila/casamila_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day6/Casa-Mila/casamila_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day6/Casa-Mila/casamila_3.webp",
     ],
     descriptions: [
       "1906년부터 1912년 사이 가우디가 설계한 마지막 민간 건축물로, 파도치는 바위 산을 연상시키는 물결 모양의 석회암 외벽 때문에 바르셀로나 사람들로부터 '라 페드레라(La Pedrera, 채석장)'라는 별명을 얻었습니다.",
@@ -398,9 +398,9 @@ export const scheduleModalsData: ModalData[] = [
     id: "marseille",
     title: "[관광정보] 마르세유 (MARSEILLE)",
     images: [
-      "/products/western-mediterranean-cruise/sectrion6/day7/Marseille/marseille_1.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day7/Marseille/marseille_2.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day7/Marseille/marseille_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day7/Marseille/marseille_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day7/Marseille/marseille_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day7/Marseille/marseille_3.webp",
     ],
     descriptions: [
       "프랑스 제2의 도시이자 지중해의 관문, 마르세유.",
@@ -420,11 +420,11 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "notredamedelagarde",
-    title: "마르세유의 수호성당, 노트르담 드 라 가르드 (NOTRE-DAME DE LA GARDE)",
+    title: "[관광정보] 노트르담 성당 (NOTRE-DAME DE LA GARDE)",
     images: [
-      "/products/western-mediterranean-cruise/sectrion6/day7/Notre-Dame/notredame_1.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day7/Notre-Dame/notredame_2.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day7/Notre-Dame/notredame_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day7/Notre-Dame/notredame_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day7/Notre-Dame/notredame_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day7/Notre-Dame/notredame_3.webp",
     ],
     descriptions: [
       "해발 162m의 가르드 언덕 정상에 우뚝 선 노트르담 드 라 가르드 성당(Notre-Dame de la Garde)은 마르세유를 대표하는 가장 상징적인 랜드마크입니다.",
@@ -443,11 +443,11 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "vieuxport",
-    title: "마르세유의 발상지, 비외 포르 구항구 (VIEUX-PORT)",
+    title: "[관광정보] 비외 포르 (VIEUX-PORT)",
     images: [
-      "/products/western-mediterranean-cruise/sectrion6/day7/Vieux-Port/vieuxport_1.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day7/Vieux-Port/vieuxport_2.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day7/Vieux-Port/vieuxport_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day7/Vieux-Port/vieuxport_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day7/Vieux-Port/vieuxport_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day7/Vieux-Port/vieuxport_3.webp",
     ],
     descriptions: [
       "비외 포르(Vieux-Port), 즉 구항구는 기원전 600년 고대 그리스인들이 마르세유를 처음 세운 바로 그 자리로, 도시의 심장부이자 발상지입니다.",
@@ -466,11 +466,11 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "cathedraledelamajor",
-    title: "지중해 최대 성당, 마조르 대성당 (CATHÉDRALE DE LA MAJOR)",
+    title: "[관광정보] 마조르 대성당 (CATHÉDRALE DE LA MAJOR)",
     images: [
-      "/products/western-mediterranean-cruise/sectrion6/day7/Cathedrale-Major/major_1.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day7/Cathedrale-Major/major_2.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day7/Cathedrale-Major/major_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day7/Cathedrale-Major/major_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day7/Cathedrale-Major/major_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day7/Cathedrale-Major/major_3.webp",
     ],
     descriptions: [
       "마조르 대성당(Cathédrale de la Major)은 지중해 연안에서 19세기 이후 건축된 성당 중 가장 웅장한 규모를 자랑하는 걸작으로, 프랑스 최대 규모의 성당 중 하나입니다.",
@@ -493,9 +493,9 @@ export const scheduleModalsData: ModalData[] = [
     id: "genoa",
     title: "[관광정보] 제노아 (GENOVA)",
     images: [
-      "/products/western-mediterranean-cruise/sectrion6/day8/Genoa/genoa_1.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day8/Genoa/genoa_2.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day8/Genoa/genoa_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day8/Genoa/genoa_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day8/Genoa/genoa_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day8/Genoa/genoa_3.webp",
     ],
     descriptions: [
       "크리스토퍼 콜럼버스의 고향, 제노바.",
@@ -515,11 +515,11 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "sanlorenzo",
-    title: "제노바의 수호 대성당, 산 로렌초 대성당 (CATTEDRALE DI SAN LORENZO)",
+    title: "[관광정보] 산 로렌초 대성당 (CATTEDRALE DI SAN LORENZO)",
     images: [
-      "/products/western-mediterranean-cruise/sectrion6/day8/San-Lorenzo/sanlorenzo_1.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day8/San-Lorenzo/sanlorenzo_2.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day8/San-Lorenzo/sanlorenzo_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day8/San-Lorenzo/sanlorenzo_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day8/San-Lorenzo/sanlorenzo_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day8/San-Lorenzo/sanlorenzo_3.webp",
     ],
     descriptions: [
       "제노바의 심장부에 우뚝 선 산 로렌초 대성당은 도시의 수호성인을 기리는 로마 가톨릭 성당입니다.",
@@ -537,11 +537,11 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "palazzosangiorgio",
-    title: "마르코 폴로가 갇혔던 궁전, 팔라초 산 조르조 (PALAZZO SAN GIORGIO)",
+    title: "[관광정보] 팔라초 산 조르조 (PALAZZO SAN GIORGIO)",
     images: [
-      "/products/western-mediterranean-cruise/sectrion6/day8/Palazzo-San-Giorgio/palazzo_1.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day8/Palazzo-San-Giorgio/palazzo_2.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day8/Palazzo-San-Giorgio/palazzo_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day8/Palazzo-San-Giorgio/palazzo_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day8/Palazzo-San-Giorgio/palazzo_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day8/Palazzo-San-Giorgio/palazzo_3.webp",
     ],
     descriptions: [
       "제노바 항구 바로 앞에 자리한 팔라초 산 조르조는 1260년 건립된 제노바 최초의 공공 건물입니다.",
@@ -563,9 +563,9 @@ export const scheduleModalsData: ModalData[] = [
     id: "mscseaview",
     title: "MSC 씨뷰 (MSC SEAVIEW)",
     images: [
-      "/products/western-mediterranean-cruise/sectrion6/day2/msc_seaview_1.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day2/msc_seaview_2.webp",
-      "/products/western-mediterranean-cruise/sectrion6/day2/msc_seaview_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day2/msc_seaview_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day2/msc_seaview_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/sectrion6/day2/msc_seaview_3.webp",
     ],
     descriptions: [
       "MSC 크루즈의 초대형 럭셔리 선박, MSC 씨뷰.",
@@ -586,7 +586,7 @@ export const scheduleModalsData: ModalData[] = [
   // ─── Cruise At Sea Modal ───
   {
     type: "cruise-at-sea",
-    id: "mscseainterior",
+    id: "cruiseatsea",
     title: "MSC 씨뷰 전일 해상",
     images: [
       "/products/western-mediterranean-cruise/sectrion6/day3/day3_5.avif",
@@ -599,17 +599,10 @@ export const scheduleModalsData: ModalData[] = [
       "/products/western-mediterranean-cruise/sectrion6/day3/day3_6.webp",
     ],
     descriptions: [
-      "선내 자유시간: 수준 높은 무료 공연 관람 및 다채로운 부대시설 이용",
+      "오늘은 종일 해상에서 보내는 날입니다. MSC 씨뷰의 다양한 시설을 마음껏 즐겨보세요.",
+      "18층 Forest Aquaventure Park 워터파크에서 짜릿한 짚라인과 워터슬라이드를 체험하고, 4개의 수영장과 13개의 자쿠지에서 여유를 만끽하세요. 950석 규모의 대극장에서 브로드웨이 스타일의 화려한 공연을 관람하거나, MSC Aurea Spa에서 전문 테라피스트의 마사지로 피로를 풀어보세요.",
+      "메인 다이닝룸과 뷔페 레스토랑에서 세계 각국의 요리를 즐기시고, 워터프론트 보드워크를 거닐며 지중해의 풍경을 감상하며 특별한 하루를 보내시기 바랍니다.",
     ],
-    bulletPoints: [
-      "18층 Forest Aquaventure Park 워터파크와 짜릿한 짚라인을 즐겨보세요.",
-      "4개의 수영장과 13개의 자쿠지에서 지중해 바다를 만끽해 보세요.",
-      "950석 대극장에서 브로드웨이 스타일의 화려한 공연을 관람해 보세요.",
-      "MSC Aurea Spa에서 전문 테라피스트의 마사지로 피로를 풀어보세요.",
-      "워터프론트 보드워크를 거닐며 바다 풍경을 즐기고 다양한 레스토랑을 방문해 보세요.",
-      "스포츠 댄스 강습, 요가 강습 등 매일 다채롭게 열리는 선내 프로그램에 참여해 보세요.",
-    ],
-    closingText: "지중해 한가운데서 누리는 이 모든 휴식이 크루즈 여행의 진정한 매력입니다.",
     infoTable: [
       { label: "선박", value: "MSC 씨뷰 (MSC Seaview)" },
       { label: "주요 시설", value: "워터파크, 수영장 4개, 스파, 카지노, 대극장, 짚라인" },
@@ -644,14 +637,15 @@ export const scheduleModalsData: ModalData[] = [
         heading: "3. 승선 후 유의사항 (After Boarding)",
         items: [
           {
-            text: "승선 후 안내에 따라 지정된 장소에서 위급 상황 대처 교육을 이수해야 합니다.",
-            bold: "필수 안전 교육(Safety Drill):",
+            text: "필수 안전 교육(Safety Drill): 승선 후 안내에 따라 지정된 장소에서 위급 상황 대처 교육을 이수해야 합니다.",
+          },
+          {
+            text: "미이수 시 발생하는 실제 상황 (필독)",
             subItems: [
-              { text: "미이수 시 발생하는 실제 상황 (필독)", isWarning: true },
-              { text: "선사 시스템은 실시간으로 미이수자를 파악합니다. 교육을 마칠 때까지 이름이 공공연하게 방송되거나, 승무원이 선실로 직접 찾아와 참여를 독촉합니다.", bold: "끝까지 찾아내는 실시간 추적:" },
-              { text: "교육 미완료 시 선상 카드(SeaPass 등)가 정지됩니다. 이 경우 바(Bar)에서 음료 주문, 면세점 쇼핑, 카지노 이용 및 유료 레스토랑 예약 등 배 안의 모든 결제와 서비스 이용이 거부될 수 있습니다.", bold: "선상 카드 및 모든 유료 서비스 정지:" },
-              { text: "국제 해상법(SOLAS)에 의거, 끝내 불응할 경우 선장은 승객을 다음 기항지에서 강제로 내리게 할 권한이 있습니다.", bold: "선장 권한에 의한 '강제 하선' 조치:" },
-              { text: "규정 위반으로 인한 하선이므로 잔여 일정 환불이 전혀 안 되며, 집으로 돌아가는 항공편 비용도 본인이 직접 부담해야 하는 가장 심각한 상황이 발생할 수 있습니다.", isWarning: true, bold: "환불 및 보상 불가:" },
+              { text: "끝까지 찾아내는 실시간 추적: 선사 시스템은 실시간으로 미이수자를 파악합니다. 교육을 마칠 때까지 이름이 공공연하게 방송되거나, 승무원이 선실로 직접 찾아와 참여를 독촉합니다." },
+              { text: "선상 카드 및 모든 유료 서비스 정지: 교육 미완료 시 선상 카드(SeaPass 등)가 정지됩니다. 이 경우 바(Bar)에서 음료 주문, 면세점 쇼핑, 카지노 이용 및 유료 레스토랑 예약 등 배 안의 모든 결제와 서비스 이용이 거부될 수 있습니다." },
+              { text: "선장 권한에 의한 '강제 하선' 조치: 국제 해상법(SOLAS)에 의거, 끝내 불응할 경우 선장은 승객을 다음 기항지에서 강제로 내리게 할 권한이 있습니다." },
+              { text: "환불 및 보상 불가: 규정 위반으로 인한 하선이므로 잔여 일정 환불이 전혀 안 되며, 집으로 돌아가는 항공편 비용도 본인이 직접 부담해야 하는 가장 심각한 상황이 발생할 수 있습니다.", isWarning: true },
             ],
           },
           { text: "선사에서 운영하는 기항지 투어는 조기 마감될 수 있으므로 승선 첫날 신청하시기를 권장합니다. (변경/취소 시 수수료 발생 가능)", bold: "기항지 선택 관광:" },

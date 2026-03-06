@@ -1,5 +1,6 @@
 import type { ProductDefinition } from '@/data/types';
 import { companyInfo } from '@/data/shared/company';
+import { meta } from './meta';
 import { heroData } from './hero-data';
 import { tripInfoData } from './trip-info-data';
 import { introData } from './intro-data';
@@ -14,20 +15,7 @@ import { tripSummaryData } from './trip-summary-data';
 import { checklistData, headerData, footerData, mobileBottomBarData } from './static-data';
 
 export const southernMediterraneanCruise: ProductDefinition = {
-  meta: {
-    slug: 'southern-mediterranean-cruise',
-    name: '코스타 포르투나호 남부 지중해 크루즈 8박 10일',
-    shortDescription: '이스탄불 · 미코노스 · 크레타 · 로도스 · 산토리니 · 아테네',
-    thumbnailImage: '/shared/placeholder.png',
-    ogImage: '',
-    ogTitle: '',
-    ogDescription: '',
-    cardDepartureLabel: '26년 6월 27일 출발',
-    cardTitle: '남부 지중해 크루즈 8박 10일',
-    cardShipName: '코스타 포르투나호 (COSTA Fortuna)',
-    cardRoute: '이스탄불 > 미코노스 > 헤라클리온 > 로도스 > 산토리니 > 아테네',
-    cardPrice: '5,790,000원~',
-  },
+  meta,
   data: {
     hero: heroData,
     tripInfo: tripInfoData,

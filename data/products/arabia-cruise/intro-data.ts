@@ -7,7 +7,14 @@ export const introData: IntroData = {
   facilities: [
     {
       name: "엔터테인먼트",
-      images: ["/shared/placeholder.png"],
+      images: [
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/arabia-cruise/section3/entertainment/costa-toscana-entertainment-atrium-colosseo.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/arabia-cruise/section3/entertainment/costa-toscana-entertainment-theater-poltrona-frau.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/arabia-cruise/section3/entertainment/costa-toscana-entertainment-theater-poltrona-frau2.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/arabia-cruise/section3/entertainment/costa-toscana-sonstiges-casino-granducato-7-04960.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/arabia-cruise/section3/entertainment/costa-toscana-sonstiges-kids-video-arcade-04992.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/arabia-cruise/section3/entertainment/Costa_Smeralda_entertainment.webp",
+      ],
       alt: "코스타 토스카나 엔터테인먼트 시설",
       subtitle: "이탈리아 감성이 빚어낸 화려한 무대와 밤의 향연",
       description:
@@ -15,7 +22,14 @@ export const introData: IntroData = {
     },
     {
       name: "아웃도어 & 레저",
-      images: ["/shared/placeholder.png"],
+      images: [
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/arabia-cruise/section3/outdoor-leisure/4f728b34.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/arabia-cruise/section3/outdoor-leisure/costa-toscana-aussen-aqua-park-splash-17-18-05596.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/arabia-cruise/section3/outdoor-leisure/costa-toscana-aussen-aqua-park-splash-17-18-05598.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/arabia-cruise/section3/outdoor-leisure/costa-toscana-aussen-infinity-bar-terrace-7-05217.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/arabia-cruise/section3/outdoor-leisure/costa_cruises_activities_kids_teenagers.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/arabia-cruise/section3/outdoor-leisure/kopiera.webp",
+      ],
       alt: "코스타 토스카나 아웃도어 & 레저 시설",
       subtitle: "바다 하늘 아래 펼쳐지는 짜릿한 야외 놀이터",
       description:
@@ -23,7 +37,12 @@ export const introData: IntroData = {
     },
     {
       name: "힐링 & 웰니스",
-      images: ["/shared/placeholder.png"],
+      images: [
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/arabia-cruise/section3/healing-wellness/costa-toscana-spa-20220616_103958.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/arabia-cruise/section3/healing-wellness/costa-toscana-spa-20220616_104421.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/arabia-cruise/section3/healing-wellness/costa-toscana-spa-20220616_104819.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/arabia-cruise/section3/healing-wellness/costa-toscana-spa-fitness-05469.webp",
+      ],
       alt: "코스타 토스카나 힐링 & 웰니스 시설",
       subtitle: "바다 위에서 누리는 프리미엄 이탈리안 스파 체험",
       description:

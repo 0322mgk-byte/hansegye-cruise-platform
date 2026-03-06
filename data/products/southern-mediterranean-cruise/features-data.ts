@@ -51,7 +51,7 @@ export const featuresData: FeaturesData = {
       subtitle: "아름다운 바다를 한 눈에 볼 수 있는 야외 공간",
       description: "프라이빗 발코니가 있는 객실로, 슬라이딩 글라스 도어를 열면 지중해 바다와 기항지의 풍경을 독점으로 즐길 수 있습니다.",
       amenities: [
-        { iconName: "Maximize2", label: "객실 크기: 약 17m² + 발코니 약 3m² (총 약 20m²)", fullWidth: true },
+        { iconName: "Maximize2", label: "객실 크기: 약 17m² + 발코니 약 3m² (총 약 6.1평)", fullWidth: true },
         { iconName: "Armchair", label: "테이블 1개, 파티오 체어 2개 포함 프라이빗 발코니" },
         { iconName: "AppWindow", label: "슬라이딩 글라스 도어" },
         { iconName: "BedDouble", label: "트윈 베드 (퀸 사이즈 전환 가능)" },

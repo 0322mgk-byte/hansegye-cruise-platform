@@ -30,9 +30,9 @@ description: >
 |------|------|------|
 | 🔄 복사+교체 | 레퍼런스 복사 후 지정 필드만 교체 | hero, trip-info, schedule-labels, product-info |
 | 🔧 구조조정 | 일수/기항지에 맞게 구조 변경 | schedule-days, schedule-modals |
-| 🔬 조사반영 | Agent S/P 조사 결과로 내용 교체 | intro, features, details |
-| 🔒 그대로복사 | 레퍼런스에서 100% 그대로 복사 | pricing, trip-summary, static-data |
-| 🆕 자동생성 | 구조에 맞게 새로 생성 | index.ts |
+| 🔬 조사반영 | Agent S/V/P 조사·검증 결과로 내용 교체 | intro, features, details |
+| 🔒 그대로복사 | 레퍼런스에서 100% 그대로 복사 | trip-summary, static-data |
+| 🆕 자동생성 | 구조에 맞게 새로 생성 | meta.ts, index.ts |
 
 **레퍼런스 상품:** `data/products/alaska-cruise/` (각 파일 생성 전에 반드시 해당 레퍼런스 파일을 실제로 읽는다)
 **타입 정의:** `data/types.ts`
@@ -46,7 +46,7 @@ description: >
 사용자가 제공한 일정(텍스트 또는 이미지)에서 다음 정보를 추출:
 - 선박명 및 크루즈 선사
 - 출발일 및 기간 (N박 N일)
-- 항공사 및 항공편 정보 (직항 vs 경유)
+- 항공사 및 항공편 정보 (직항 vs 경유, 제공된 경우)
 - 기항지 도시 및 해상일
 - **각 일차별 개별 관광지/체험 이름 목록** (이름이 붙은 관광명소, 박물관, 사원, 전망대, 체험 투어 등을 모두 추출 — 이 목록이 tourist-spot 카드와 모달의 생성 근거가 됨)
 - 가격 데이터 (제공된 경우)
@@ -54,33 +54,41 @@ description: >
 
 ### 2단계: 서브에이전트 인터넷 조사 (병렬 실행)
 
-**기항지별 병렬 에이전트 아키텍처**를 사용한다. 선박 조사 1개 + 기항지별 조사 N개를 모두 동시에 실행:
+**기항지별 병렬 에이전트 아키텍처**를 사용한다. 선박 조사 1개 + 기항지별 조사 N개를 병렬 실행한 뒤, 객실 정보를 검증한다:
 
 ```
-[모두 병렬 실행]
-├── Agent S: 선박 조사 (제원 + 시설 + 객실)
+[1차: 병렬 실행]
+├── Agent S: 선박 조사 (제원 + 시설 + 객실) — 공식 사이트 기반
 ├── Agent P-1: 기항지 1 조사 (예: 두바이 — 도시 개요 + 관광지 3개)
 ├── Agent P-2: 기항지 2 조사 (예: 무스카트 — 도시 개요 + 관광지 2개)
 ├── Agent P-3: 기항지 3 조사 (예: 도하 — 도시 개요 + 관광지 2개)
 └── Agent P-4: 기항지 4 조사 (예: 아부다비 — 도시 개요 + 관광지 3개)
+
+[2차: Agent S 완료 후 실행]
+└── Agent V: 선박 정보 검증 (Agent S의 제원 + 객실 결과를 공식 사이트에서 교차 확인)
 ```
 
 각 기항지 에이전트가 해당 도시의 개요 + 모든 개별 관광지를 함께 조사한다. 같은 도시의 관광지는 교통, 문화, 지리 등 공유 컨텍스트가 있어 하나의 에이전트가 처리하는 것이 품질과 효율 면에서 최적이다.
 
 **해상일(sea day)**은 별도 에이전트를 배정하지 않는다. Agent S의 선박 시설 조사 결과를 활용하여 생성한다.
 
-**Agent S — 선박 조사:**
-크루즈 선박을 인터넷에서 조사하여 수집:
+**Agent S — 선박 조사 (공식 사이트 필수):**
+크루즈 선박의 정보를 **해당 선사의 공식 사이트**에서 우선적으로 수집한다:
 - 선박 제원: 톤수, 길이, 승무원, 높이(미터), 갑판 수(층), 승객 정원, 첫 항해, 객실 수
 - 시설 설명: 엔터테인먼트, 아웃도어 & 레저, 힐링 & 웰니스 (3개 카테고리)
-- 객실 스펙: 인사이드/오션뷰/발코니 객실 크기, 침대 타입, 어메니티
-- YouTube 선박 투어 영상 ID (찾을 수 있는 경우)
+- 객실 정보: **공식 사이트에 기재된 객실 타입별 어메니티를 있는 그대로** 수집 (임의 추가/생략 금지)
 
 Agent S 프롬프트 템플릿:
 ```
-크루즈 선박 "{선박명}"에 대한 상세 정보를 인터넷에서 검색해줘.
-필요한 정보:
-1. 선박 제원 (8항목, 반드시 구분하여 조사):
+크루즈 선박 "{선박명}"에 대한 상세 정보를 조사해줘.
+
+■ 필수 규칙:
+- 반드시 해당 선사의 공식 사이트(예: costacruises.com, princess.com, msccruises.com)에서 정보를 가져올 것
+- 모든 데이터 항목에 출처 URL을 기록할 것
+- 공식 사이트에 명시되지 않은 항목은 포함하지 말 것
+- 선박 제원 8항목 중 공식 사이트에서 확인할 수 없는 항목은 빈 문자열("")로 반환할 것 (부정확한 정보보다 빈 값이 낫다)
+
+■ 1. 선박 제원 (8항목, 반드시 구분하여 조사):
    - 총 톤수 (예: 113,561톤)
    - 길이 (예: 289.86m)
    - 승무원 수 (예: 약 1,200명)
@@ -89,15 +97,58 @@ Agent S 프롬프트 템플릿:
    - 갑판/층 수 (예: 19층, 20층) ※ 선박 높이와 별도
    - 첫 항해 연도 (예: 2007. 4. 11 또는 2018년)
    - 총 객실 수 (예: 1,539개)
-2. 선내 시설 3개 카테고리:
+   출처 URL: {공식 사이트 URL}
+
+■ 2. 선내 시설 3개 카테고리:
    - 엔터테인먼트: 극장, 공연, 카지노, 바
    - 아웃도어 & 레저: 수영장, 스포츠 코트, 워터파크, 조깅 트랙
    - 힐링 & 웰니스: 스파, 피트니스 센터, 사우나, 자쿠지
    각 카테고리별 subtitle(1줄)과 description(2-3문장, 한국어)을 작성
-3. 객실 타입 (인사이드, 오션뷰, 발코니):
-   각각: 면적(m²), 침대 구성, TV 크기, 냉장고 유무, 욕실 설비
-4. 선박 투어 YouTube 영상 ID (찾을 수 있다면)
-구조화된 형식으로 반환.
+   출처 URL: {공식 사이트 URL}
+
+■ 3. 객실 정보 (공식 사이트 기반 — 가장 중요):
+   공식 사이트에서 아래 3개 객실 카테고리에 해당하는 타입을 찾아 조사:
+   - 인사이드 (공식 사이트 표기: Interior, Inside, Classic Interior 등)
+   - 오션뷰 (공식 사이트 표기: Ocean View, Exterior, Classic Exterior 등)
+   - 발코니 (공식 사이트 표기: Balcony, Veranda, Classic Balcony 등)
+
+   각 객실 타입별:
+   a) 공식 사이트에서 사용하는 정확한 객실 타입 명칭
+   b) 면적(m²)
+   c) 공식 사이트에 기재된 어메니티/설비를 있는 그대로 전부 수집
+      - 공식 사이트에 나열된 항목만 포함 (임의 추가 금지)
+      - 항목 수는 공식 사이트에 있는 만큼만
+   d) 출처 URL
+
+■ 출력 형식:
+[선박 제원]
+- 출처: {URL}
+- 톤수: ... / 길이: ... / ...
+
+[선내 시설]
+- 출처: {URL}
+- 엔터테인먼트: subtitle + description
+- 아웃도어 & 레저: subtitle + description
+- 힐링 & 웰니스: subtitle + description
+
+[객실 정보]
+인사이드 (공식 명칭: {공식 사이트 표기})
+- 출처: {URL}
+- 면적: {m²}
+- 어메니티:
+  1. {공식 사이트 항목 그대로}
+  2. {공식 사이트 항목 그대로}
+  ...
+
+오션뷰 (공식 명칭: {공식 사이트 표기})
+- 출처: {URL}
+- 면적: {m²}
+- 어메니티: (상동)
+
+발코니 (공식 명칭: {공식 사이트 표기})
+- 출처: {URL}
+- 면적: {m²}
+- 어메니티: (상동)
 ```
 
 **Agent P-{N} — 기항지별 조사 (기항지 수만큼 병렬 생성):**
@@ -122,34 +173,155 @@ Agent P 프롬프트 템플릿:
 구조화된 형식으로 반환.
 ```
 
-### 3단계: 데이터 파일 13개 생성
+**Agent V — 선박 정보 검증 (Agent S 완료 후 실행):**
+Agent S가 반환한 **제원 + 객실 정보**의 정확성을 공식 사이트에서 교차 검증한다. Agent S → Agent V는 순차 실행 (V는 S의 결과에 의존). Agent P는 V와 무관하므로 병렬 진행된다.
 
-`data/products/{slug}/` 디렉토리를 생성하고 다음 순서로 파일 생성:
+Agent V 프롬프트 템플릿:
+```
+아래는 "{선박명}" 선박 조사 결과이다. 출처 URL을 직접 방문하여 교차 검증해줘.
+
+{Agent S의 출력 전체를 여기에 첨부}
+
+■ 검증 작업 A: 선박 제원 (8항목)
+1. Agent S가 제출한 출처 URL에 접속하여 각 제원 수치가 실제로 존재하는지 확인
+2. 공식 사이트에서 확인할 수 없는 항목은 value를 빈 문자열("")로 처리
+3. 단위(톤, m, 명, 층 등)가 올바른지 확인
+
+■ 검증 작업 B: 객실 정보
+1. Agent S가 제출한 출처 URL에 접속하여 해당 정보가 실제로 존재하는지 확인
+2. 면적(m²) 수치가 공식 사이트 표기와 일치하는지 확인
+3. 어메니티 항목이 공식 사이트에 실제로 기재되어 있는지 1:1 대조
+4. 공식 사이트에는 있지만 Agent S가 누락한 항목이 있는지 확인하여 보충
+5. 공식 사이트에 없는 항목이 Agent S 결과에 포함되어 있으면 제거
+
+■ 출력 형식:
+[제원 검증 결과]
+- 공식 사이트 URL: {직접 방문하여 확인한 URL}
+- 톤 수: {확인된 값 또는 ""} — 확인/불일치/미확인
+- 길이: {확인된 값 또는 ""} — 확인/불일치/미확인
+- 승무원: {확인된 값 또는 ""} — 확인/불일치/미확인
+- 높이: {확인된 값 또는 ""} — 확인/불일치/미확인
+- 승객 정원: {확인된 값 또는 ""} — 확인/불일치/미확인
+- 규모: {확인된 값 또는 ""} — 확인/불일치/미확인
+- 첫 항해: {확인된 값 또는 ""} — 확인/불일치/미확인
+- 객실 수: {확인된 값 또는 ""} — 확인/불일치/미확인
+
+[객실 검증 결과]
+- 공식 사이트 URL: {직접 방문하여 확인한 URL}
+- 검증 상태: 각 항목별 확인/불일치/미확인
+
+[확정 객실 데이터] (검증 통과 항목만)
+인사이드 (공식 명칭: {공식 사이트 표기})
+- 면적: {확인된 m²}
+- 어메니티:
+  1. {확인된 항목}
+  2. {확인된 항목}
+  ...
+
+오션뷰 (공식 명칭: ...)
+- ...
+
+발코니 (공식 명칭: ...)
+- ...
+```
+
+### 3단계: 데이터 파일 14개 생성
+
+`data/products/{slug}/` 디렉토리를 생성하고 다음 순서로 파일 생성 (총 14개):
 
 | # | 파일 | 마커 | 작업 방식 | 참조 문서 |
 |---|------|------|----------|----------|
 | 1 | `hero-data.ts` | 🔄 | 레퍼런스 복사 → 지정 필드 교체 | `references/data-structure.md` Section 1 |
 | 2 | `trip-info-data.ts` | 🔄 | 레퍼런스 복사 → 항공편/기항지 교체 | `references/data-structure.md` Section 2 |
 | 3 | `intro-data.ts` | 🔬 | 레퍼런스 구조 복사 → Agent S 내용 반영 | `references/data-structure.md` Section 3 |
-| 4 | `features-data.ts` | 🔬 | 레퍼런스 구조 복사 → Agent S 내용 반영 | `references/data-structure.md` Section 4 |
-| 5 | `details-data.ts` | 🔬 | 레퍼런스 구조 복사 → Agent S specs value 교체 | `references/data-structure.md` Section 5 |
+| 4 | `features-data.ts` | 🔬 | 레퍼런스 구조 참고 → Agent V 검증 데이터 반영 | `references/data-structure.md` Section 4 |
+| 5 | `details-data.ts` | 🔬 | 레퍼런스 구조 복사 → Agent V 검증 제원 데이터 반영 | `references/data-structure.md` Section 5 |
 | 6 | `schedule-labels-data.ts` | 🔄 | 레퍼런스 복사 → 선박명/날짜만 교체 | `references/data-structure.md` Section 6 |
 | 7 | `schedule-days-data.ts` | 🔧 | 일수에 맞게 구조 변경 | `references/timeline-items.md` |
 | 8 | `schedule-modals-data.ts` | 🔧 | 기항지에 맞게 모달 구성 | `references/timeline-items.md` |
-| 9 | `pricing-data.ts` | 🔒 | **레퍼런스 그대로 복사** (가격 미제공 시) | `references/data-structure.md` Section 9 |
-| 10 | `product-info-data.ts` | 🔄 | 레퍼런스 복사 → 항공사/선박/기항지명만 교체 | `references/data-structure.md` Section 10 |
+| 9 | `product-info-data.ts` | 🔄 | 레퍼런스 복사 → 항공사/선박/기항지명만 교체 | `references/data-structure.md` Section 7 |
+| 10 | `pricing-data.ts` | 🔄 | 사용자가 가격 제공 시 교체, 미제공 시 레퍼런스 그대로 | `references/data-structure.md` Section 8 |
 | 11 | `trip-summary-data.ts` | 🔒 | 레퍼런스에서 **그대로 복사** | `references/example-patterns.md` Section 4 |
 | 12 | `static-data.ts` | 🔒 | 레퍼런스에서 **그대로 복사** | `references/example-patterns.md` Section 5 |
-| 13 | `index.ts` | 🆕 | 자동 생성 | `references/example-patterns.md` Section 6 |
+| 13 | `meta.ts` | 🆕 | 자동 생성 (홈페이지 카드용 메타 정보) | `references/example-patterns.md` Section 6-A |
+| 14 | `index.ts` | 🆕 | 자동 생성 (meta import + data 조립) | `references/example-patterns.md` Section 6-B |
 
 **중요:** 각 파일 생성 전에 반드시 **알래스카 레퍼런스의 해당 파일을 실제로 읽고**, 참조 문서에서 교체할 필드 목록을 확인한다. 레퍼런스를 읽지 않고 템플릿에서 생성하면 안 된다.
 
 ### 4단계: 등록 및 검증
 
-1. `data/products/index.ts` (중앙 레지스트리)에 새 상품 추가
+1. `data/products/index.ts` (중앙 레지스트리)에 새 상품 추가: meta import + productMetas 배열 + productLoaders 항목 3곳 추가 (Section 8 참조)
 2. `public/shared/placeholder.png` 존재 확인 (없으면 생성 — 400x300 회색 PNG)
 3. `npm run build` 실행하여 TypeScript 타입 에러 검증
 4. 새 상품 URL 안내: `/products/{slug}`
+
+### 5단계: 에셋 폴더 생성
+
+3단계에서 생성한 데이터 파일을 기반으로 `public/products/{slug}/` 에셋 폴더 구조를 생성한다. 이 폴더에 사용자가 나중에 이미지와 영상을 넣는다.
+
+#### 고정 폴더 (항상 생성)
+
+```
+public/products/{slug}/
+├── hero-video/          ← 히어로 영상
+│   ├── desktop/         ← 데스크톱 영상 (mp4)
+│   └── mobile/          ← 모바일 영상 (mp4)
+├── section3/            ← 크루즈 시설 안내 (intro-data.ts)
+│   ├── entertainment/
+│   ├── outdoor-leisure/
+│   └── healing-wellness/
+├── section4/            ← 숙박 시설 (features-data.ts)
+│   ├── inside/          ← 인사이드 객실 대표 이미지 1장
+│   ├── oceanview/       ← 오션뷰 객실 대표 이미지 1장
+│   └── balcony/         ← 발코니 객실 대표 이미지 1장
+└── section5/            ← 크루즈 제원 (details-data.ts)
+    ├── desktop/         ← 데스크톱용 제원 영상
+    └── mobile/          ← 모바일용 제원 영상
+```
+
+- OG 이미지는 `public/products/{slug}/` 루트에 직접 배치 (폴더 불필요)
+- section3 하위 폴더명은 고정 (모든 상품이 동일한 3개 카테고리 사용)
+
+#### section6 (일정별 관광지 이미지)
+
+3단계에서 생성한 `schedule-days-data.ts`를 기반으로 생성한다.
+
+```
+public/products/{slug}/
+└── section6/
+    ├── day2/
+    │   ├── Dubai/
+    │   ├── Museum-of-the-Future/
+    │   └── ...
+    ├── day3/
+    └── ...
+```
+
+**dayN 폴더 생성 규칙:**
+- `scheduleDaysData`에서 `tourist-spot` 또는 `cruise-at-sea` 타입 아이템이 **1개 이상** 있는 일차만 생성
+- 해당 아이템이 없는 일차(출발일, 귀국일 등)는 생성하지 않음
+
+**dayN 하위 폴더 생성 규칙:**
+- `tourist-spot` 또는 `cruise-at-sea` 아이템이 **2개 이상**인 일차 → 각 관광지별 하위 폴더 생성
+- **1개**인 일차 → 하위 폴더 없이 플랫 구조 (이미지를 dayN/ 에 직접 배치)
+
+**하위 폴더 네이밍:**
+
+모달 `title`의 괄호 `()` 안 텍스트를 그대로 사용한다:
+1. 모달 `title`에서 괄호 안 텍스트를 추출
+2. Title Case로 변환, 단어 간 하이픈으로 연결
+3. 관사/전치사(of, the, at, in)는 소문자 유지
+
+| 모달 title | 폴더명 |
+|---|---|
+| `[관광정보] 이스탄불 (ISTANBUL)` | `Istanbul` |
+| `[관광정보] 하기아 소피아 (HAGIA SOPHIA)` | `Hagia-Sophia` |
+| `[관광정보] 톱카프 궁전 (TOPKAPI PALACE)` | `Topkapi-Palace` |
+| `[관광정보] 카스르 알 와탄 (QASR AL WATAN)` | `Qasr-Al-Watan` |
+| `[관광정보] 예류지질공원 (YEHLIU GEOPARK)` | `Yehliu-Geopark` |
+| `[관광정보] 미코노스 풍차 (KATO MILI WINDMILLS)` | `Kato-Mili-Windmills` |
+
+**생성 명령:** `mkdir -p`로 전체 구조를 한 번에 생성한다.
 
 ---
 
@@ -161,50 +333,23 @@ Agent P 프롬프트 템플릿:
 - 각 `▣ ...`은 해당 아이템의 `details` 배열 원소가 된다
 - 사용자가 `▣` 항목을 제공하지 않은 텍스트 아이템은 `details` 필드를 생략한다
 - AI가 임의로 details 항목을 추가/삭제/이동하지 않는다
+- **예외 — 항공편 출발 아이템의 필수 표준 항목:** 사용자가 `▣`로 제공하지 않았더라도 아래 2개는 항상 details에 포함한다. 사용자가 제공했으면 그 값을 쓰고, 미제공이면 자동 보충한다:
+  - `시차 : 한국보다 {N}시간 느립니다/빠릅니다.` — 메인 에이전트가 목적지 기준으로 판단 (서머타임 미적용, 대표 시차)
+  - `항공 시간 및 편수는 변경될 수 있습니다.` — 고정 문구
 
-이 원칙은 1일차(출발일), 마지막 일차(귀국일) 등 모든 일차의 text 아이템에 적용된다. 상세 매핑 규칙은 `references/timeline-items.md`의 "First Day" 패턴 참조.
+이 원칙은 1일차(출발일), 마지막 일차(귀국일) 등 모든 일차의 text 아이템에 적용된다. 상세 매핑 규칙은 `references/timeline-items.md`의 "출발일 예시" 참조.
 
 ### 관광지 카드 세분화 (가장 중요한 규칙)
-사용자가 제공한 일정에서 **이름이 붙은 관광지/체험**마다 개별 `tourist-spot` 카드를 생성한다. 기항지 관광일의 카드 구성은 반드시 다음과 같다:
+사용자가 제공한 일정에서 **이름이 붙은 관광지/체험**마다 개별 `tourist-spot` 카드를 생성한다. 기항지 관광일의 카드 구성:
 
-1. **도시 개요 카드 1개** — `title: '[관광 정보] {도시명}'` 형식. 도시 전체를 소개.
-2. **개별 관광지 카드 N개** — 사용자 데이터에 이름이 나온 각 관광명소/체험마다 1개씩. `title`은 설명적 제목 사용 (예: `'미완의 걸작, 사그라다 파밀리아 [입장]'`).
+1. **도시 개요 카드 1개** — `title: '[관광 정보] {도시명} ({로마자})'` 형식
+2. **개별 관광지 카드 N개** — `title: '[관광 정보] {관광지명} ({로마자})'` 형식, 각 관광명소/체험마다 1개씩
 
-각 tourist-spot 카드에는 대응하는 모달 데이터도 `schedule-modals-data.ts`에 반드시 함께 생성해야 한다.
-
-**카드로 만드는 항목:** 이름이 있는 관광명소, 박물관, 사원, 전망대, 체험 투어 (사막 사파리, 유람선 등)
-**카드로 만들지 않는 항목 (text 타입 사용):** "자유시간", "쇼핑몰 방문", "항구 복귀", "공항 이동" 등
-
-예시 — 사용자 데이터:
-> 두바이 미래 박물관 [외관], 팜 주메이라 전망대 [내부], 사막 사파리 투어
-
-→ 생성할 카드 4개:
-1. `[관광 정보] 두바이` — 도시 개요 (modalId: `dubai`)
-2. `두바이 미래 박물관` — 개별 카드 (modalId: `museumofthefuture`)
-3. `팜 주메이라 전망대` — 개별 카드 (modalId: `palmjumeirah`)
-4. `사막 사파리 투어` — 개별 카드 (modalId: `desertsafari`)
+상세 규칙, 예시 및 카드 생성 기준은 `references/timeline-items.md`의 tourist-spot 섹션 참조.
 
 ### Google Maps 지도 자동 생성
-tourist-spot 모달에는 반드시 지도를 포함한다. `googleMapQuery`로부터 `googleMapEmbed`를 **자동 생성**한다:
-
-```
-googleMapEmbed: 'https://maps.google.com/maps?q={googleMapQuery의 공백을 +로 치환}&t=&z=15&ie=UTF8&iwloc=&output=embed'
-```
-
-예시:
-```typescript
-googleMapQuery: 'Hagia Sophia,Istanbul,Turkey',
-googleMapEmbed: 'https://maps.google.com/maps?q=Hagia+Sophia,Istanbul,Turkey&t=&z=15&ie=UTF8&iwloc=&output=embed',
-```
-
-| 모달 타입 | 지도 포함 |
-|-----------|----------|
-| tourist-spot (도시 개요 + 개별 관광지) | **YES** — 반드시 포함 |
-| cruise-at-sea | NO |
-| ship-info | NO |
-| shore-excursion | NO |
-| info (승선/하선) | NO |
-
+tourist-spot 모달에는 반드시 지도를 포함한다. `googleMapQuery`로부터 `googleMapEmbed`를 자동 생성한다.
+생성 규칙 및 모달 타입별 포함 여부는 `references/timeline-items.md`의 "googleMapEmbed 자동 생성 규칙" 참조.
 Agent P에게 embed URL 조사를 요청하지 않는다 — `googleMapQuery`만 조사하면 embed URL은 자동 생성된다.
 
 ### 이미지/영상 처리
@@ -219,11 +364,14 @@ Agent P에게 embed URL 조사를 요청하지 않는다 — `googleMapQuery`만
 | `thumbnailImage` | `"/shared/placeholder.png"` |
 | `ogImage` | `""` (빈 문자열) |
 
+### 빌딩 블록 조립 방식
+각 일차의 구성은 고정 템플릿이 아니라, 사용자 데이터를 읽고 해당하는 블록만 골라 조립한다. 블록 선택 기준, 배치 순서, 엣지 케이스 처리 규칙은 `references/timeline-items.md`의 "빌딩 블록 조립 방식" 섹션 참조.
+
 ### 동적 일수 생성
 `scheduleDaysData` 배열의 항목 수 = UI 아코디언 개수. 크루즈가 8박 11일이면 `DayScheduleData` 객체 11개를 생성한다.
 
 ### 직항 vs 경유 항공편
-`references/data-structure.md` Section 2의 분기 로직 참조. 직항은 배열에 FlightLeg 1개, 경유는 FlightLeg 2개 + `arriveLayover`/`departLayover` 라벨 필드 추가.
+`references/data-structure.md` Section 2의 분기 로직 참조. 직항은 배열에 FlightLeg 1개, 경유는 FlightLeg 2개 + `arriveLayover`/`departLayover` 라벨 필드 추가. 항공편 정보가 제공되지 않은 경우 항공편 관련 필드를 생략한다.
 
 ### 승선/하선 수속 안내 (Info Cards)
 승선(`modalId: "boarding"`) 및 하선(`modalId: "disembarkation"`) info-card와 해당 info 모달은 알래스카 레퍼런스에서 그대로 복사한다. title 필드의 선박명만 변경. `references/example-patterns.md` Section 7 참조.

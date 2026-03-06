@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import type { HeroData } from "@/data/types";
 
@@ -9,11 +10,20 @@ interface HeroProps {
 
 export default function Hero({ data }: HeroProps) {
     const { ctaText, cruiseLine, departureDate, duration, description, mobileDescription, videoSources, mobileVideoSrc, mobileVideoSources } = data;
+    const [isMobile, setIsMobile] = useState<boolean | null>(null);
+
+    useEffect(() => {
+        const mq = window.matchMedia("(max-width: 767px)");
+        setIsMobile(mq.matches);
+        const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+        mq.addEventListener("change", handler);
+        return () => mq.removeEventListener("change", handler);
+    }, []);
 
     return (
         <div id="hero">
             {/* Mobile Hero */}
-            <section className="md:hidden bg-gray-100 pt-14">
+            {isMobile !== false && <section className={`bg-gray-100 pt-14${isMobile === null ? " md:hidden" : ""}`}>
                 <div className="px-4 pt-12 text-center">
                     <h1 className="text-[24px] font-bold leading-tight tracking-tight text-gray-900">
                         {cruiseLine}
@@ -45,10 +55,10 @@ export default function Hero({ data }: HeroProps) {
                         </video>
                     </div>
                 </div>
-            </section>
+            </section>}
 
             {/* Desktop Hero */}
-            <section className="hidden md:flex relative min-h-svh items-center overflow-hidden bg-gray-900 pt-20">
+            {isMobile !== true && <section className={`relative min-h-svh items-center overflow-hidden bg-gray-900 pt-20${isMobile === null ? " hidden md:flex" : " flex"}`}>
                 {/* Video Background */}
                 <div className="absolute inset-0 z-0 pointer-events-none">
                     <div className="absolute inset-0 bg-black/60 z-10" />
@@ -96,7 +106,7 @@ export default function Hero({ data }: HeroProps) {
                         <div className="w-1.5 h-1.5 rounded-full bg-white" />
                     </div>
                 </div>
-            </section>
+            </section>}
         </div>
     );
 }

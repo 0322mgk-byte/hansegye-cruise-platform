@@ -9,7 +9,7 @@ export default function TripInfo({ data, duration }: TripInfoProps) {
     const { title, subtitle, labels, flights, routeCities, reservationStatus, reservationCount, escortInfo, meetingPlace } = data;
 
     const tripData = [
-        {
+        ...(flights ? [{
             label: labels.schedule,
             value: (
                 <div>
@@ -66,7 +66,7 @@ export default function TripInfo({ data, duration }: TripInfoProps) {
                     </div>
                 </div>
             )
-        },
+        }] : []),
         {
             label: labels.routeRegion,
             value: (

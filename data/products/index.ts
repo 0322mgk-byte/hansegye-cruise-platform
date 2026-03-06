@@ -1,21 +1,38 @@
 import type { ProductDefinition, ProductMeta } from '@/data/types';
-import { alaskaCruise } from './alaska-cruise';
-import { northEuropeCruise } from './north-europe-cruise';
-import { westernMediterraneanCruise } from './western-mediterranean-cruise';
-import { arabiaCruise } from './arabia-cruise';
-import { southernMediterraneanCruise } from './southern-mediterranean-cruise';
-import { okinawaTaiwanCruise } from './okinawa-taiwan-cruise';
 
-const products: ProductDefinition[] = [alaskaCruise, northEuropeCruise, westernMediterraneanCruise, arabiaCruise, southernMediterraneanCruise, okinawaTaiwanCruise];
+// Lightweight meta-only imports (no heavy schedule/modal data)
+import { meta as alaskaMeta } from './alaska-cruise/meta';
+import { meta as northEuropeMeta } from './north-europe-cruise/meta';
+import { meta as westernMedMeta } from './western-mediterranean-cruise/meta';
+import { meta as arabiaMeta } from './arabia-cruise/meta';
+import { meta as southernMedMeta } from './southern-mediterranean-cruise/meta';
+import { meta as okinawaTaiwanMeta } from './okinawa-taiwan-cruise/meta';
+
+const productMetas: ProductMeta[] = [
+  alaskaMeta,
+  northEuropeMeta,
+  westernMedMeta,
+  arabiaMeta,
+  southernMedMeta,
+  okinawaTaiwanMeta,
+];
 
 export function getAllProductMetas(): ProductMeta[] {
-  return products.map(p => p.meta);
+  return productMetas;
 }
 
 export async function getProductBySlug(slug: string): Promise<ProductDefinition | null> {
-  return products.find(p => p.meta.slug === slug) ?? null;
+  switch (slug) {
+    case 'alaska-cruise': return (await import('./alaska-cruise')).alaskaCruise;
+    case 'north-europe-cruise': return (await import('./north-europe-cruise')).northEuropeCruise;
+    case 'western-mediterranean-cruise': return (await import('./western-mediterranean-cruise')).westernMediterraneanCruise;
+    case 'arabia-cruise': return (await import('./arabia-cruise')).arabiaCruise;
+    case 'southern-mediterranean-cruise': return (await import('./southern-mediterranean-cruise')).southernMediterraneanCruise;
+    case 'okinawa-taiwan-cruise': return (await import('./okinawa-taiwan-cruise')).okinawaTaiwanCruise;
+    default: return null;
+  }
 }
 
 export function getAllSlugs(): string[] {
-  return products.map(p => p.meta.slug);
+  return productMetas.map(m => m.slug);
 }

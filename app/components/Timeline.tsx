@@ -55,29 +55,24 @@ const InfoCardListItems = ({ items }: { items: InfoCardListItem[] }) => (
   <ul className="mt-2 space-y-1.5 ml-4 list-disc">
     {items.map((listItem, lIdx) => (
       <li key={lIdx} className={listItem.isWarning ? "text-red-500" : ""}>
-        {listItem.isWarning && "\u26A0\uFE0F "}
+
         {listItem.bold && (
           <span className={`font-semibold ${listItem.isWarning ? "" : "text-gray-700"}`}>{listItem.bold} </span>
         )}
-        {listItem.text}
+        {listItem.subItems && listItem.subItems.length > 0 && !listItem.isWarning ? (
+          <span className="text-red-500">{listItem.text}</span>
+        ) : (
+          listItem.text
+        )}
         {listItem.subItems && listItem.subItems.length > 0 && (
-          <div className="mt-3 mb-3 bg-red-50/60 border border-red-200 px-4 py-3 -ml-4 space-y-3">
+          <ul className="mt-2 space-y-1.5 ml-4 list-disc">
             {listItem.subItems.map((sub, sIdx) => (
-              <div key={sIdx}>
-                {sub.isWarning ? (
-                  <p className="text-red-600 font-semibold">
-                    {"\u26A0\uFE0F "}{sub.bold && `${sub.bold} `}{sub.text}
-                  </p>
-                ) : (
-                  <p className="flex items-start gap-1.5">
-                    <span className="text-gray-400 flex-shrink-0 mt-0.5">•</span>
-                    <span><span className="font-semibold text-gray-800">{sub.bold}</span>
-                    {" "}{sub.text}</span>
-                  </p>
-                )}
-              </div>
+              <li key={sIdx}>
+                {sub.bold && <span className="font-semibold text-gray-700">{sub.bold} </span>}
+                {sub.isWarning ? <span className="text-red-500">{sub.text}</span> : sub.text}
+              </li>
             ))}
-          </div>
+          </ul>
         )}
       </li>
     ))}

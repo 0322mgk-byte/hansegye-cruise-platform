@@ -9,9 +9,9 @@ export const scheduleModalsData: ModalData[] = [
     id: "hamburg",
     title: "[관광정보] 함부르크 (HAMBURG)",
     images: [
-      "/products/north-europe-cruise/sectrion6/day2/Hamburg/hamburg_1.webp",
-      "/products/north-europe-cruise/sectrion6/day2/Hamburg/hamburg_2.webp",
-      "/products/north-europe-cruise/sectrion6/day2/Hamburg/hamburg_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day2/Hamburg/hamburg_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day2/Hamburg/hamburg_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day2/Hamburg/hamburg_3.webp",
     ],
     descriptions: [
       "독일 북부 최대의 항구도시, 함부르크.",
@@ -30,11 +30,11 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "hamburgerrathaus",
-    title: "네오르네상스의 걸작, 함부르크 시청 (HAMBURGER RATHAUS)",
+    title: "[관광정보] 함부르크 시청 (HAMBURGER RATHAUS)",
     images: [
-      "/products/north-europe-cruise/sectrion6/day2/Hamburg/rathaus_1.webp",
-      "/products/north-europe-cruise/sectrion6/day2/Hamburg/rathaus_2.webp",
-      "/products/north-europe-cruise/sectrion6/day2/Hamburg/rathaus_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day2/Hamburg/rathaus_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day2/Hamburg/rathaus_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day2/Hamburg/rathaus_3.webp",
     ],
     descriptions: [
       "1842년 대화재로 옛 시청이 소실된 후, 7명의 건축가가 참여하여 1886년부터 11년간 건설해 1897년에 완공한 네오르네상스 양식의 걸작입니다.",
@@ -54,11 +54,11 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "stmichaelis",
-    title: "함부르크의 상징, 성미카엘 교회 (ST. MICHAELIS KIRCHE)",
+    title: "[관광정보] 성미카엘 교회 (ST. MICHAELIS)",
     images: [
-      "/products/north-europe-cruise/sectrion6/day2/Hamburg/stmichaelis_1.webp",
-      "/products/north-europe-cruise/sectrion6/day2/Hamburg/stmichaelis_2.webp",
-      "/products/north-europe-cruise/sectrion6/day2/Hamburg/stmichaelis_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day2/Hamburg/stmichaelis_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day2/Hamburg/stmichaelis_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day2/Hamburg/stmichaelis_3.webp",
     ],
     descriptions: [
       "함부르크 시민들이 애칭으로 '미헬(Michel)'이라 부르는 성미카엘 교회는 북독일 바로크 건축의 대표작이자 함부르크의 가장 유명한 랜드마크입니다.",
@@ -78,11 +78,11 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "alterelbtunnel",
-    title: "유럽 최초의 수중 터널, 알터 엘베 터널 (ALTER ELBTUNNEL)",
+    title: "[관광정보] 알터 엘베 터널 (ALTER ELBTUNNEL)",
     images: [
-      "/products/north-europe-cruise/sectrion6/day2/Hamburg/elbtunnel_1.webp",
-      "/products/north-europe-cruise/sectrion6/day2/Hamburg/elbtunnel_2.webp",
-      "/products/north-europe-cruise/sectrion6/day2/Hamburg/elbtunnel_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day2/Hamburg/elbtunnel_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day2/Hamburg/elbtunnel_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day2/Hamburg/elbtunnel_3.webp",
     ],
     descriptions: [
       "1907년 착공하여 1911년에 개통된 알터 엘베 터널은 유럽 대륙 최초의 하저(河底) 터널로, 엘베강 수면 아래 24m 깊이에 건설된 토목 공학의 걸작입니다.",
@@ -102,11 +102,11 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "plantenunblomen",
-    title: "도심 속 초록빛 오아시스, 플란텐 운 블로멘 (PLANTEN UN BLOMEN)",
+    title: "[관광정보] 플란텐 운 블로멘 (PLANTEN UN BLOMEN)",
     images: [
-      "/products/north-europe-cruise/sectrion6/day2/Hamburg/planten_1.webp",
-      "/products/north-europe-cruise/sectrion6/day2/Hamburg/planten_2.webp",
-      "/products/north-europe-cruise/sectrion6/day2/Hamburg/planten_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day2/Hamburg/planten_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day2/Hamburg/planten_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day2/Hamburg/planten_3.webp",
     ],
     descriptions: [
       "'플란텐 운 블로멘'은 저지 독일어로 '식물과 꽃'이라는 뜻으로, 함부르크 도심 한가운데 47헥타르에 펼쳐진 시민의 휴식처입니다.",
@@ -130,9 +130,9 @@ export const scheduleModalsData: ModalData[] = [
     id: "copenhagen",
     title: "[관광정보] 코펜하겐 (COPENHAGEN)",
     images: [
-      "/products/north-europe-cruise/sectrion6/day4/Copenhagen/copenhagen_1.webp",
-      "/products/north-europe-cruise/sectrion6/day4/Copenhagen/copenhagen_2.webp",
-      "/products/north-europe-cruise/sectrion6/day4/Copenhagen/copenhagen_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day4/Copenhagen/copenhagen_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day4/Copenhagen/copenhagen_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day4/Copenhagen/copenhagen_3.webp",
     ],
     descriptions: [
       "동화의 나라 덴마크의 수도, 코펜하겐.",
@@ -151,11 +151,11 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "littlemermaid",
-    title: "코펜하겐의 상징, 인어공주 동상 (DEN LILLE HAVFRUE)",
+    title: "[관광정보] 인어공주 동상 (THE LITTLE MERMAID)",
     images: [
-      "/products/north-europe-cruise/sectrion6/day4/Copenhagen/mermaid_1.webp",
-      "/products/north-europe-cruise/sectrion6/day4/Copenhagen/mermaid_2.webp",
-      "/products/north-europe-cruise/sectrion6/day4/Copenhagen/mermaid_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day4/Copenhagen/mermaid_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day4/Copenhagen/mermaid_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day4/Copenhagen/mermaid_3.webp",
     ],
     descriptions: [
       "한스 크리스티안 안데르센의 동화 '인어공주'에서 영감을 받아 1913년 조각가 에드바르드 에릭센이 제작한 브론즈 상으로, 코펜하겐의 가장 대표적인 상징물입니다.",
@@ -175,11 +175,11 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "gefionfountain",
-    title: "북유럽 신화의 웅장한 분수, 게피온 분수 (GEFION FOUNTAIN)",
+    title: "[관광정보] 게피온 분수 (GEFION FOUNTAIN)",
     images: [
-      "/products/north-europe-cruise/sectrion6/day4/Copenhagen/gefion_1.webp",
-      "/products/north-europe-cruise/sectrion6/day4/Copenhagen/gefion_2.webp",
-      "/products/north-europe-cruise/sectrion6/day4/Copenhagen/gefion_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day4/Copenhagen/gefion_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day4/Copenhagen/gefion_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day4/Copenhagen/gefion_3.webp",
     ],
     descriptions: [
       "덴마크 조각가 안데르스 분가르드가 1908년에 완성한 코펜하겐 최대 규모의 분수로, 북유럽 신화 속 여신 게피온이 네 마리 황소를 몰아 땅을 쟁기질하는 장면을 역동적으로 표현하고 있습니다.",
@@ -199,11 +199,11 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "amalienborg",
-    title: "덴마크 왕실의 거처, 아말리엔보르 궁전 (AMALIENBORG PALACE)",
+    title: "[관광정보] 아말리엔보르성 (AMALIENBORG)",
     images: [
-      "/products/north-europe-cruise/sectrion6/day4/Copenhagen/amalienborg_1.webp",
-      "/products/north-europe-cruise/sectrion6/day4/Copenhagen/amalienborg_2.webp",
-      "/products/north-europe-cruise/sectrion6/day4/Copenhagen/amalienborg_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day4/Copenhagen/amalienborg_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day4/Copenhagen/amalienborg_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day4/Copenhagen/amalienborg_3.webp",
     ],
     descriptions: [
       "1794년 크리스티안보르 궁전 화재 이후 덴마크 왕실의 공식 거처가 된 아말리엔보르 궁전은, 팔각형 광장을 중심으로 네 개의 동일한 로코코 양식 건물이 대칭을 이루는 18세기 건축의 걸작입니다.",
@@ -223,11 +223,11 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "nyhavn",
-    title: "동화 같은 알록달록 운하, 뉘하운 (NYHAVN)",
+    title: "[관광정보] 뉘하운 운하 (NYHAVN)",
     images: [
-      "/products/north-europe-cruise/sectrion6/day4/Copenhagen/nyhavn_1.webp",
-      "/products/north-europe-cruise/sectrion6/day4/Copenhagen/nyhavn_2.webp",
-      "/products/north-europe-cruise/sectrion6/day4/Copenhagen/nyhavn_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day4/Copenhagen/nyhavn_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day4/Copenhagen/nyhavn_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day4/Copenhagen/nyhavn_3.webp",
     ],
     descriptions: [
       "1670~1673년 크리스티안 5세 국왕의 명으로 건설된 뉘하운(Nyhavn, '새 항구')은 바다에서 도심으로 물자를 운반하기 위한 운하였으며, 한때 선원들과 술집으로 붐비던 항구 거리였습니다.",
@@ -251,9 +251,9 @@ export const scheduleModalsData: ModalData[] = [
     id: "geirangerfjord",
     title: "[관광정보] 게이랑에르 피요르드 (GEIRANGERFJORD)",
     images: [
-      "/products/north-europe-cruise/sectrion6/day6/Geirangerfjord/geirangerfjord_1.webp",
-      "/products/north-europe-cruise/sectrion6/day6/Geirangerfjord/geirangerfjord_2.webp",
-      "/products/north-europe-cruise/sectrion6/day6/Geirangerfjord/geirangerfjord_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day6/Geirangerfjord/geirangerfjord_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day6/Geirangerfjord/geirangerfjord_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day6/Geirangerfjord/geirangerfjord_3.webp",
     ],
     descriptions: [
       "노르웨이 서부 피요르드의 보석, 게이랑에르.",
@@ -267,16 +267,16 @@ export const scheduleModalsData: ModalData[] = [
       { label: "기후", value: "8월 평균 11~15°C (서늘하고 비가 잦음)" },
     ],
     googleMapQuery: "Geiranger,Norway",
-    googleMapEmbed: "https://maps.google.com/maps?q=62.1008,7.2059&z=12&hl=ko&output=embed",
+    googleMapEmbed: "https://maps.google.com/maps?q=Geiranger,Norway&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
     id: "dalsnibba",
-    title: "유럽에서 가장 높은 피요르드 전망, 달스니바 전망대 (MT DALSNIBBA)",
+    title: "[관광정보] 달스니바 전망대 (DALSNIBBA)",
     images: [
-      "/products/north-europe-cruise/sectrion6/day6/Geirangerfjord/dalsnibba_1.webp",
-      "/products/north-europe-cruise/sectrion6/day6/Geirangerfjord/dalsnibba_2.webp",
-      "/products/north-europe-cruise/sectrion6/day6/Geirangerfjord/dalsnibba_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day6/Geirangerfjord/dalsnibba_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day6/Geirangerfjord/dalsnibba_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day6/Geirangerfjord/dalsnibba_3.webp",
     ],
     descriptions: [
       "해발 1,500m에서 내려다보는 유럽 최고의 피요르드 전망대입니다.",
@@ -291,16 +291,16 @@ export const scheduleModalsData: ModalData[] = [
       { label: "연락처", value: "" },
     ],
     googleMapQuery: "Dalsnibba+Geiranger+Skywalk+Norway",
-    googleMapEmbed: "https://maps.google.com/maps?q=62.0472,7.2822&z=13&hl=ko&output=embed",
+    googleMapEmbed: "https://maps.google.com/maps?q=Dalsnibba+Geiranger+Skywalk+Norway&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
     id: "ornesvingen",
-    title: "독수리의 길 위에서 만나는 절경, 이글 로드 & 오르네스빙엔 전망대 (EAGLE ROAD)",
+    title: "[관광정보] 이글 로드 (ØRNESVINGEN)",
     images: [
-      "/products/north-europe-cruise/sectrion6/day6/Geirangerfjord/eagleroad_1.webp",
-      "/products/north-europe-cruise/sectrion6/day6/Geirangerfjord/eagleroad_2.webp",
-      "/products/north-europe-cruise/sectrion6/day6/Geirangerfjord/eagleroad_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day6/Geirangerfjord/eagleroad_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day6/Geirangerfjord/eagleroad_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day6/Geirangerfjord/eagleroad_3.webp",
     ],
     descriptions: [
       "게이랑에르에서 에이즈달을 잇는 11개의 급커브 산악 도로, 이글 로드입니다.",
@@ -315,7 +315,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "연락처", value: "" },
     ],
     googleMapQuery: "Ornesvingen+viewpoint+Geiranger+Norway",
-    googleMapEmbed: "https://maps.google.com/maps?q=62.1125,7.1547&z=14&hl=ko&output=embed",
+    googleMapEmbed: "https://maps.google.com/maps?q=Ornesvingen+viewpoint+Geiranger+Norway&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
 
   // 베르겐 (Bergen) - Day 7
@@ -324,10 +324,10 @@ export const scheduleModalsData: ModalData[] = [
     id: "bergen",
     title: "[관광정보] 베르겐 (BERGEN)",
     images: [
-      "/products/north-europe-cruise/sectrion6/day7/Bergen/bergen_1.webp",
-      "/products/north-europe-cruise/sectrion6/day7/Bergen/bergen_2.webp",
-      "/products/north-europe-cruise/sectrion6/day7/Bergen/bergen_3.webp",
-      "/products/north-europe-cruise/sectrion6/day7/Bergen/bergen_4.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day7/Bergen/bergen_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day7/Bergen/bergen_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day7/Bergen/bergen_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day7/Bergen/bergen_4.webp",
     ],
     descriptions: [
       "노르웨이 제2의 도시이자 피오르의 관문, 베르겐.",
@@ -341,16 +341,16 @@ export const scheduleModalsData: ModalData[] = [
       { label: "기후", value: "8월 평균 16°C (해양성 기후, 비 잦음)" },
     ],
     googleMapQuery: "Bergen+Norway",
-    googleMapEmbed: "https://maps.google.com/maps?q=60.3913,5.3221&z=13&hl=ko&output=embed",
+    googleMapEmbed: "https://maps.google.com/maps?q=Bergen+Norway&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
     id: "floibanen",
-    title: "베르겐의 상징, 플로엔산 후니쿨라 (FLOIBANEN FUNICULAR)",
+    title: "[관광정보] 플로엔산 후니쿨라 (FLØIBANEN)",
     images: [
-      "/products/north-europe-cruise/sectrion6/day7/Bergen/floibanen_1.webp",
-      "/products/north-europe-cruise/sectrion6/day7/Bergen/floibanen_2.webp",
-      "/products/north-europe-cruise/sectrion6/day7/Bergen/floibanen_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day7/Bergen/floibanen_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day7/Bergen/floibanen_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day7/Bergen/floibanen_3.webp",
     ],
     descriptions: [
       "베르겐 시내 중심부에서 해발 320m의 플로엔산 정상까지 약 6분 만에 올라가는 산악 케이블 열차입니다.",
@@ -365,16 +365,16 @@ export const scheduleModalsData: ModalData[] = [
       { label: "연락처", value: "" },
     ],
     googleMapQuery: "Floibanen+Funicular+Bergen+Norway",
-    googleMapEmbed: "https://maps.google.com/maps?q=60.3934,5.3260&z=15&hl=ko&output=embed",
+    googleMapEmbed: "https://maps.google.com/maps?q=Floibanen+Funicular+Bergen+Norway&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
     id: "bergenfishmarket",
-    title: "활기 넘치는 해산물의 천국, 베르겐 피쉬 마켓 (BERGEN FISH MARKET)",
+    title: "[관광정보] 피쉬 마켓 (FISKETORGET)",
     images: [
-      "/products/north-europe-cruise/sectrion6/day7/Bergen/fishmarket_1.webp",
-      "/products/north-europe-cruise/sectrion6/day7/Bergen/fishmarket_2.webp",
-      "/products/north-europe-cruise/sectrion6/day7/Bergen/fishmarket_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day7/Bergen/fishmarket_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day7/Bergen/fishmarket_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day7/Bergen/fishmarket_3.webp",
     ],
     descriptions: [
       "베르겐 항구 바로 앞에 자리한 노르웨이에서 가장 유명한 수산시장으로, 1276년부터 이어져 온 약 750년의 역사를 자랑합니다.",
@@ -389,16 +389,16 @@ export const scheduleModalsData: ModalData[] = [
       { label: "연락처", value: "" },
     ],
     googleMapQuery: "Bergen+Fish+Market+Fisketorget+Norway",
-    googleMapEmbed: "https://maps.google.com/maps?q=60.3954,5.3246&z=16&hl=ko&output=embed",
+    googleMapEmbed: "https://maps.google.com/maps?q=Bergen+Fish+Market+Fisketorget+Norway&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
     id: "bryggen",
-    title: "유네스코 세계문화유산, 브뤼겐 한자 빌딩 (BRYGGEN HANSEATIC WHARF)",
+    title: "[관광정보] 브뤼겐 (BRYGGEN)",
     images: [
-      "/products/north-europe-cruise/sectrion6/day7/Bergen/bryggen_1.webp",
-      "/products/north-europe-cruise/sectrion6/day7/Bergen/bryggen_2.webp",
-      "/products/north-europe-cruise/sectrion6/day7/Bergen/bryggen_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day7/Bergen/bryggen_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day7/Bergen/bryggen_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day7/Bergen/bryggen_3.webp",
     ],
     descriptions: [
       "1979년 유네스코 세계문화유산으로 지정된 브뤼겐은 14세기부터 16세기까지 한자동맹의 주요 무역 거점이었던 베르겐의 옛 부두 지구입니다.",
@@ -413,7 +413,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "연락처", value: "" },
     ],
     googleMapQuery: "Bryggen+Hanseatic+Wharf+Bergen+Norway",
-    googleMapEmbed: "https://maps.google.com/maps?q=60.3976,5.3238&z=16&hl=ko&output=embed",
+    googleMapEmbed: "https://maps.google.com/maps?q=Bryggen+Hanseatic+Wharf+Bergen+Norway&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -433,7 +433,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "연락처", value: "" },
     ],
     googleMapQuery: "Bergen+Cathedral+Domkirken+Norway",
-    googleMapEmbed: "https://maps.google.com/maps?q=60.3919,5.3310&z=16&hl=ko&output=embed",
+    googleMapEmbed: "https://maps.google.com/maps?q=Bergen+Cathedral+Domkirken+Norway&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
@@ -453,7 +453,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "연락처", value: "" },
     ],
     googleMapQuery: "Bergenhus+Fortress+Bergen+Norway",
-    googleMapEmbed: "https://maps.google.com/maps?q=60.3994,5.3180&z=16&hl=ko&output=embed",
+    googleMapEmbed: "https://maps.google.com/maps?q=Bergenhus+Fortress+Bergen+Norway&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
 
   // 스타방에르 (Stavanger) - Day 8
@@ -462,9 +462,9 @@ export const scheduleModalsData: ModalData[] = [
     id: "stavanger",
     title: "[관광정보] 스타방에르 (STAVANGER)",
     images: [
-      "/products/north-europe-cruise/sectrion6/day8/Stavanger/stavanger_1.webp",
-      "/products/north-europe-cruise/sectrion6/day8/Stavanger/stavanger_2.webp",
-      "/products/north-europe-cruise/sectrion6/day8/Stavanger/stavanger_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day8/Stavanger/stavanger_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day8/Stavanger/stavanger_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day8/Stavanger/stavanger_3.webp",
     ],
     descriptions: [
       "노르웨이 석유 산업의 수도, 스타방에르.",
@@ -478,16 +478,16 @@ export const scheduleModalsData: ModalData[] = [
       { label: "기후", value: "8월 평균 15°C (해양성 기후, 온화하나 비 잦음)" },
     ],
     googleMapQuery: "Stavanger+Norway",
-    googleMapEmbed: "https://maps.google.com/maps?q=58.9700,5.7331&z=12&hl=ko&output=embed",
+    googleMapEmbed: "https://maps.google.com/maps?q=Stavanger+Norway&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
     id: "gamlestavanger",
-    title: "북유럽 최대의 목조 가옥 마을, 올드 스타방에르 (GAMLE STAVANGER)",
+    title: "[관광정보] 올드 스타방에르 (GAMLE STAVANGER)",
     images: [
-      "/products/north-europe-cruise/sectrion6/day8/Stavanger/oldstavanger_1.webp",
-      "/products/north-europe-cruise/sectrion6/day8/Stavanger/oldstavanger_2.webp",
-      "/products/north-europe-cruise/sectrion6/day8/Stavanger/oldstavanger_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day8/Stavanger/oldstavanger_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day8/Stavanger/oldstavanger_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day8/Stavanger/oldstavanger_3.webp",
     ],
     descriptions: [
       "18~19세기에 지어진 173채의 하얀 목조 가옥이 자갈 깔린 좁은 골목을 따라 늘어선 북유럽 최대의 목조 건축 보존 지구입니다.",
@@ -502,16 +502,16 @@ export const scheduleModalsData: ModalData[] = [
       { label: "연락처", value: "" },
     ],
     googleMapQuery: "Gamle+Stavanger+Old+Town+Norway",
-    googleMapEmbed: "https://maps.google.com/maps?q=58.9740,5.7230&z=16&hl=ko&output=embed",
+    googleMapEmbed: "https://maps.google.com/maps?q=Gamle+Stavanger+Old+Town+Norway&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
     id: "stavangerdomkirke",
-    title: "노르웨이에서 가장 오래된 성당, 스타방에르 성당 (STAVANGER DOMKIRKE)",
+    title: "[관광정보] 스타방에르 성당 (STAVANGER DOMKIRKE)",
     images: [
-      "/products/north-europe-cruise/sectrion6/day8/Stavanger/domkirke_1.webp",
-      "/products/north-europe-cruise/sectrion6/day8/Stavanger/domkirke_2.webp",
-      "/products/north-europe-cruise/sectrion6/day8/Stavanger/domkirke_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day8/Stavanger/domkirke_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day8/Stavanger/domkirke_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day8/Stavanger/domkirke_3.webp",
     ],
     descriptions: [
       "1125년경 영국 윈체스터 출신으로 추정되는 레이날드 주교에 의해 건축이 시작되어 약 1150년에 완공된 노르웨이 최고(最古)의 성당입니다.",
@@ -526,16 +526,16 @@ export const scheduleModalsData: ModalData[] = [
       { label: "연락처", value: "" },
     ],
     googleMapQuery: "Stavanger+Cathedral+Domkirke+Norway",
-    googleMapEmbed: "https://maps.google.com/maps?q=58.9697,5.7331&z=17&hl=ko&output=embed",
+    googleMapEmbed: "https://maps.google.com/maps?q=Stavanger+Cathedral+Domkirke+Norway&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     type: "tourist-spot",
     id: "lysefjordcruise",
-    title: "노르웨이 피요르드의 진수, 뤼세피요르드 유람선 (LYSEFJORD CRUISE)",
+    title: "[관광정보] 뤼세 피요르드 (LYSEFJORDEN)",
     images: [
-      "/products/north-europe-cruise/sectrion6/day8/Stavanger/lysefjord_1.webp",
-      "/products/north-europe-cruise/sectrion6/day8/Stavanger/lysefjord_2.webp",
-      "/products/north-europe-cruise/sectrion6/day8/Stavanger/lysefjord_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day8/Stavanger/lysefjord_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day8/Stavanger/lysefjord_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day8/Stavanger/lysefjord_3.webp",
     ],
     descriptions: [
       "스타방에르 도심 항구에서 출발하여 약 3시간 동안 42km 길이의 뤼세피요르드를 탐험하는 유람선 투어입니다.",
@@ -550,7 +550,7 @@ export const scheduleModalsData: ModalData[] = [
       { label: "연락처", value: "" },
     ],
     googleMapQuery: "Lysefjord+Norway",
-    googleMapEmbed: "https://maps.google.com/maps?q=59.0500,6.2300&z=11&hl=ko&output=embed",
+    googleMapEmbed: "https://maps.google.com/maps?q=Lysefjord+Norway&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
 
   // ── Ship Info Modal ──
@@ -559,10 +559,10 @@ export const scheduleModalsData: ModalData[] = [
     id: "costadiadema",
     title: "코스타 디아데마 (COSTA DIADEMA)",
     images: [
-      "/products/north-europe-cruise/sectrion6/day3/costa_diadema_1.webp",
-      "/products/north-europe-cruise/sectrion6/day3/costa_diadema_2.webp",
-      "/products/north-europe-cruise/sectrion6/day3/costa_diadema_3.webp",
-      "/products/north-europe-cruise/sectrion6/day3/costa_diadema_4.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day3/costa_diadema_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day3/costa_diadema_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day3/costa_diadema_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day3/costa_diadema_4.webp",
     ],
     descriptions: [
       "코스타 크루즈의 플래그십 선박, 코스타 디아데마.",
@@ -579,50 +579,22 @@ export const scheduleModalsData: ModalData[] = [
     ],
   },
 
-  // ── Cruise At Sea Modals ──
+  // ── Cruise At Sea Modal ──
   {
     type: "cruise-at-sea",
-    id: "cruiseinterior",
+    id: "cruiseatsea",
     title: "코스타 디아데마 전일 해상",
     images: [
-      "/products/north-europe-cruise/sectrion6/day5/day5_1.webp",
-      "/products/north-europe-cruise/sectrion6/day5/day5_2.webp",
-      "/products/north-europe-cruise/sectrion6/day5/day5_3.webp",
-      "/products/north-europe-cruise/sectrion6/day5/day5_4.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day5/day5_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day5/day5_2.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day5/day5_3.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/sectrion6/day5/day5_4.webp",
     ],
     descriptions: [
       "오늘은 종일 해상에서 보내는 날입니다. 코스타 디아데마의 다양한 시설을 마음껏 즐겨보세요.",
       "500m 이상의 야외 프롬나드에서 바닷바람을 맞으며 산책하고, 6,200m² 규모의 삼사라 스파에서 깊은 휴식을 경험하세요. 1,600석 규모의 에메랄드 시어터에서는 코스타 디아데마 전용 오리지널 공연이 매일 펼쳐집니다.",
       "메인 다이닝룸과 뷔페 레스토랑에서 이탈리아 정통 요리를 즐기시고, 야외 데크에서 광활한 바다의 풍경을 감상하며 특별한 하루를 보내시기 바랍니다.",
     ],
-    infoTable: [
-      { label: "선박", value: "코스타 디아데마 (Costa Diadema)" },
-      { label: "주요 시설", value: "수영장, 삼사라 스파, 카지노, 에메랄드 시어터, 프롬나드" },
-      { label: "식사", value: "메인 다이닝룸, 뷔페, 피제리아, 철판구이 등" },
-      { label: "드레스코드", value: "캐주얼 (스마트 캐주얼 권장)" },
-    ],
-  },
-  {
-    type: "cruise-at-sea",
-    id: "cruiseatsea",
-    title: "코스타 디아데마 전일 해상",
-    images: [
-      "/products/north-europe-cruise/sectrion6/day5/day5_1.webp",
-      "/products/north-europe-cruise/sectrion6/day5/day5_2.webp",
-      "/products/north-europe-cruise/sectrion6/day5/day5_3.webp",
-      "/products/north-europe-cruise/sectrion6/day5/day5_4.webp",
-    ],
-    descriptions: [
-      "선내 자유시간: 수준 높은 무료 공연 관람 및 다채로운 부대시설 이용",
-    ],
-    bulletPoints: [
-      "삼사라 스파에서 탈라소테라피와 마사지로 여행의 피로를 부드럽게 풀어보세요.",
-      "탁 트인 야외 수영장에서 일광욕을 즐기며 여유롭게 책을 읽어보세요.",
-      "500m 야외 프롬나드를 달리거나 최신식 피트니스 센터에서 상쾌하게 땀을 흘려보세요.",
-      "따뜻한 자쿠지에 몸을 담그고 와인 한 잔의 여유를 만끽해 보세요.",
-      "에메랄드 시어터에서 코스타 디아데마 전용 오리지널 공연을 관람해 보세요.",
-    ],
-    closingText: "잔잔한 바다 한가운데서 누리는 이 모든 휴식이 크루즈 여행의 진정한 매력입니다.",
     infoTable: [
       { label: "선박", value: "코스타 디아데마 (Costa Diadema)" },
       { label: "주요 시설", value: "수영장, 삼사라 스파, 카지노, 에메랄드 시어터, 프롬나드" },
@@ -660,14 +632,15 @@ export const scheduleModalsData: ModalData[] = [
         heading: "3. 승선 후 유의사항 (After Boarding)",
         items: [
           {
-            text: "승선 후 안내에 따라 지정된 장소에서 위급 상황 대처 교육을 이수해야 합니다.",
-            bold: "필수 안전 교육(Safety Drill):",
+            text: "필수 안전 교육(Safety Drill): 승선 후 안내에 따라 지정된 장소에서 위급 상황 대처 교육을 이수해야 합니다.",
+          },
+          {
+            text: "미이수 시 발생하는 실제 상황 (필독)",
             subItems: [
-              { text: "미이수 시 발생하는 실제 상황 (필독)", isWarning: true },
-              { text: "선사 시스템은 실시간으로 미이수자를 파악합니다. 교육을 마칠 때까지 이름이 공공연하게 방송되거나, 승무원이 선실로 직접 찾아와 참여를 독촉합니다.", bold: "끝까지 찾아내는 실시간 추적:" },
-              { text: "교육 미완료 시 선상 카드(SeaPass 등)가 정지됩니다. 이 경우 바(Bar)에서 음료 주문, 면세점 쇼핑, 카지노 이용 및 유료 레스토랑 예약 등 배 안의 모든 결제와 서비스 이용이 거부될 수 있습니다.", bold: "선상 카드 및 모든 유료 서비스 정지:" },
-              { text: "국제 해상법(SOLAS)에 의거, 끝내 불응할 경우 선장은 승객을 다음 기항지에서 강제로 내리게 할 권한이 있습니다.", bold: "선장 권한에 의한 '강제 하선' 조치:" },
-              { text: "규정 위반으로 인한 하선이므로 잔여 일정 환불이 전혀 안 되며, 집으로 돌아가는 항공편 비용도 본인이 직접 부담해야 하는 가장 심각한 상황이 발생할 수 있습니다.", isWarning: true, bold: "환불 및 보상 불가:" },
+              { text: "끝까지 찾아내는 실시간 추적: 선사 시스템은 실시간으로 미이수자를 파악합니다. 교육을 마칠 때까지 이름이 공공연하게 방송되거나, 승무원이 선실로 직접 찾아와 참여를 독촉합니다." },
+              { text: "선상 카드 및 모든 유료 서비스 정지: 교육 미완료 시 선상 카드(SeaPass 등)가 정지됩니다. 이 경우 바(Bar)에서 음료 주문, 면세점 쇼핑, 카지노 이용 및 유료 레스토랑 예약 등 배 안의 모든 결제와 서비스 이용이 거부될 수 있습니다." },
+              { text: "선장 권한에 의한 '강제 하선' 조치: 국제 해상법(SOLAS)에 의거, 끝내 불응할 경우 선장은 승객을 다음 기항지에서 강제로 내리게 할 권한이 있습니다." },
+              { text: "환불 및 보상 불가: 규정 위반으로 인한 하선이므로 잔여 일정 환불이 전혀 안 되며, 집으로 돌아가는 항공편 비용도 본인이 직접 부담해야 하는 가장 심각한 상황이 발생할 수 있습니다.", isWarning: true },
             ],
           },
           { text: "선사에서 운영하는 기항지 투어(영어 진행)는 조기 마감될 수 있으므로 승선 첫날 신청하시기를 권장합니다. (변경/취소 시 수수료 발생 가능)", bold: "기항지 선택 관광:" },

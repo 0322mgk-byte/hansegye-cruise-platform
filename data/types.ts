@@ -232,7 +232,7 @@ export interface TripInfoData {
     escort: string;
     meetingPlace: string;
   };
-  flights: {
+  flights?: {
     outbound: FlightLeg[];
     inbound: FlightLeg[];
   };

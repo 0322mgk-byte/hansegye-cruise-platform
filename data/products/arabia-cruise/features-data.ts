@@ -8,11 +8,11 @@ export const featuresData: FeaturesData = {
   rooms: [
     {
       name: "인사이드",
-      image: "/shared/placeholder.png",
+      image: "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/arabia-cruise/section4/inside/inside_costa_toscana.webp",
       subtitle: "합리적인 가격의 인테리어룸",
       description: "가장 저렴한 가격의 객실인 인테리어룸은 합리적인 여행을 즐기기에 완벽한 장소입니다.",
       amenities: [
-        { iconName: "Maximize2", label: "객실 크기: 약 12.6~16.6m²", fullWidth: true },
+        { iconName: "Maximize2", label: "객실 크기: 약 12.6~16.6m² (약 3.8~5.0평)", fullWidth: true },
         { iconName: "BedDouble", label: "트윈 베드 (퀸 전환 가능)" },
         { iconName: "Refrigerator", label: "미니바/냉장고" },
         { iconName: "Tv", label: "평면 HDTV" },
@@ -27,11 +27,11 @@ export const featuresData: FeaturesData = {
     },
     {
       name: "오션뷰",
-      image: "/shared/placeholder.png",
+      image: "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/arabia-cruise/section4/oceanview/Toscana_Esterna_Desktop_1392x636_v2.jpg.image.1392.636.high.webp",
       subtitle: "푸른 바다를 품은 오션뷰 룸",
       description: "그림 같은 풍경과 자연 채광이 가득한 오션뷰 룸은 광활한 바다의 아름다운 경치를 자랑합니다.",
       amenities: [
-        { iconName: "Maximize2", label: "객실 크기: 약 19.1~19.7m²" },
+        { iconName: "Maximize2", label: "객실 크기: 약 19.1~19.7m² (약 5.8~6.0평)" },
         { iconName: "AppWindow", label: "대형 픽처 윈도우" },
         { iconName: "BedDouble", label: "트윈 베드 (퀸 전환 가능)" },
         { iconName: "Refrigerator", label: "미니바/냉장고" },
@@ -47,11 +47,11 @@ export const featuresData: FeaturesData = {
     },
     {
       name: "발코니",
-      image: "/shared/placeholder.png",
+      image: "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/arabia-cruise/section4/balcony/Toscana_Balcone_Desktop_1392x636_v2.jpg.image.1392.636.high.webp",
       subtitle: "아름다운 바다를 한 눈에 볼 수 있는 야외 공간",
       description: "인상적인 바다 뷰를 자랑하는 이 객실은 바다가 한눈에 들어오는 발코니 공간을 제공합니다.",
       amenities: [
-        { iconName: "Maximize2", label: "객실 크기: 약 19m² + 발코니 8m²", fullWidth: true },
+        { iconName: "Maximize2", label: "객실 크기: 약 19m² + 발코니 8m² (총 약 8.2평)", fullWidth: true },
         { iconName: "Armchair", label: "데크체어 2개, 테이블을 포함한 프라이빗 발코니" },
         { iconName: "AppWindow", label: "슬라이딩 글라스 도어" },
         { iconName: "BedDouble", label: "트윈 베드 (퀸 전환 가능)" },

@@ -8,9 +8,9 @@ export const introData: IntroData = {
     {
       name: "엔터테인먼트",
       images: [
-        "/products/western-mediterranean-cruise/section3/entertainment/shows-broadwar-theatre.webp",
-        "/products/western-mediterranean-cruise/section3/entertainment/1025-juniorclublego.jpg",
-        "/products/western-mediterranean-cruise/section3/entertainment/virtual-games-arcade.jpg",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/section3/entertainment/shows-broadwar-theatre.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/section3/entertainment/1025-juniorclublego.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/section3/entertainment/virtual-games-arcade.webp",
       ],
       alt: "대극장",
       subtitle: "낮부터 밤까지 이어지는 다채로운 즐길 거리",
@@ -20,10 +20,10 @@ export const introData: IntroData = {
     {
       name: "아웃도어 & 레저",
       images: [
-        "/products/western-mediterranean-cruise/section3/outdoor-leisure/outdoor-activities-zip-line_mobile.webp",
-        "/products/western-mediterranean-cruise/section3/outdoor-leisure/msc-sports-arena.jpg",
-        "/products/western-mediterranean-cruise/section3/outdoor-leisure/MSC - Power Walking Track 2.jpg",
-        "/products/western-mediterranean-cruise/section3/outdoor-leisure/maxresdefault.jpg",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/section3/outdoor-leisure/outdoor-activities-zip-line_mobile.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/section3/outdoor-leisure/msc-sports-arena.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/section3/outdoor-leisure/MSC%20-%20Power%20Walking%20Track%202.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/section3/outdoor-leisure/maxresdefault.webp",
       ],
       alt: "워터파크 & 아웃도어",
       subtitle: "바다 위에서 즐기는 활력 넘치는 액티비티",
@@ -33,9 +33,9 @@ export const introData: IntroData = {
     {
       name: "힐링 & 웰니스",
       images: [
-        "/products/western-mediterranean-cruise/section3/wellness/sv_public_area_msc_aurea_spa_06.avif",
-        "/products/western-mediterranean-cruise/section3/wellness/img_4480.avif",
-        "/products/western-mediterranean-cruise/section3/wellness/waterfront-boardwalk.jpg",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/section3/wellness/sv_public_area_msc_aurea_spa_06.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/section3/wellness/img_4480.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/section3/wellness/waterfront-boardwalk.webp",
       ],
       alt: "MSC Aurea 스파",
       subtitle: "바다 위에서 누리는 힐링 테라피",

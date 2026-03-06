@@ -39,7 +39,7 @@ export const tripInfoData: TripInfoData = {
       },
     ],
   },
-  routeCities: ["두바이", "두바이", "무스카트", "해상", "도하", "아부다비", "두바이"],
+  routeCities: ["두바이", "무스카트", "해상", "도하", "아부다비", "두바이"],
   reservationStatus: "출발확정",
   reservationCount: "20",
   escortInfo: "인솔자 1명이 동행합니다.",

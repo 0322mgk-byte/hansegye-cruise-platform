@@ -21,9 +21,9 @@ export const pricingData: PricingData = {
     reserveButton: "상품 예약 하기",
   },
   roomTabs: [
-    { key: "inside", label: "인사이드", prices: { adult: "5,790,000", child: "5,790,000", infant: "5,790,000" } },
-    { key: "oceanview", label: "오션뷰", prices: { adult: "5,990,000", child: "5,990,000", infant: "5,990,000" } },
-    { key: "balcony", label: "발코니", prices: { adult: "6,490,000", child: "6,490,000", infant: "6,490,000" } },
+    { key: "inside", label: "인사이드", prices: { adult: "2,300,000", child: "2,300,000", infant: "2,300,000" } },
+    { key: "oceanview", label: "오션뷰", prices: { adult: "2,300,000", child: "2,300,000", infant: "2,300,000" } },
+    { key: "balcony", label: "발코니", prices: { adult: "2,300,000", child: "2,300,000", infant: "2,300,000" } },
   ],
   personOptions: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   fuelSurcharge: 123000,
@@ -47,7 +47,7 @@ export const pricingData: PricingData = {
       ],
     },
     {
-      title: "소아 및 유아 안내",
+      title: "소아 및 유아\n안내",
       items: [
         "소아/유아 요금은 성인 2인과 같은 방을 사용하는 조건입니다. (조건 미충족 시 아동 추가 요금 발생)",
         "여행 기간 중 만 2세가 되는 경우 요금 별도 문의",
@@ -63,7 +63,7 @@ export const pricingData: PricingData = {
       ],
     },
     {
-      title: "요금 변동 및 기타",
+      title: "요금 변동 및\n기타",
       items: [
         "유류할증료 및 제세공과금은 유가와 환율 변동에 따라 변경될 수 있습니다.",
         "개별 항공권 발권 또는 현지 합류 고객은 일정에 따라 요금이 다르므로 별도 문의 바랍니다.",

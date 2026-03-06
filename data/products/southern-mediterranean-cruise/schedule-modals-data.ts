@@ -28,7 +28,7 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: 'tourist-spot',
     id: 'hagiasophia',
-    title: '하기아 소피아 (HAGIA SOPHIA)',
+    title: '[관광정보] 하기아 소피아 (HAGIA SOPHIA)',
     images: ['/shared/placeholder.png'],
     descriptions: [
       '하기아 소피아는 537년 비잔틴 황제 유스티니아누스 1세에 의해 건립된 세계 건축사의 걸작으로, 약 1,000년 동안 세계 최대의 성당으로 군림했습니다. 직경 31미터, 높이 56미터의 거대한 중앙 돔은 건축학적 혁신의 상징이며, 내부에 들어서면 돔을 통해 쏟아지는 자연광이 황금빛 모자이크를 비추어 경이로운 분위기를 자아냅니다.',
@@ -51,7 +51,7 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: 'tourist-spot',
     id: 'bluemosque',
-    title: '블루 모스크 (SULTAN AHMED MOSQUE)',
+    title: '[관광정보] 블루 모스크 (SULTAN AHMED MOSQUE)',
     images: ['/shared/placeholder.png'],
     descriptions: [
       '블루 모스크는 1609년에서 1616년 사이 오스만 술탄 아흐메트 1세의 명에 의해 건설된 이스탄불의 대표적인 이슬람 사원입니다. 세계에서 유일하게 6개의 미나렛을 갖춘 모스크로, 하기아 소피아 바로 맞은편에 위치하여 두 건축물이 서로 마주보는 장관을 이룹니다.',
@@ -74,7 +74,7 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: 'tourist-spot',
     id: 'topkapipalace',
-    title: '톱카프 궁전 (TOPKAPI PALACE)',
+    title: '[관광정보] 톱카프 궁전 (TOPKAPI PALACE)',
     images: ['/shared/placeholder.png'],
     descriptions: [
       '톱카프 궁전은 1459년부터 약 400년간 오스만 제국 술탄들의 공식 거처이자 행정 중심지로 사용된 거대한 궁전 복합체입니다. 보스포루스 해협과 골든혼(Halic)이 만나는 세라글리오 곶에 위치하여, 궁전에서 바라보는 해양 파노라마가 장엄합니다. 약 70만 제곱미터의 부지에 4개의 정원(안뜰)과 수많은 건물로 구성되어 있습니다.',
@@ -97,7 +97,7 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: 'tourist-spot',
     id: 'hippodrome',
-    title: '히포드롬 광장 (HIPPODROME OF CONSTANTINOPLE)',
+    title: '[관광정보] 히포드롬 광장 (HIPPODROME OF CONSTANTINOPLE)',
     images: ['/shared/placeholder.png'],
     descriptions: [
       '히포드롬 광장은 203년 로마 황제 셉티미우스 세베루스에 의해 건설이 시작되고, 330년 콘스탄티누스 대제가 대대적으로 확장한 고대 전차 경기장입니다. 전성기에는 약 10만 명의 관중을 수용할 수 있었으며, 비잔틴 제국 시대 공공 생활과 정치적 갈등의 중심 무대였습니다. 현재는 술탄아흐메트 광장이라는 이름으로 블루 모스크 바로 앞에 자리하고 있습니다.',
@@ -143,7 +143,7 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: 'tourist-spot',
     id: 'littlevenice',
-    title: '리틀 베니스 (LITTLE VENICE)',
+    title: '[관광정보] 리틀 베니스 (LITTLE VENICE)',
     images: ['/shared/placeholder.png'],
     descriptions: [
       '리틀 베니스는 미코노스 타운 남서쪽 끝에 위치한 해안 지구로, 16~18세기에 지어진 색색의 건물들이 바다 바로 위에 돌출되어 세워져 있는 것이 특징입니다. 이탈리아 베네치아를 연상시킨다 하여 "리틀 베니스"라는 이름이 붙었으며, 공식 명칭은 알레프칸드라(Alefkandra)입니다.',
@@ -166,7 +166,7 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: 'tourist-spot',
     id: 'mykonoswindmills',
-    title: '미코노스 풍차 (KATO MILI WINDMILLS)',
+    title: '[관광정보] 카토 밀리 풍차 (KATO MILI WINDMILLS)',
     images: ['/shared/placeholder.png'],
     descriptions: [
       '카토 밀리(Kato Mili)는 미코노스 타운 남쪽 언덕 위에 나란히 서 있는 7기의 풍차로, 미코노스 섬을 상징하는 가장 유명한 랜드마크입니다. 16세기부터 20세기 초까지 에게해에서 불어오는 강한 바람을 이용하여 곡물을 빻는 데 사용되었으며, 미코노스 경제의 핵심 시설이었습니다.',
@@ -189,7 +189,7 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: 'tourist-spot',
     id: 'paraportiani',
-    title: '파라포르티아니 교회 (PANAGIA PARAPORTIANI)',
+    title: '[관광정보] 파라포르티아니 교회 (PANAGIA PARAPORTIANI)',
     images: ['/shared/placeholder.png'],
     descriptions: [
       '파라포르티아니 교회는 미코노스 타운 카스트로(Kastro) 지구에 위치한 그리스 정교회 성당으로, 미코노스에서 가장 사진이 많이 찍히는 건축물이자 세계에서 가장 아름다운 교회 중 하나로 평가받습니다. 1425년에 건축이 시작되어 17세기에 완성되었으며, 약 200년에 걸쳐 지어진 독특한 역사를 지니고 있습니다.',
@@ -304,7 +304,7 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: 'tourist-spot',
     id: 'panathenaic',
-    title: '파나티나이코 스타디움 (PANATHENAIC STADIUM)',
+    title: '[관광정보] 파나티나이코 스타디움 (PANATHENAIC STADIUM)',
     images: ['/shared/placeholder.png'],
     descriptions: [
       '1896년 제1회 근대 올림픽이 개최된 역사적인 경기장으로, 세계에서 유일하게 전체가 대리석으로 만들어진 경기장입니다. 그리스어로 "칼리마르마로(Kallimarmaro)", 즉 "아름다운 대리석"이라는 별명으로도 불리며, 약 5만 명을 수용할 수 있는 U자형 구조를 갖추고 있습니다.',
@@ -327,7 +327,7 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: 'tourist-spot',
     id: 'acropolis',
-    title: '아테네 아크로폴리스 (ACROPOLIS OF ATHENS)',
+    title: '[관광정보] 아크로폴리스 (ACROPOLIS OF ATHENS)',
     images: ['/shared/placeholder.png'],
     descriptions: [
       '해발 156m의 석회암 언덕 위에 세워진 고대 그리스 최고의 성채로, 유네스코 세계문화유산이자 서양 문명을 대표하는 상징적인 유적지입니다. "높은 도시"를 뜻하는 아크로폴리스는 기원전 5세기 아테네의 황금기에 페리클레스의 지휘 아래 건설되었으며, 2,500년이 넘는 세월 동안 아테네의 스카이라인을 지배해 왔습니다.',
@@ -350,7 +350,7 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: 'tourist-spot',
     id: 'syntagma',
-    title: '신타그마 광장과 국회의사당 (SYNTAGMA SQUARE & HELLENIC PARLIAMENT)',
+    title: '[관광정보] 신타그마 광장 (SYNTAGMA SQUARE & HELLENIC PARLIAMENT)',
     images: ['/shared/placeholder.png'],
     descriptions: [
       '신타그마 광장은 "헌법 광장"이라는 뜻으로, 현대 아테네에서 가장 중요한 정치적·역사적 광장입니다. 1843년 국왕 오토 1세가 이곳에서 헌법을 선포한 데서 이름이 유래하였으며, 광장 정면에는 19세기 왕궁 건물을 개조한 그리스 국회의사당이 위풍당당하게 자리하고 있습니다.',
@@ -376,16 +376,10 @@ export const scheduleModalsData: ModalData[] = [
     title: '코스타 포르투나호 전일 해상',
     images: ['/shared/placeholder.png'],
     descriptions: [
-      '선내 자유시간: 수준 높은 무료 공연 관람 및 다채로운 부대시설 이용',
+      '오늘은 종일 해상에서 보내는 날입니다. 코스타 포르투나호의 다양한 시설을 마음껏 즐겨보세요.',
+      '3개의 수영장과 6개의 자쿠지에서 일광욕을 즐기며 여유를 만끽하고, 프리미엄 스파에서 여행의 피로를 부드럽게 풀어보세요. 오션뷰 조깅 트랙을 달리거나 최신식 피트니스 센터에서 상쾌하게 땀을 흘리며, 대극장에서 화려한 공연도 관람하실 수 있습니다.',
+      '메인 다이닝룸과 뷔페 레스토랑에서 세계 각국의 요리를 즐기시고, 야외 데크에서 광활한 바다의 풍경을 감상하며 특별한 하루를 보내시기 바랍니다.',
     ],
-    bulletPoints: [
-      '프리미엄 스파에서 여행의 피로를 부드럽게 풀어보세요.',
-      '탁 트인 야외 수영장에서 일광욕을 즐기며 여유롭게 책을 읽어보세요.',
-      '오션뷰 조깅 트랙을 달리거나 최신식 피트니스 센터에서 상쾌하게 땀을 흘려보세요.',
-      '따뜻한 자쿠지에 몸을 담그고 와인 한 잔의 여유를 만끽해 보세요.',
-      '요가, 댄스 강좌, 빙고 등 매일 다채롭게 열리는 선내 프로그램에 참여해 보세요.',
-    ],
-    closingText: '잔잔한 바다 한가운데서 누리는 이 모든 휴식이 크루즈 여행의 진정한 매력입니다.',
     infoTable: [
       { label: '선박', value: '코스타 포르투나호 (COSTA Fortuna)' },
       { label: '주요 시설', value: '수영장 3개, 자쿠지 6개, 카지노, 극장, 스파' },
@@ -420,14 +414,15 @@ export const scheduleModalsData: ModalData[] = [
         heading: '3. 승선 후 유의사항 (After Boarding)',
         items: [
           {
-            text: '승선 후 안내에 따라 지정된 장소에서 위급 상황 대처 교육을 이수해야 합니다.',
-            bold: '필수 안전 교육(Safety Drill):',
+            text: '필수 안전 교육(Safety Drill): 승선 후 안내에 따라 지정된 장소에서 위급 상황 대처 교육을 이수해야 합니다.',
+          },
+          {
+            text: '미이수 시 발생하는 실제 상황 (필독)',
             subItems: [
-              { text: '미이수 시 발생하는 실제 상황 (필독)', isWarning: true },
-              { text: '선사 시스템은 실시간으로 미이수자를 파악합니다. 교육을 마칠 때까지 이름이 공공연하게 방송되거나, 승무원이 선실로 직접 찾아와 참여를 독촉합니다.', bold: '끝까지 찾아내는 실시간 추적:' },
-              { text: '교육 미완료 시 선상 카드(SeaPass 등)가 정지됩니다. 이 경우 바(Bar)에서 음료 주문, 면세점 쇼핑, 카지노 이용 및 유료 레스토랑 예약 등 배 안의 모든 결제와 서비스 이용이 거부될 수 있습니다.', bold: '선상 카드 및 모든 유료 서비스 정지:' },
-              { text: '국제 해상법(SOLAS)에 의거, 끝내 불응할 경우 선장은 승객을 다음 기항지에서 강제로 내리게 할 권한이 있습니다.', bold: '선장 권한에 의한 \'강제 하선\' 조치:' },
-              { text: '규정 위반으로 인한 하선이므로 잔여 일정 환불이 전혀 안 되며, 집으로 돌아가는 항공편 비용도 본인이 직접 부담해야 하는 가장 심각한 상황이 발생할 수 있습니다.', isWarning: true, bold: '환불 및 보상 불가:' },
+              { text: '끝까지 찾아내는 실시간 추적: 선사 시스템은 실시간으로 미이수자를 파악합니다. 교육을 마칠 때까지 이름이 공공연하게 방송되거나, 승무원이 선실로 직접 찾아와 참여를 독촉합니다.' },
+              { text: '선상 카드 및 모든 유료 서비스 정지: 교육 미완료 시 선상 카드(SeaPass 등)가 정지됩니다. 이 경우 바(Bar)에서 음료 주문, 면세점 쇼핑, 카지노 이용 및 유료 레스토랑 예약 등 배 안의 모든 결제와 서비스 이용이 거부될 수 있습니다.' },
+              { text: '선장 권한에 의한 \'강제 하선\' 조치: 국제 해상법(SOLAS)에 의거, 끝내 불응할 경우 선장은 승객을 다음 기항지에서 강제로 내리게 할 권한이 있습니다.' },
+              { text: '환불 및 보상 불가: 규정 위반으로 인한 하선이므로 잔여 일정 환불이 전혀 안 되며, 집으로 돌아가는 항공편 비용도 본인이 직접 부담해야 하는 가장 심각한 상황이 발생할 수 있습니다.', isWarning: true },
             ],
           },
           { text: '선사에서 운영하는 기항지 투어(영어 진행)는 조기 마감될 수 있으므로 승선 첫날 신청하시기를 권장합니다. (변경/취소 시 수수료 발생 가능)', bold: '기항지 선택 관광:' },

@@ -28,7 +28,7 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "yehliu",
-    title: "파도와 바람이 깎아 만든 여왕 바위, 예류지질공원 (YEHLIU GEOPARK)",
+    title: "[관광정보] 예류지질공원 (YEHLIU GEOPARK)",
     images: ["/shared/placeholder.png"],
     descriptions: [
       "예류지질공원은 대만 북부 해안 만리(Wanli) 지역에 위치한 세계적인 지질 명소로, 약 1,700m 길이의 곶 위에 수천만 년에 걸친 해식·풍식 작용이 빚어낸 기암괴석이 줄지어 서 있다.",
@@ -49,7 +49,7 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "shifen",
-    title: "기찻길 위 천등 소원 명소, 스펀 (SHIFEN)",
+    title: "[관광정보] 스펀 (SHIFEN)",
     images: ["/shared/placeholder.png"],
     descriptions: [
       "스펀(十分)은 타이베이 동쪽 핑시(Pingxi) 산간 지역에 자리한 작은 철도 마을로, 기찻길 양옆으로 상점이 빼곡히 늘어선 스펀 올드스트리트가 대표 명소이다.",
@@ -70,7 +70,7 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "jiufen",
-    title: "홍등이 가득한 계단, 지우펀 (JIUFEN)",
+    title: "[관광정보] 지우펀 (JIUFEN)",
     images: ["/shared/placeholder.png"],
     descriptions: [
       "지우펀(九份)은 신베이시 루이팡구의 산비탈에 자리한 옛 금광 마을로, 19세기 말 골드러시 시절 번성했다가 광산 폐쇄 이후 쇠락한 뒤, 1989년 영화 '비정성시(A City of Sadness)'의 촬영지로 알려지며 다시 관광 명소로 부활했다.",
@@ -135,7 +135,7 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "dmmkariyushi",
-    title: "살아있는 체험형 수족관, DMM카리유시 수족관 (DMM KARIYUSHI AQUARIUM)",
+    title: "[관광정보] DMM카리유시 수족관 (DMM KARIYUSHI AQUARIUM)",
     images: ["/shared/placeholder.png"],
     descriptions: [
       "DMM카리유시 수족관은 2020년 5월에 오픈한 오키나와의 차세대 체험형 수족관으로, '살아있는 것과의 교감'을 컨셉으로 최신 영상기술과 실제 생물 전시를 결합한 새로운 형태의 엔터테인먼트 수족관이다.",
@@ -156,7 +156,7 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "iiasokinawa",
-    title: "오키나와 남부 최대 쇼핑몰, 이아스 이온몰 (IIAS OKINAWA TOYOSAKI)",
+    title: "[관광정보] 이아스 이온몰 (IIAS OKINAWA TOYOSAKI)",
     images: ["/shared/placeholder.png"],
     descriptions: [
       "이아스 오키나와 토요사키는 2020년 6월에 오키나와 남부 토미구스쿠시에 오픈한 대형 복합 쇼핑몰로, 오키나와 남부 최대 규모를 자랑한다.",
@@ -177,7 +177,7 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "shuricastle",
-    title: "500년 역사 류큐 왕국의 거성, 슈리성 (SHURI CASTLE)",
+    title: "[관광정보] 슈리성 (SHURI CASTLE)",
     images: ["/shared/placeholder.png"],
     descriptions: [
       "슈리성은 14세기 말에 창건되어 약 500년간 류큐 왕국의 정치, 외교, 문화의 중심지 역할을 한 궁전으로, 2000년에 유네스코 세계문화유산 '류큐 왕국의 구스쿠 및 관련 유산군'의 일부로 등재되었다.",
@@ -198,7 +198,7 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "kokusaistreet",
-    title: "나하 시내 쇼핑, 맛집 거리, 국제거리 (KOKUSAI STREET)",
+    title: "[관광정보] 국제거리 (KOKUSAI STREET)",
     images: ["/shared/placeholder.png"],
     descriptions: [
       "국제거리(코쿠사이도리)는 나하 시내 중심부를 관통하는 약 1.6km 길이의 메인 스트리트로, 오키나와 최대의 번화가이자 관광 쇼핑 거리이다. 제2차 세계대전 후 폐허에서 가장 빠르게 부흥한 거리라는 의미에서 '기적의 1마일'이라는 별명으로 불린다.",
@@ -241,7 +241,7 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "limestonecave",
-    title: "20만년 전 형성된 거대한 종유동굴, 이시가키 종유동 (ISHIGAKI LIMESTONE CAVE)",
+    title: "[관광정보] 이시가키 종유동 (ISHIGAKI LIMESTONE CAVE)",
     images: ["/shared/placeholder.png"],
     descriptions: [
       "이시가키 종유동은 약 20만 년 전 해저의 산호초가 지각변동에 의해 융기하면서 형성된, 일본 최남단의 관광 종유동굴이다. 동굴의 총 연장은 약 3.2km로 이시가키섬에서 가장 큰 동굴이며, 이 중 약 660m 구간이 관광 코스로 공개되어 있다.",
@@ -262,7 +262,7 @@ export const scheduleModalsData: ModalData[] = [
   {
     type: "tourist-spot",
     id: "yaimavillage",
-    title: "이시가키 전통과 자연의 민속촌, 야이마무라 (YAIMA VILLAGE)",
+    title: "[관광정보] 야이마무라 민속촌 (YAIMA VILLAGE)",
     images: ["/shared/placeholder.png"],
     descriptions: [
       "야이마무라(石垣やいま村)는 이시가키섬 나구라만이 내려다보이는 언덕 위에 자리 잡은, 일본 최남단이자 최서단의 테마파크이다. 국가 유형문화재로 등록된 붉은 기와지붕의 전통 민가가 여러 채 복원되어 있으며, 샤미센 음악과 함께 옛 야에야마의 정취를 느낄 수 있다.",
@@ -328,14 +328,15 @@ export const scheduleModalsData: ModalData[] = [
         heading: "3. 승선 후 유의사항 (After Boarding)",
         items: [
           {
-            text: "승선 후 안내에 따라 지정된 장소에서 위급 상황 대처 교육을 이수해야 합니다.",
-            bold: "필수 안전 교육(Safety Drill):",
+            text: "필수 안전 교육(Safety Drill): 승선 후 안내에 따라 지정된 장소에서 위급 상황 대처 교육을 이수해야 합니다.",
+          },
+          {
+            text: "미이수 시 발생하는 실제 상황 (필독)",
             subItems: [
-              { text: "미이수 시 발생하는 실제 상황 (필독)", isWarning: true },
-              { text: "선사 시스템은 실시간으로 미이수자를 파악합니다. 교육을 마칠 때까지 이름이 공공연하게 방송되거나, 승무원이 선실로 직접 찾아와 참여를 독촉합니다.", bold: "끝까지 찾아내는 실시간 추적:" },
-              { text: "교육 미완료 시 선상 카드(SeaPass 등)가 정지됩니다. 이 경우 바(Bar)에서 음료 주문, 면세점 쇼핑, 카지노 이용 및 유료 레스토랑 예약 등 배 안의 모든 결제와 서비스 이용이 거부될 수 있습니다.", bold: "선상 카드 및 모든 유료 서비스 정지:" },
-              { text: "국제 해상법(SOLAS)에 의거, 끝내 불응할 경우 선장은 승객을 다음 기항지에서 강제로 내리게 할 권한이 있습니다.", bold: "선장 권한에 의한 '강제 하선' 조치:" },
-              { text: "규정 위반으로 인한 하선이므로 잔여 일정 환불이 전혀 안 되며, 집으로 돌아가는 항공편 비용도 본인이 직접 부담해야 하는 가장 심각한 상황이 발생할 수 있습니다.", isWarning: true, bold: "환불 및 보상 불가:" },
+              { text: "끝까지 찾아내는 실시간 추적: 선사 시스템은 실시간으로 미이수자를 파악합니다. 교육을 마칠 때까지 이름이 공공연하게 방송되거나, 승무원이 선실로 직접 찾아와 참여를 독촉합니다." },
+              { text: "선상 카드 및 모든 유료 서비스 정지: 교육 미완료 시 선상 카드(SeaPass 등)가 정지됩니다. 이 경우 바(Bar)에서 음료 주문, 면세점 쇼핑, 카지노 이용 및 유료 레스토랑 예약 등 배 안의 모든 결제와 서비스 이용이 거부될 수 있습니다." },
+              { text: "선장 권한에 의한 '강제 하선' 조치: 국제 해상법(SOLAS)에 의거, 끝내 불응할 경우 선장은 승객을 다음 기항지에서 강제로 내리게 할 권한이 있습니다." },
+              { text: "환불 및 보상 불가: 규정 위반으로 인한 하선이므로 잔여 일정 환불이 전혀 안 되며, 집으로 돌아가는 항공편 비용도 본인이 직접 부담해야 하는 가장 심각한 상황이 발생할 수 있습니다.", isWarning: true },
             ],
           },
           { text: "선사에서 운영하는 기항지 투어(영어 진행)는 조기 마감될 수 있으므로 승선 첫날 신청하시기를 권장합니다. (변경/취소 시 수수료 발생 가능)", bold: "기항지 선택 관광:" },

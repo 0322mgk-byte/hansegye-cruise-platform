@@ -13,11 +13,9 @@ export const detailsData: DetailsData = {
     { label: "객실 수", value: "2,066개" },
   ],
   videoSources: [
-    { src: "/products/western-mediterranean-cruise/section5/desktop-cruise-specifications.webm", type: "video/webm" },
-    { src: "/products/western-mediterranean-cruise/section5/desktop-cruise-specifications.mp4", type: "video/mp4" },
+    { src: "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/section5/desktop-cruise-specifications.mp4", type: "video/mp4" },
   ],
   mobileVideoSources: [
-    { src: "/products/western-mediterranean-cruise/section5/mobile-cruise-specifications.webm", type: "video/webm" },
-    { src: "/products/western-mediterranean-cruise/section5/mobile-cruise-specifications.mp4", type: "video/mp4" },
+    { src: "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/section5/mobile-cruise-specifications.mp4", type: "video/mp4" },
   ],
 };

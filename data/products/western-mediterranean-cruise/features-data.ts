@@ -8,7 +8,7 @@ export const featuresData: FeaturesData = {
   rooms: [
     {
       name: "인사이드",
-      image: "/products/western-mediterranean-cruise/section4/sv_inside.avif",
+      image: "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/section4/sv_inside.webp",
       subtitle: "합리적인 가격의 인테리어룸",
       description: "가장 합리적인 가격으로 MSC 씨뷰의 모든 시설을 누릴 수 있는 인사이드 객실입니다.",
       amenities: [
@@ -27,7 +27,7 @@ export const featuresData: FeaturesData = {
     },
     {
       name: "오션뷰",
-      image: "/products/western-mediterranean-cruise/section4/sv_ocean_view.avif",
+      image: "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/section4/sv_ocean_view.webp",
       subtitle: "푸른 바다를 품은 오션뷰 룸",
       description: "대형 창문을 통해 지중해의 아름다운 풍경과 자연 채광을 즐길 수 있는 오션뷰 객실입니다.",
       amenities: [
@@ -47,11 +47,11 @@ export const featuresData: FeaturesData = {
     },
     {
       name: "발코니",
-      image: "/products/western-mediterranean-cruise/section4/sv_suite_exp.avif",
+      image: "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-mediterranean-cruise/section4/sv_suite_exp.webp",
       subtitle: "나만의 발코니에서 즐기는 지중해",
       description: "개인 발코니에서 지중해의 탁 트인 바다를 바라보며 특별한 크루즈 여행을 즐기세요.",
       amenities: [
-        { iconName: "Maximize2", label: "객실 크기: 약 17m² + 발코니 약 8m² (총 약 25m²)", fullWidth: true },
+        { iconName: "Maximize2", label: "객실 크기: 약 17m² + 발코니 약 8m² (총 약 7.6평)", fullWidth: true },
         { iconName: "Armchair", label: "발코니 의자 2개 + 음료 테이블" },
         { iconName: "AppWindow", label: "바닥부터 천장까지 슬라이딩 유리문" },
         { iconName: "BedDouble", label: "퀸 또는 트윈 베드 (킹사이즈 전환 가능)" },
