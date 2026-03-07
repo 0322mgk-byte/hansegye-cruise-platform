@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { clsx } from "clsx";
 import type { HeroData } from "@/data/types";
 
 interface HeroProps {
@@ -23,7 +24,7 @@ export default function Hero({ data }: HeroProps) {
     return (
         <div id="hero">
             {/* Mobile Hero */}
-            {isMobile !== false && <section className={`bg-gray-100 pt-14${isMobile === null ? " md:hidden" : ""}`}>
+            {isMobile !== false && <section className={clsx("bg-gray-100 pt-14", isMobile === null && "md:hidden")}>
                 <div className="px-4 pt-12 text-center">
                     <h1 className="text-[24px] font-bold leading-tight tracking-tight text-gray-900">
                         {cruiseLine}
@@ -58,7 +59,7 @@ export default function Hero({ data }: HeroProps) {
             </section>}
 
             {/* Desktop Hero */}
-            {isMobile !== true && <section className={`relative min-h-svh items-center overflow-hidden bg-gray-900 pt-20${isMobile === null ? " hidden md:flex" : " flex"}`}>
+            {isMobile !== true && <section className={clsx("relative min-h-svh items-center overflow-hidden bg-gray-900 pt-20", isMobile === null ? "hidden md:flex" : "flex")}>
                 {/* Video Background */}
                 <div className="absolute inset-0 z-0 pointer-events-none">
                     <div className="absolute inset-0 bg-black/60 z-10" />
