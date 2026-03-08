@@ -7,7 +7,12 @@ export const introData: IntroData = {
   facilities: [
     {
       name: "엔터테인먼트",
-      images: ["/shared/placeholder.png"],
+      images: [
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section3/entertainment/433-neptuniacasino.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section3/entertainment/757866b8-084f-4213-9dbf-2b236fb9460f.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section3/entertainment/Costa-Fortuna-Cruise-Blog-8.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section3/entertainment/IMG_3414b-1280x983.webp",
+      ],
       alt: "코스타 포르투나호 엔터테인먼트 시설",
       subtitle: "이탈리아 해양 역사를 담은 화려한 무대와 밤의 향연",
       description:
@@ -15,7 +20,11 @@ export const introData: IntroData = {
     },
     {
       name: "아웃도어 & 레저",
-      images: ["/shared/placeholder.png"],
+      images: [
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section3/outdoor-leisure/de21e8b7-9e6c-4a7f-b058-af6c15e2ff1c.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section3/outdoor-leisure/unnamed.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section3/outdoor-leisure/unnamed2.webp",
+      ],
       alt: "코스타 포르투나호 아웃도어 & 레저 시설",
       subtitle: "지중해 햇살 아래 펼쳐지는 활기찬 야외 놀이터",
       description:
@@ -23,7 +32,11 @@ export const introData: IntroData = {
     },
     {
       name: "힐링 & 웰니스",
-      images: ["/shared/placeholder.png"],
+      images: [
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section3/healing-wellness/1148395.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section3/healing-wellness/723962b5-7977-4514-99cf-fdbfce91e7cc.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section3/healing-wellness/Costa%20Fortuna%20Jogging%20Track.webp",
+      ],
       alt: "코스타 포르투나호 힐링 & 웰니스 시설",
       subtitle: "1,300m² 규모의 프리미엄 이탈리안 웰니스 센터",
       description:

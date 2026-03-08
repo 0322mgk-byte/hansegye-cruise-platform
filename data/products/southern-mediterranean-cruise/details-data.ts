@@ -2,6 +2,12 @@ import type { DetailsData } from '@/data/types';
 
 export const detailsData: DetailsData = {
   title: "크루즈 제원",
+  videoSources: [
+    { src: "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section5/desktop/section5-video.mp4", type: "video/mp4" },
+  ],
+  mobileVideoSources: [
+    { src: "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section5/mobile/section5-video.mp4", type: "video/mp4" },
+  ],
   specs: [
     { label: "톤 수", value: "102,669톤" },
     { label: "길이", value: "272.19m" },

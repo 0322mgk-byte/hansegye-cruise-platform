@@ -6,7 +6,11 @@ export const scheduleModalsData: ModalData[] = [
     type: 'tourist-spot',
     id: 'istanbul',
     title: '[관광정보] 이스탄불 (ISTANBUL)',
-    images: ['/shared/placeholder.png'],
+    images: [
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day2/1356202249_8d28a788af_k.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day2/6e5e51315884b28a33eedb9ddb50a657-1.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day2/pexels-ugurtandogan-34215009.webp',
+    ],
     descriptions: [
       '이스탄불은 보스포루스 해협을 사이에 두고 유럽과 아시아 두 대륙에 걸쳐 있는 세계 유일의 대륙 횡단 도시입니다. 약 1,600년간 로마 제국, 비잔틴 제국, 오스만 제국의 수도로 번영했으며, 그 찬란한 역사가 도시 곳곳에 켜켜이 남아 있습니다.',
       '술탄아흐메트(Sultanahmet) 지구에는 하기아 소피아, 블루 모스크, 톱카프 궁전, 히포드롬 광장 등 비잔틴과 오스만 시대의 핵심 유적이 집중되어 있어 걸어서도 충분히 둘러볼 수 있습니다. 그랜드 바자르와 스파이스 바자르 같은 전통 시장에서는 수공예품, 향신료, 터키 카펫 등을 합리적인 가격에 구매할 수 있으며, 활기찬 흥정 문화도 여행의 즐거움입니다.',
@@ -29,7 +33,11 @@ export const scheduleModalsData: ModalData[] = [
     type: 'tourist-spot',
     id: 'hagiasophia',
     title: '[관광정보] 하기아 소피아 (HAGIA SOPHIA)',
-    images: ['/shared/placeholder.png'],
+    images: [
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day9/Hagia-Sophia/(486)%20%F0%9F%87%B9%F0%9F%87%B7%20Hagia%20Sophia%20%204K%20Walking%20Tour%20%20ISTANBUL%20%20%F0%9F%87%B9%F0%9F%87%B7%20Turkey%20-%20YouTube%20(1).webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day9/Hagia-Sophia/(486)%20%F0%9F%87%B9%F0%9F%87%B7%20Hagia%20Sophia%20%204K%20Walking%20Tour%20%20ISTANBUL%20%20%F0%9F%87%B9%F0%9F%87%B7%20Turkey%20-%20YouTube.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day9/Hagia-Sophia/Hagia-Sophia-Istanbul.webp',
+    ],
     descriptions: [
       '하기아 소피아는 537년 비잔틴 황제 유스티니아누스 1세에 의해 건립된 세계 건축사의 걸작으로, 약 1,000년 동안 세계 최대의 성당으로 군림했습니다. 직경 31미터, 높이 56미터의 거대한 중앙 돔은 건축학적 혁신의 상징이며, 내부에 들어서면 돔을 통해 쏟아지는 자연광이 황금빛 모자이크를 비추어 경이로운 분위기를 자아냅니다.',
       '1453년 오스만 제국의 콘스탄티노플 정복 이후 모스크로 전환되었으며, 4개의 미나렛이 추가되었습니다. 1934년 아타튀르크에 의해 박물관으로 변경되었다가, 2020년 다시 모스크로 재전환되어 현재 활동 중인 이슬람 예배 장소입니다. 비잔틴 시대의 기독교 모자이크와 이슬람 캘리그래피가 공존하는 독특한 내부 장식은 전 세계 어디에서도 볼 수 없는 특별한 경험입니다.',
@@ -52,7 +60,11 @@ export const scheduleModalsData: ModalData[] = [
     type: 'tourist-spot',
     id: 'bluemosque',
     title: '[관광정보] 블루 모스크 (SULTAN AHMED MOSQUE)',
-    images: ['/shared/placeholder.png'],
+    images: [
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day9/Sultan-Ahmed-Mosque/674ed392632d89f6889e093c_the-blue-mosque_1029.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day9/Sultan-Ahmed-Mosque/blue-mosque.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day9/Sultan-Ahmed-Mosque/Istanbul_(34223582516)_(cropped).webp',
+    ],
     descriptions: [
       '블루 모스크는 1609년에서 1616년 사이 오스만 술탄 아흐메트 1세의 명에 의해 건설된 이스탄불의 대표적인 이슬람 사원입니다. 세계에서 유일하게 6개의 미나렛을 갖춘 모스크로, 하기아 소피아 바로 맞은편에 위치하여 두 건축물이 서로 마주보는 장관을 이룹니다.',
       '"블루 모스크"라는 별명은 내부를 장식한 20,000장 이상의 이즈니크(Iznik) 타일에서 유래합니다. 튤립, 장미, 카네이션 등의 꽃 문양이 푸른빛과 흰빛으로 어우러져 있으며, 260개의 창문을 통해 들어오는 자연광이 타일에 반사되면서 신비로운 푸른 빛으로 내부 공간을 물들입니다.',
@@ -75,7 +87,11 @@ export const scheduleModalsData: ModalData[] = [
     type: 'tourist-spot',
     id: 'topkapipalace',
     title: '[관광정보] 톱카프 궁전 (TOPKAPI PALACE)',
-    images: ['/shared/placeholder.png'],
+    images: [
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day9/Topkapi-Palace/aerial_view_00.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day9/Topkapi-Palace/bosphorus-tours-istanbul-topkapi-palace-1.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day9/Topkapi-Palace/topkapi-palace.webp',
+    ],
     descriptions: [
       '톱카프 궁전은 1459년부터 약 400년간 오스만 제국 술탄들의 공식 거처이자 행정 중심지로 사용된 거대한 궁전 복합체입니다. 보스포루스 해협과 골든혼(Halic)이 만나는 세라글리오 곶에 위치하여, 궁전에서 바라보는 해양 파노라마가 장엄합니다. 약 70만 제곱미터의 부지에 4개의 정원(안뜰)과 수많은 건물로 구성되어 있습니다.',
       '궁전 내부에는 예언자 무함마드의 유물이 보관된 성스러운 유물 전시실, 86캐럿의 "스푼 제조자의 다이아몬드"를 비롯한 보물 전시실, 중국과 일본 도자기 컬렉션 등 오스만 제국의 방대한 문화유산이 전시되어 있습니다. 특히 하렘(Harem) 구역은 술탄의 사적 생활 공간으로, 화려한 이즈니크 타일 장식과 정교한 내부 공간이 인상적입니다.',
@@ -98,7 +114,14 @@ export const scheduleModalsData: ModalData[] = [
     type: 'tourist-spot',
     id: 'hippodrome',
     title: '[관광정보] 히포드롬 광장 (HIPPODROME OF CONSTANTINOPLE)',
-    images: ['/shared/placeholder.png'],
+    images: [
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day9/Hippodrome-of-Constantinople/1155c367fc2a5984635b6aec2e312922cdebae07e7be23babad2233c203a1d71.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day9/Hippodrome-of-Constantinople/37d0c7_9dde2929270240df9c76daaec6f83411~mv2.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day9/Hippodrome-of-Constantinople/hippodrome_edited_edited-1-large.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day9/Hippodrome-of-Constantinople/semazen.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day9/Hippodrome-of-Constantinople/serpent-column-at-the-hippodrome-of-constantinople-v0-dvin4xj7a8jd1.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day9/Hippodrome-of-Constantinople/Sultanahmet_Square,_Obelisk_of_Theodosius,_Istanbul_(52121868925).webp',
+    ],
     descriptions: [
       '히포드롬 광장은 203년 로마 황제 셉티미우스 세베루스에 의해 건설이 시작되고, 330년 콘스탄티누스 대제가 대대적으로 확장한 고대 전차 경기장입니다. 전성기에는 약 10만 명의 관중을 수용할 수 있었으며, 비잔틴 제국 시대 공공 생활과 정치적 갈등의 중심 무대였습니다. 현재는 술탄아흐메트 광장이라는 이름으로 블루 모스크 바로 앞에 자리하고 있습니다.',
       '광장에는 기원전 15세기에 제작되어 이집트 룩소르의 카르나크 신전에서 옮겨온 "테오도시우스 오벨리스크", 기원전 479년 델포이 신전에서 가져온 "뱀 기둥(Serpent Column)", 그리고 10세기에 제작된 "벽돌 오벨리스크" 등 고대 유물이 보존되어 있습니다.',
@@ -121,7 +144,11 @@ export const scheduleModalsData: ModalData[] = [
     type: 'tourist-spot',
     id: 'mykonos',
     title: '[관광정보] 미코노스 (MYKONOS)',
-    images: ['/shared/placeholder.png'],
+    images: [
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day3/Mykonos/06cb15c9a113c72c3907fa6c4225882e-little-venice.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day3/Mykonos/mykonos-winmillds-kato-mili.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day3/Mykonos/view-of-a-street-in-mykonos-desktop.webp',
+    ],
     descriptions: [
       '미코노스는 그리스 에게해 중앙에 위치한 키클라데스 제도의 섬으로, 산토리니와 함께 그리스를 대표하는 세계적인 관광지입니다. 섬 이름은 그리스 신화 속 아폴로의 손자 뮈코노스(Mykonos)에서 유래했으며, 새하얀 회벽의 키클라데스식 건축물, 좁고 미로처럼 얽힌 골목길, 그리고 에메랄드빛 에게해가 어우러져 "바람의 섬"이라는 별명으로도 불립니다.',
       '미코노스 타운(호라, Chora)은 섬의 심장부로, 상징적인 카토 밀리 풍차, 리틀 베니스 해안가, 파라포르티아니 교회 등 주요 랜드마크가 도보 거리 내에 밀집해 있어 걸어 다니며 관광하기에 최적입니다. 특히 리틀 베니스에서 바라보는 석양은 세계에서 가장 아름다운 일몰 중 하나로 손꼽힙니다.',
@@ -144,7 +171,11 @@ export const scheduleModalsData: ModalData[] = [
     type: 'tourist-spot',
     id: 'littlevenice',
     title: '[관광정보] 리틀 베니스 (LITTLE VENICE)',
-    images: ['/shared/placeholder.png'],
+    images: [
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day3/Little-Venice/038d9058d2ca8680f0af206eceb35038d90.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day3/Little-Venice/little-venice-mykonos-greece-jcp6.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day3/Little-Venice/view-little-venice-mykonos-sunset-people-434421882.webp',
+    ],
     descriptions: [
       '리틀 베니스는 미코노스 타운 남서쪽 끝에 위치한 해안 지구로, 16~18세기에 지어진 색색의 건물들이 바다 바로 위에 돌출되어 세워져 있는 것이 특징입니다. 이탈리아 베네치아를 연상시킨다 하여 "리틀 베니스"라는 이름이 붙었으며, 공식 명칭은 알레프칸드라(Alefkandra)입니다.',
       '과거 선원과 상인들의 거주지였던 이 건물들은 현재 트렌디한 바, 레스토랑, 아트 갤러리로 변모하여 활기찬 분위기를 자아냅니다. 특히 늦은 오후부터 저녁 시간대에는 에게해 위로 펼쳐지는 장엄한 석양을 감상하려는 방문객들로 북적이며, 미코노스에서 가장 낭만적인 일몰 명소로 사랑받고 있습니다.',
@@ -167,7 +198,11 @@ export const scheduleModalsData: ModalData[] = [
     type: 'tourist-spot',
     id: 'mykonoswindmills',
     title: '[관광정보] 카토 밀리 풍차 (KATO MILI WINDMILLS)',
-    images: ['/shared/placeholder.png'],
+    images: [
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day3/Kato-Mili-Windmills/L275589.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day3/Kato-Mili-Windmills/mykonos-Kati-Myli-windmills--1440x1080.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day3/Kato-Mili-Windmills/the-windmills-5.webp',
+    ],
     descriptions: [
       '카토 밀리(Kato Mili)는 미코노스 타운 남쪽 언덕 위에 나란히 서 있는 7기의 풍차로, 미코노스 섬을 상징하는 가장 유명한 랜드마크입니다. 16세기부터 20세기 초까지 에게해에서 불어오는 강한 바람을 이용하여 곡물을 빻는 데 사용되었으며, 미코노스 경제의 핵심 시설이었습니다.',
       '7기의 풍차 중 게로니모스 밀(Geronymos Mill)은 1700년에 지어진 가장 오래된 풍차로, 1960년대까지 실제로 밀가루를 생산했습니다. 보니스 밀(Bonis Mill)은 그리스 최초의 농업 박물관으로 개조되어 7~9월 사이 무료로 관람할 수 있습니다.',
@@ -190,7 +225,11 @@ export const scheduleModalsData: ModalData[] = [
     type: 'tourist-spot',
     id: 'paraportiani',
     title: '[관광정보] 파라포르티아니 교회 (PANAGIA PARAPORTIANI)',
-    images: ['/shared/placeholder.png'],
+    images: [
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day3/Panagia-Paraportiani/church_panagia_paraportiani_mykonos.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day3/Panagia-Paraportiani/panagia-paraportiani-church-desktop.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day3/Panagia-Paraportiani/Panagia-Paraportiani-Church-Mykonos-6.webp',
+    ],
     descriptions: [
       '파라포르티아니 교회는 미코노스 타운 카스트로(Kastro) 지구에 위치한 그리스 정교회 성당으로, 미코노스에서 가장 사진이 많이 찍히는 건축물이자 세계에서 가장 아름다운 교회 중 하나로 평가받습니다. 1425년에 건축이 시작되어 17세기에 완성되었으며, 약 200년에 걸쳐 지어진 독특한 역사를 지니고 있습니다.',
       '이 교회의 가장 큰 특징은 실제로 5개의 개별 예배당이 하나로 합쳐진 복합 건축물이라는 점입니다. 1층에 4개의 예배당이 자리하고, 그 위에 성모 마리아에게 봉헌된 5번째 예배당이 올려져 있습니다. 비대칭적이면서도 유기적인 곡선이 어우러진 순백의 외관은 키클라데스 건축의 정수를 보여줍니다.',
@@ -213,7 +252,11 @@ export const scheduleModalsData: ModalData[] = [
     type: 'tourist-spot',
     id: 'heraklion',
     title: '[관광정보] 크레타 헤라클리온 (HERAKLION, CRETE)',
-    images: ['/shared/placeholder.png'],
+    images: [
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day4/knossos-palace-ancient-ruins-Kiev.Victor-shutterstock.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day4/Knossos-Palace.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day4/Knossos_-_North_Portico_02.webp',
+    ],
     descriptions: [
       '고대 미노아 문명의 심장부, 크레타 헤라클리온. 그리스 최대의 섬 크레타의 수도이자 최대 도시인 헤라클리온은 약 5,000년의 역사를 간직한 유서 깊은 도시입니다.',
       '유럽에서 가장 오래된 문명인 미노아 문명의 정치적·문화적 중심지였으며, 도시에서 남쪽으로 약 5km 거리에 위치한 크노소스 궁전은 미노아 문명의 영광을 오늘날까지 전하고 있습니다. 기원전 2000년경 지어진 크노소스 궁전은 가로세로 160~170m에 달하는 거대한 규모에 1,000개가 넘는 방이 복잡하게 배치되어 있어, 예로부터 "미궁(라비린토스)"이라 불려왔습니다.',
@@ -236,7 +279,11 @@ export const scheduleModalsData: ModalData[] = [
     type: 'tourist-spot',
     id: 'rhodes',
     title: '[관광정보] 로도스 (RHODES)',
-    images: ['/shared/placeholder.png'],
+    images: [
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day5/caption.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day5/d5.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day5/street-of-knights.webp',
+    ],
     descriptions: [
       '중세 기사단의 요새가 살아 숨 쉬는 섬, 로도스. 에게해 남동쪽에 위치한 로도스는 그리스에서 네 번째로 큰 섬으로, 고대 세계 7대 불가사의 중 하나인 "로도스의 거상"이 세워졌던 곳입니다.',
       '로도스 구시가지는 유럽에서 가장 잘 보존된 중세 도시 중 하나로, 1988년 유네스코 세계문화유산으로 등재되었습니다. 1309년 성 요한 기사단이 로도스에 도착하여 약 200년간 이 섬을 본거지로 삼으며, 기독교 순례자를 보호하고 오스만 제국에 맞서는 지중해의 방파제 역할을 수행했습니다.',
@@ -259,7 +306,11 @@ export const scheduleModalsData: ModalData[] = [
     type: 'tourist-spot',
     id: 'santorini',
     title: '[관광정보] 산토리니 (SANTORINI)',
-    images: ['/shared/placeholder.png'],
+    images: [
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day6/Blue-domed-church-along-caldera-edge-in-Oia-Santorini-greece-conde-nast-traveller-11aug17-iStock.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day6/fira-greece-cta-hero.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day6/TAL-santorini-lead-image-SANTORINIGR0424-c7151a6a233440ac871e0b99fd484467.webp',
+    ],
     descriptions: [
       '에게해의 보석, 화산이 빚어낸 절경의 섬 산토리니. 그리스 키클라데스 제도 최남단에 위치한 산토리니는 기원전 17세기경 초대형 화산 폭발로 형성된 깊이 400m의 칼데라 지형과 높이 300m의 수직 절벽 위에 세워진 마을들로 유명합니다.',
       '산토리니를 상징하는 하얀 벽의 큐브형 집들과 파란 돔 지붕의 교회들은 칼데라 절벽 위에 촘촘히 들어서 에게해의 코발트빛 바다와 극적인 대비를 이루며 세계에서 가장 아름다운 풍경 중 하나로 손꼽힙니다. 특히 이아(Oia) 마을은 세계 3대 일몰 명소로 유명합니다.',
@@ -282,7 +333,11 @@ export const scheduleModalsData: ModalData[] = [
     type: 'tourist-spot',
     id: 'athens',
     title: '[관광정보] 아테네 (ATHENS)',
-    images: ['/shared/placeholder.png'],
+    images: [
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day7/Athens/41d1a181f253481c73558fedfada0a8dd8d093fa-1600x1066.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day7/Athens/Gray-Line-Athens-Cover-Photo-scaled.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day7/Athens/stock-photo-parthenon-temple-on-sinset-acropolis-athens-591272060.webp',
+    ],
     descriptions: [
       '서양 문명의 발상지이자 민주주의의 요람, 아테네. 약 3,400년의 역사를 간직한 그리스의 수도 아테네는 고대 그리스 철학, 예술, 학문의 중심지로서 소크라테스, 플라톤, 아리스토텔레스가 활동한 곳입니다. 도시 곳곳에 고대 유적이 현대 도시와 어우러져 있어, 카페에 앉아 커피를 마시며 2,500년 전 신전을 바라보는 독특한 경험을 선사합니다.',
       '아크로폴리스 언덕 위의 파르테논 신전을 필두로, 올림피아 제우스 신전, 고대 아고라, 하드리아누스 도서관 등 수많은 고대 유적지가 밀집해 있으며, 국립 고고학 박물관과 아크로폴리스 박물관에서는 고대 그리스 문명의 정수를 만나볼 수 있습니다.',
@@ -305,7 +360,11 @@ export const scheduleModalsData: ModalData[] = [
     type: 'tourist-spot',
     id: 'panathenaic',
     title: '[관광정보] 파나티나이코 스타디움 (PANATHENAIC STADIUM)',
-    images: ['/shared/placeholder.png'],
+    images: [
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day7/Panathenaic-Stadium/21_Panathenaic_Stadium.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day7/Panathenaic-Stadium/Panathenaic-Stadium-788x537.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day7/Panathenaic-Stadium/stadium-athens.webp',
+    ],
     descriptions: [
       '1896년 제1회 근대 올림픽이 개최된 역사적인 경기장으로, 세계에서 유일하게 전체가 대리석으로 만들어진 경기장입니다. 그리스어로 "칼리마르마로(Kallimarmaro)", 즉 "아름다운 대리석"이라는 별명으로도 불리며, 약 5만 명을 수용할 수 있는 U자형 구조를 갖추고 있습니다.',
       '원래 기원전 330년경 고대 아테네의 파나테나이아 축제를 위해 건설된 경기장으로, 기원후 144년 헤로데스 아티쿠스에 의해 대리석으로 재건되었습니다. 이후 천 년 이상 방치되었다가 1869년부터 대규모 복원 공사를 거쳐 1896년 제1회 근대 올림픽의 무대가 되었습니다. 2004년 아테네 올림픽에서는 양궁 경기와 마라톤 결승 지점으로 사용되었습니다.',
@@ -328,7 +387,11 @@ export const scheduleModalsData: ModalData[] = [
     type: 'tourist-spot',
     id: 'acropolis',
     title: '[관광정보] 아크로폴리스 (ACROPOLIS OF ATHENS)',
-    images: ['/shared/placeholder.png'],
+    images: [
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day7/Acropolis-of-Athens/b698f96a3bf7e35418940973f33c4708-The%20Acropolis%20of%20Athens.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day7/Acropolis-of-Athens/Olivia-Leaves-Acropolis.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day7/Acropolis-of-Athens/The_Acropolis_of_Athens_as_seen_from_the_Pnyx_in_October_2025.webp',
+    ],
     descriptions: [
       '해발 156m의 석회암 언덕 위에 세워진 고대 그리스 최고의 성채로, 유네스코 세계문화유산이자 서양 문명을 대표하는 상징적인 유적지입니다. "높은 도시"를 뜻하는 아크로폴리스는 기원전 5세기 아테네의 황금기에 페리클레스의 지휘 아래 건설되었으며, 2,500년이 넘는 세월 동안 아테네의 스카이라인을 지배해 왔습니다.',
       '언덕 위에는 아테나 여신에게 봉헌된 파르테논 신전을 중심으로, 승리의 여신 니케를 모신 아테나 니케 신전, 성스러운 입구인 프로필레아, 그리고 카리아티드 여인상으로 유명한 에레크테이온 신전이 자리하고 있습니다. 각 건축물은 고대 그리스 건축의 정수인 도리아식·이오니아식 기둥 양식을 완벽하게 구현하고 있습니다.',
@@ -351,7 +414,11 @@ export const scheduleModalsData: ModalData[] = [
     type: 'tourist-spot',
     id: 'syntagma',
     title: '[관광정보] 신타그마 광장 (SYNTAGMA SQUARE & HELLENIC PARLIAMENT)',
-    images: ['/shared/placeholder.png'],
+    images: [
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day7/Syntagma-Square-and-Hellenic-Parliament/Building-of-Greek-parliament-in-Syntagma-square-Athens-Greece.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day7/Syntagma-Square-and-Hellenic-Parliament/DSC_3961.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day7/Syntagma-Square-and-Hellenic-Parliament/f1x_athens_city_experience_see_changing_of_the_guard_yatzer-1024x577.webp',
+    ],
     descriptions: [
       '신타그마 광장은 "헌법 광장"이라는 뜻으로, 현대 아테네에서 가장 중요한 정치적·역사적 광장입니다. 1843년 국왕 오토 1세가 이곳에서 헌법을 선포한 데서 이름이 유래하였으며, 광장 정면에는 19세기 왕궁 건물을 개조한 그리스 국회의사당이 위풍당당하게 자리하고 있습니다.',
       '국회의사당 정면에는 1932년에 건립된 무명용사의 비가 있으며, 조국을 위해 희생한 모든 무명의 용사들을 기리고 있습니다. 비석에는 고대 그리스 장례 조각을 본뜬 쓰러진 전사의 부조가 새겨져 있으며, 양쪽에는 투키디데스의 "펠로폰네소스 전쟁사"에서 발췌한 페리클레스의 추도 연설문이 각인되어 있습니다.',
@@ -374,7 +441,13 @@ export const scheduleModalsData: ModalData[] = [
     type: 'cruise-at-sea',
     id: 'cruiseatsea',
     title: '코스타 포르투나호 전일 해상',
-    images: ['/shared/placeholder.png'],
+    images: [
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day8/(486)%20Costa%20Fortuna%20buffet%20Food%20Costa%20cruises%20food%20-%20YouTube.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day8/433-columbopool.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day8/b15461eb-4623-4d19-ab20-38fb18168643.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day8/Barcellona-Pool.webp',
+      'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section6/day8/costa-fortuna-132-ristorante-michelangelo.webp',
+    ],
     descriptions: [
       '오늘은 종일 해상에서 보내는 날입니다. 코스타 포르투나호의 다양한 시설을 마음껏 즐겨보세요.',
       '3개의 수영장과 6개의 자쿠지에서 일광욕을 즐기며 여유를 만끽하고, 프리미엄 스파에서 여행의 피로를 부드럽게 풀어보세요. 오션뷰 조깅 트랙을 달리거나 최신식 피트니스 센터에서 상쾌하게 땀을 흘리며, 대극장에서 화려한 공연도 관람하실 수 있습니다.',

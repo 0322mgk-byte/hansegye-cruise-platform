@@ -385,7 +385,8 @@ Agent P에게 embed URL 조사를 요청하지 않는다 — `googleMapQuery`만
 | `slug` | 크루즈명 영문 변환 + `-cruise` |
 | `name` | `{선박명} {지역} 크루즈 {N박 N일}` (한국어) |
 | `shortDescription` | 기항지 도시 나열 (` · ` 구분) |
-| `ogTitle`, `ogDescription` | `""` (빈 값 — 사용자가 나중에 설정) |
+| `ogTitle` | 아래 OG 카피 생성 규칙 참조 |
+| `ogDescription` | 아래 OG 카피 생성 규칙 참조 |
 | `thumbnailImage` | `"/shared/placeholder.png"` |
 | `ogImage` | `""` (빈 값 — 사용자가 나중에 설정) |
 | `cardDepartureLabel` | `"YY년 M월 D일 출발"` (예: `"26년 1월 10일 출발"`) |
@@ -393,6 +394,31 @@ Agent P에게 embed URL 조사를 요청하지 않는다 — `googleMapQuery`만
 | `cardShipName` | `"{한글 선박명} ({영문 선박명})"` (예: `"코스타 토스카나호 (Costa Toscana)"`) |
 | `cardRoute` | 아래 경로 요약 규칙 참조 |
 | `cardPrice` | `"{최저가격}원~"` — 천 단위 콤마 포함 (예: `"5,790,000원~"`) pricing-data의 첫 번째 roomTab 최저가 사용 |
+
+#### OG 카피 생성 규칙 (`ogTitle`, `ogDescription`)
+
+SNS/카카오톡 공유 시 노출되는 카피. 스크롤을 멈추고 클릭하게 만드는 것이 목적이다.
+
+**타겟:** 20~40대 / **핵심 소구:** 호기심, 의외성
+
+**글자 수:**
+- `ogTitle`: 40자 이내 (카카오톡 미리보기 잘림 방지)
+- `ogDescription`: 80자 이내
+
+**필수 조건:**
+- `ogTitle`과 `ogDescription` 중 최소 하나에 "크루즈"를 포함한다
+- `name`이나 `cardTitle`을 그대로 복사하지 않는다 — OG 카피는 별도의 독립적인 카피이다
+
+**작성 프로세스:**
+1. `references/og-copy-guide.md`를 읽고 소비자 욕구(Desires)와 불안(Barriers) 목록을 파악한다
+2. 이 크루즈 상품의 핵심 특장점(Agent P 조사 결과 중 가장 차별화되는 요소)을 1개 선정한다
+3. Section 5(상품 특성 → 욕구 매칭)를 참고하여, 특장점에 가장 잘 맞는 소비자 욕구/불안을 연결한다
+4. Section 4(후킹 기법)의 패턴 중 하나를 활용하여 ogTitle을 작성한다 — 관광지 정보가 아니라 소비자 심리를 건드리는 카피
+5. ogDescription은 ogTitle의 호기심을 구체적 정보로 뒷받침한다 (어떤 크루즈인지, 왜 클릭해야 하는지)
+6. Section 6(금지 패턴)에 해당하는 표현을 사용하지 않는다
+7. 상품마다 가장 잘 어울리는 후킹 기법을 자율적으로 판단하여 선택한다 — 하나의 패턴에 고정하지 않는다
+
+**주의:** 사용자가 OG 카피를 직접 지정한 경우, 사용자 제공 값을 그대로 사용한다.
 
 ### 홈페이지 카드 경로 요약 규칙 (`cardRoute`)
 일정 순서(1일차→마지막 일차)를 기준으로 나열하되, 해상일은 제외한다. 귀환(출발지 복귀)은 생략한다.
@@ -415,3 +441,4 @@ Agent P에게 embed URL 조사를 요청하지 않는다 — `googleMapQuery`만
 - **`references/data-structure.md`** — 파일별 "교체할 필드" 목록과 "보존할 필드" 목록. 이 문서에 명시된 필드만 교체하고, 나머지는 레퍼런스 그대로 유지한다.
 - **`references/timeline-items.md`** — TimelineItem 10가지 타입 + ModalData 5가지 타입 예제 포함. 관광지 카드 세분화 규칙 포함.
 - **`references/example-patterns.md`** — 알래스카 레퍼런스에서 그대로 복사할 패턴 (static-data, trip-summary, pricing-data, 승선/하선 안내 모달)
+- **`references/og-copy-guide.md`** — OG 카피 작성을 위한 소비자 욕구/불안 분석 및 후킹 기법 가이드

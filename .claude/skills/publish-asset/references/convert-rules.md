@@ -40,6 +40,18 @@ AVIF의 CRF는 0(최고)~63(최저). quality 80이면 CRF ≈ 13.
 - 최대 크기 이하 → 변환 건너뜀, 그대로 업로드
 - 최대 크기 초과 → quality를 낮추며 재인코딩
 
+### OG 이미지 (1200×630 크롭)
+
+OG 이미지는 `batch-convert.js`를 사용하지 않고 직접 ffmpeg를 실행한다.
+
+```bash
+ffmpeg -i "{원본경로}" -vf "scale=1200:630:force_original_aspect_ratio=increase,crop=1200:630" -c:v libwebp -quality 80 "{출력경로}" -y
+```
+
+- `force_original_aspect_ratio=increase`: 원본 비율을 유지하면서 1200×630 영역을 **완전히 덮도록** 확대
+- `crop=1200:630`: 중앙 기준 크롭 (ffmpeg 기본값 — x,y 미지정 시 중앙)
+- 크기 제한 없음 (quality 80 고정)
+
 ---
 
 ## 영상 변환

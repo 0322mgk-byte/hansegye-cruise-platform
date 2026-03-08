@@ -54,7 +54,6 @@
       "Bash(taskkill:*)",
       "Bash(npx next:*)",
       "Bash(mv:*)",
-      "Bash(rm:*)",
       "Bash(npm ls:*)",
       "Bash(ipconfig:*)",
       "Bash(tasklist:*)",
@@ -69,7 +68,16 @@
       "WebFetch(domain:adrianroselli.com)",
       "WebFetch(domain:www.codegenes.net)",
       "WebFetch(domain:blog.stephaniestimac.com)",
-      "WebFetch(domain:www.filamentgroup.com)"
+      "WebFetch(domain:www.filamentgroup.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:hansegye-cruise-platform.vercel.app)",
+      "Bash(ls:*)",
+      "WebFetch(domain:docs.cloud.google.com)",
+      "WebFetch(domain:www.atlabs.ai)",
+      "WebFetch(domain:blog.google)",
+      "WebFetch(domain:gemini.google)",
+      "WebFetch(domain:deepmind.google)"
     ]
   }
 }

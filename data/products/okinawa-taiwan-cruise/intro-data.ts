@@ -7,7 +7,13 @@ export const introData: IntroData = {
   facilities: [
     {
       name: "엔터테인먼트",
-      images: ["/shared/placeholder.png"],
+      images: [
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section3/entertainment/amusements.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section3/entertainment/images.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section3/entertainment/maxresdefault.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section3/entertainment/MSC-Bellissima-Kids-Club-1-1024x768.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section3/entertainment/msc-bellissima-review-1-489.webp",
+      ],
       alt: "MSC 벨리시마 엔터테인먼트 시설",
       subtitle: "세계적 수준의 공연과 짜릿한 즐거움이 가득한 바다 위 엔터테인먼트",
       description:
@@ -15,7 +21,13 @@ export const introData: IntroData = {
     },
     {
       name: "아웃도어 & 레저",
-      images: ["/shared/placeholder.png"],
+      images: [
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section3/outdoor-leisure/35f557ee-8e87-48ba-8216-23f65f26e996_msc_meraviglia_activities_sportcomplex.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section3/outdoor-leisure/fitness-basketball.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section3/outdoor-leisure/msc-yacht-club-pool.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section3/outdoor-leisure/msc19019278.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section3/outdoor-leisure/msc22015857.webp",
+      ],
       alt: "MSC 벨리시마 아웃도어 & 레저 시설",
       subtitle: "4개의 수영장과 워터파크, 스포츠 코트까지 바다 위 모험의 천국",
       description:
@@ -23,7 +35,11 @@ export const introData: IntroData = {
     },
     {
       name: "힐링 & 웰니스",
-      images: ["/shared/placeholder.png"],
+      images: [
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section3/healing-wellness/be_public_area_aurea_spa_03.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section3/healing-wellness/ebf5a21625ea4e11a91763ecfadb102e.webp",
+        "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section3/healing-wellness/MSC-World-Europa-Gym-Treamills.webp",
+      ],
       alt: "MSC 벨리시마 힐링 & 웰니스 시설",
       subtitle: "발리네시안 테마의 프리미엄 스파에서 즐기는 완벽한 휴식",
       description:

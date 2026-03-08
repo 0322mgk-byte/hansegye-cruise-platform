@@ -8,7 +8,11 @@ export const scheduleModalsData: ModalData[] = [
     type: "tourist-spot",
     id: "taiwan",
     title: "[관광정보] 대만 (TAIWAN)",
-    images: ["/shared/placeholder.png"],
+    images: [
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day1/Taiwan/2025-11-11T052648Z_132071190_RC23UHAHE1W9_RTRMADP_3_ASIA-WEATHER-TAIWAN-1762923874.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day1/Taiwan/taivan.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day1/Taiwan/wulai-taiwan.webp",
+    ],
     descriptions: [
       "대만 북부는 수도 타이베이(Taipei)를 중심으로 신베이(New Taipei City), 지룽(Keelung) 일대를 아우르는 대만 최대의 관광 권역이다.",
       "도심을 벗어나면 북부 해안과 산간 지역에 자연경관과 역사가 어우러진 매력적인 당일 여행지가 펼쳐진다. 기암괴석이 늘어선 예류지질공원, 하늘로 천등을 날리는 스펀, 홍등으로 물든 계단 골목의 지우펀 등은 타이베이에서 1~1.5시간 거리에 위치해 당일치기 코스로 큰 인기를 얻고 있다.",
@@ -29,7 +33,11 @@ export const scheduleModalsData: ModalData[] = [
     type: "tourist-spot",
     id: "yehliu",
     title: "[관광정보] 예류지질공원 (YEHLIU GEOPARK)",
-    images: ["/shared/placeholder.png"],
+    images: [
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day1/Yehliu-Geopark/1024x768_tours-image-2_jocmr1geiez56vah1cja.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day1/Yehliu-Geopark/abc82cf4-e703-43f2-ba07-a25a9ac19201.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day1/Yehliu-Geopark/img120160803085929917.webp",
+    ],
     descriptions: [
       "예류지질공원은 대만 북부 해안 만리(Wanli) 지역에 위치한 세계적인 지질 명소로, 약 1,700m 길이의 곶 위에 수천만 년에 걸친 해식·풍식 작용이 빚어낸 기암괴석이 줄지어 서 있다.",
       "그중에서도 버섯 모양으로 깎인 '여왕머리바위(Queen's Head)'가 가장 유명한데, 오랜 침식으로 목 부분이 점차 가늘어지고 있어 머지않아 자연 붕괴가 예상되므로 지금이 방문 적기라 할 수 있다.",
@@ -50,7 +58,11 @@ export const scheduleModalsData: ModalData[] = [
     type: "tourist-spot",
     id: "shifen",
     title: "[관광정보] 스펀 (SHIFEN)",
-    images: ["/shared/placeholder.png"],
+    images: [
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day1/Shifen/0d.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day1/Shifen/blog05-1-800x533.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day1/Shifen/feature-Shifen-waterfall.webp",
+    ],
     descriptions: [
       "스펀(十分)은 타이베이 동쪽 핑시(Pingxi) 산간 지역에 자리한 작은 철도 마을로, 기찻길 양옆으로 상점이 빼곡히 늘어선 스펀 올드스트리트가 대표 명소이다.",
       "이곳의 가장 큰 매력은 철도 위에서 직접 천등(sky lantern)에 소원을 적어 하늘로 날리는 체험으로, 열기구 원리로 떠오르는 형형색색의 천등이 산골짜기 하늘을 수놓는 장면은 대만 여행의 상징적 풍경이 되었다.",
@@ -71,7 +83,11 @@ export const scheduleModalsData: ModalData[] = [
     type: "tourist-spot",
     id: "jiufen",
     title: "[관광정보] 지우펀 (JIUFEN)",
-    images: ["/shared/placeholder.png"],
+    images: [
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day1/Jiufen/500cQZjjKjD3JwLbclZeWiSb4YMQsOPxPOMEpXVT.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day1/Jiufen/jiufen-taiwan-teahouse.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day1/Jiufen/pic_jiufen-modelcourse22.webp",
+    ],
     descriptions: [
       "지우펀(九份)은 신베이시 루이팡구의 산비탈에 자리한 옛 금광 마을로, 19세기 말 골드러시 시절 번성했다가 광산 폐쇄 이후 쇠락한 뒤, 1989년 영화 '비정성시(A City of Sadness)'의 촬영지로 알려지며 다시 관광 명소로 부활했다.",
       "좁은 계단식 골목 양쪽으로 붉은 홍등이 빼곡히 걸린 풍경이 스튜디오 지브리 애니메이션 '센과 치히로의 행방불명'의 배경을 연상시킨다고 하여 일본과 한국 관광객 사이에서 폭발적 인기를 얻고 있다.",
@@ -94,7 +110,11 @@ export const scheduleModalsData: ModalData[] = [
     type: "tourist-spot",
     id: "miyakojima",
     title: "[관광정보] 미야코지마 (MIYAKOJIMA)",
-    images: ["/shared/placeholder.png"],
+    images: [
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day3/7a188fc0cca43845d9e52618367583ae.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day3/miyakojima%20sunayama.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day3/miyakojima2018.webp",
+    ],
     descriptions: [
       "미야코지마는 일본 오키나와현 남서쪽 해상에 자리한 산호초 섬으로, 일본에서 가장 아름다운 해변을 품고 있는 열대 낙원이다.",
       "'동양의 몰디브'라는 별명답게 요나하 마에하마 해변, 스나야마 해변, 요시노 해안 등 일본 최고 수준의 백사장 해변이 줄지어 있으며, 섬에는 높은 산이나 큰 하천이 없어 토사가 바다로 유입되지 않기 때문에 에메랄드빛으로 빛나는 투명한 바닷물이 연중 유지된다.",
@@ -116,7 +136,11 @@ export const scheduleModalsData: ModalData[] = [
     type: "tourist-spot",
     id: "naha",
     title: "[관광정보] 나하 (NAHA)",
-    images: ["/shared/placeholder.png"],
+    images: [
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day4/Naha/23512202_m.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day4/Naha/naha-bar-street-unsplash.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day4/Naha/naha-shrine.webp",
+    ],
     descriptions: [
       "나하는 일본 최남단에 위치한 오키나와현의 행정, 경제, 문화 중심지로, 약 32만 명의 인구가 거주하는 활기찬 도시이다.",
       "과거 류큐 왕국(1429~1879)의 수도로서 500년 이상의 독자적인 역사와 문화를 간직하고 있으며, 동남아시아, 중국, 일본 본토를 잇는 해상 무역의 거점 역할을 해왔다.",
@@ -136,7 +160,11 @@ export const scheduleModalsData: ModalData[] = [
     type: "tourist-spot",
     id: "dmmkariyushi",
     title: "[관광정보] DMM카리유시 수족관 (DMM KARIYUSHI AQUARIUM)",
-    images: ["/shared/placeholder.png"],
+    images: [
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day4/DMM-Kariyushi-Aquarium/9218V_78e358a8-d8b4-459c-a831-d08d4be07aec.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day4/DMM-Kariyushi-Aquarium/A-0100_1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day4/DMM-Kariyushi-Aquarium/bUA5JH8Ikmx2lbvE.webp",
+    ],
     descriptions: [
       "DMM카리유시 수족관은 2020년 5월에 오픈한 오키나와의 차세대 체험형 수족관으로, '살아있는 것과의 교감'을 컨셉으로 최신 영상기술과 실제 생물 전시를 결합한 새로운 형태의 엔터테인먼트 수족관이다.",
       "약 190종, 5,000점 이상의 생물을 전시하며, 관람 동선은 '바다의 세계'와 '숲의 세계' 두 가지 존으로 나뉜다. 바닥이 투명한 유리로 된 수조 위를 걸으며 상어와 가오리를 내려다보는 체험, 펭귄과 나무늘보를 가까이에서 관찰하는 코너가 인기가 높다.",
@@ -157,7 +185,11 @@ export const scheduleModalsData: ModalData[] = [
     type: "tourist-spot",
     id: "iiasokinawa",
     title: "[관광정보] 이아스 이온몰 (IIAS OKINAWA TOYOSAKI)",
-    images: ["/shared/placeholder.png"],
+    images: [
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day4/Iias-Okinawa-Toyosaki/1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day4/Iias-Okinawa-Toyosaki/20250831_190410_eddf9f51_w1920.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day4/Iias-Okinawa-Toyosaki/vVa7NhBOx1mEwpVoJ3cGa5BSKnt9skHJsiSZpUsG.webp",
+    ],
     descriptions: [
       "이아스 오키나와 토요사키는 2020년 6월에 오키나와 남부 토미구스쿠시에 오픈한 대형 복합 쇼핑몰로, 오키나와 남부 최대 규모를 자랑한다.",
       "약 150개 이상의 점포가 입점해 있으며, 패션, 잡화, 가전, 식료품 등 다양한 분야의 쇼핑을 한곳에서 즐길 수 있다. 건물 내에는 DMM카리유시 수족관도 함께 위치하고 있어 쇼핑과 레저를 동시에 즐길 수 있는 복합 문화 공간이다.",
@@ -178,7 +210,11 @@ export const scheduleModalsData: ModalData[] = [
     type: "tourist-spot",
     id: "shuricastle",
     title: "[관광정보] 슈리성 (SHURI CASTLE)",
-    images: ["/shared/placeholder.png"],
+    images: [
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day4/Shuri-Castle/7103_top.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day4/Shuri-Castle/shureimon-gate-shuri-iStock-orpheus26-1024x600.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day4/Shuri-Castle/Shuri-Castle-grounds-1024x682.webp",
+    ],
     descriptions: [
       "슈리성은 14세기 말에 창건되어 약 500년간 류큐 왕국의 정치, 외교, 문화의 중심지 역할을 한 궁전으로, 2000년에 유네스코 세계문화유산 '류큐 왕국의 구스쿠 및 관련 유산군'의 일부로 등재되었다.",
       "나하 시내가 한눈에 내려다보이는 구릉 위에 자리 잡고 있으며, 선명한 주홍색의 정전(正殿)은 중국과 일본 건축 양식이 융합된 류큐 특유의 건축미를 보여준다. 2019년 화재로 정전이 소실되었으며, 현재 2026년 가을 완공을 목표로 복원 공사가 진행 중이다.",
@@ -199,7 +235,11 @@ export const scheduleModalsData: ModalData[] = [
     type: "tourist-spot",
     id: "kokusaistreet",
     title: "[관광정보] 국제거리 (KOKUSAI STREET)",
-    images: ["/shared/placeholder.png"],
+    images: [
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day4/Kokusai-Street/83987aa3b1e0361c65788230c26a77fb-800x534.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day4/Kokusai-Street/kokusaidori-info_thumb.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day4/Kokusai-Street/p47020008_01.webp",
+    ],
     descriptions: [
       "국제거리(코쿠사이도리)는 나하 시내 중심부를 관통하는 약 1.6km 길이의 메인 스트리트로, 오키나와 최대의 번화가이자 관광 쇼핑 거리이다. 제2차 세계대전 후 폐허에서 가장 빠르게 부흥한 거리라는 의미에서 '기적의 1마일'이라는 별명으로 불린다.",
       "약 600여 개의 상점, 레스토랑, 호텔, 기념품 가게가 밀집해 있으며, 시사(수호신) 장식품, 자색 고구마 타르트, 추라우미 소금, 아와모리(전통 증류주) 등 오키나와 대표 기념품을 한곳에서 구입할 수 있다.",
@@ -222,7 +262,11 @@ export const scheduleModalsData: ModalData[] = [
     type: "tourist-spot",
     id: "ishigaki",
     title: "[관광정보] 이시가키 (ISHIGAKI)",
-    images: ["/shared/placeholder.png"],
+    images: [
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day5/Ishigaki/1757473235-ishigaki-lighthouse.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day5/Ishigaki/de103_kv_ishigaki-island-scenery-1024x683.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day5/Ishigaki/DJI_0519-Pano-2-Pano.webp",
+    ],
     descriptions: [
       "이시가키섬은 일본 오키나와현의 남서쪽, 야에야마 제도의 중심에 위치한 아열대 섬으로, 도쿄에서 남쪽으로 약 1,941km 떨어져 있다.",
       "미쉐린 그린가이드에서 별점을 받은 세계적 수준의 해안 경관과, 투명한 에메랄드빛 바다, 풍부한 산호초, 그리고 맹그로브 숲이 어우러진 천혜의 자연환경이 이 섬의 가장 큰 매력이다. 특히 가비라만(川平湾)은 이시가키 최고의 절경으로 유명하다.",
@@ -242,7 +286,11 @@ export const scheduleModalsData: ModalData[] = [
     type: "tourist-spot",
     id: "limestonecave",
     title: "[관광정보] 이시가키 종유동 (ISHIGAKI LIMESTONE CAVE)",
-    images: ["/shared/placeholder.png"],
+    images: [
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day5/Ishigaki-Limestone-Cave/ef8ea718-c3fe-42a5-9fcb-62f3fac4fff8.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day5/Ishigaki-Limestone-Cave/P7076363-640x480.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day5/Ishigaki-Limestone-Cave/spot3-1.webp",
+    ],
     descriptions: [
       "이시가키 종유동은 약 20만 년 전 해저의 산호초가 지각변동에 의해 융기하면서 형성된, 일본 최남단의 관광 종유동굴이다. 동굴의 총 연장은 약 3.2km로 이시가키섬에서 가장 큰 동굴이며, 이 중 약 660m 구간이 관광 코스로 공개되어 있다.",
       "동굴 내부에는 '신들의 조각 숲'이라 불리는 거대한 석순 군락이 있으며, '토토로 종유석', '떨어지지 않는 바위' 등 독특한 형상의 종유석들이 관람 포인트로 인기가 높다. 물방울이 떨어지며 맑은 소리를 내는 수금굴의 청아한 울림도 빼놓을 수 없다.",
@@ -263,7 +311,11 @@ export const scheduleModalsData: ModalData[] = [
     type: "tourist-spot",
     id: "yaimavillage",
     title: "[관광정보] 야이마무라 민속촌 (YAIMA VILLAGE)",
-    images: ["/shared/placeholder.png"],
+    images: [
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day5/Yaima-Village/8d67602e-633d-4b77-841e-0a44f7cba09e1.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day5/Yaima-Village/p47080018_01.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day5/Yaima-Village/zypv7w2vfholw3de2vww.webp",
+    ],
     descriptions: [
       "야이마무라(石垣やいま村)는 이시가키섬 나구라만이 내려다보이는 언덕 위에 자리 잡은, 일본 최남단이자 최서단의 테마파크이다. 국가 유형문화재로 등록된 붉은 기와지붕의 전통 민가가 여러 채 복원되어 있으며, 샤미센 음악과 함께 옛 야에야마의 정취를 느낄 수 있다.",
       "민속촌 내에는 볼리비아산 다람쥐원숭이가 자유롭게 뛰어노는 '리스자루의 숲'이 있어 가족 단위 방문객에게 특히 인기가 높다. 류큐 전통의상 체험, 시사 색칠 체험, 야에야마 직조 체험 등 다양한 문화 체험 프로그램도 마련되어 있다.",
@@ -286,7 +338,14 @@ export const scheduleModalsData: ModalData[] = [
     type: "ship-info",
     id: "mscbellissima",
     title: "MSC 벨리시마 (MSC BELLISSIMA)",
-    images: ["/shared/placeholder.png"],
+    images: [
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day2/1633438005-varelia-angels-acrobatics.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day2/5ec986f6-ef6b-4af5-b4d3-4ee5282e1ebc_MSC19019267.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day2/e70626b7-d713-4a85-9fd0-11e77bdc14d3_MSC-Bellissima-Interior.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day2/IMG_20190324_205910-1024x576.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day2/jpg.webp",
+      "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/section6/day2/MSC-Bellissima-Exterior.webp",
+    ],
     descriptions: [
       "MSC 크루즈의 대표 선박, MSC 벨리시마.",
       "총 톤수 171,598톤, 전장 315.8m, 최대 5,686명의 승객을 수용하는 초대형 크루즈 선박입니다. 2019년 취항한 메라비글리아 클래스 2번선으로, 프랑스 생나제르 조선소에서 건조되었습니다.",

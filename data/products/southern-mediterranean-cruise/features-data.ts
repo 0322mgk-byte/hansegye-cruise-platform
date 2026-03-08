@@ -8,7 +8,7 @@ export const featuresData: FeaturesData = {
   rooms: [
     {
       name: "인사이드",
-      image: "/shared/placeholder.png",
+      image: "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section4/inside/cc-costa-fortuna-inside.webp",
       subtitle: "합리적인 가격의 인테리어룸",
       description: "가장 합리적인 가격의 인사이드 객실은 효율적인 공간 구성과 편안한 침구로 쾌적한 휴식을 제공합니다.",
       amenities: [
@@ -27,7 +27,7 @@ export const featuresData: FeaturesData = {
     },
     {
       name: "오션뷰",
-      image: "/shared/placeholder.png",
+      image: "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section4/oceanview/Fortuna_Esterna_Desktop_1392x636.jpg.image.1392.636.high.webp",
       subtitle: "푸른 바다를 품은 오션뷰 룸",
       description: "대형 픽처 윈도우를 통해 바다 풍경을 감상할 수 있는 오션뷰 객실은 자연 채광과 함께 여유로운 항해를 선사합니다.",
       amenities: [
@@ -47,7 +47,7 @@ export const featuresData: FeaturesData = {
     },
     {
       name: "발코니",
-      image: "/shared/placeholder.png",
+      image: "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/section4/balcony/Fortuna_Balcone_Desktop_1392x636.jpg.image.1392.636.high.webp",
       subtitle: "아름다운 바다를 한 눈에 볼 수 있는 야외 공간",
       description: "프라이빗 발코니가 있는 객실로, 슬라이딩 글라스 도어를 열면 지중해 바다와 기항지의 풍경을 독점으로 즐길 수 있습니다.",
       amenities: [
