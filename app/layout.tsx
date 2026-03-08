@@ -23,6 +23,17 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "한세계여행사 - 크루즈 전문",
   description: "전세계 크루즈 여행 전문 여행사",
+  openGraph: {
+    title: "한세계여행사 - 크루즈 전문",
+    description: "전세계 크루즈 여행 전문 여행사",
+    images: [
+      {
+        url: "https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/og.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
