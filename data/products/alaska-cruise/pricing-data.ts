@@ -21,9 +21,9 @@ export const pricingData: PricingData = {
     reserveButton: "상품 예약 하기",
   },
   roomTabs: [
-    { key: "inside", label: "인사이드", prices: { adult: "5,790,000", child: "5,790,000", infant: "5,790,000" } },
-    { key: "oceanview", label: "오션뷰", prices: { adult: "5,990,000", child: "5,990,000", infant: "5,990,000" } },
-    { key: "balcony", label: "발코니", prices: { adult: "6,490,000", child: "6,490,000", infant: "6,490,000" } },
+    { key: "inside", label: "인사이드", prices: { adult: "6,500,000", child: "6,500,000", infant: "6,500,000" } },
+    { key: "oceanview", label: "오션뷰", prices: { adult: "6,700,000", child: "6,700,000", infant: "6,700,000" } },
+    { key: "balcony", label: "발코니", prices: { adult: "7,200,000", child: "7,200,000", infant: "7,200,000" } },
   ],
   personOptions: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   fuelSurcharge: 123000,

@@ -12,5 +12,5 @@ export const meta: ProductMeta = {
   cardTitle: '서부 지중해 크루즈 9박 10일',
   cardShipName: 'MSC 씨뷰호 (MSC Seaview)',
   cardRoute: '이탈리아 > 스페인 > 프랑스',
-  cardPrice: '5,790,000원~',
+  cardPrice: '5,500,000원~',
 };

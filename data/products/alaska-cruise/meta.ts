@@ -12,5 +12,5 @@ export const meta: ProductMeta = {
   cardTitle: '알래스카 크루즈 8박 10일',
   cardShipName: '에메랄드 프린세스호 (Emerald Princess)',
   cardRoute: '밴쿠버 > 주노 > 스캐그웨이 > 엔디캇 암 > 케치칸',
-  cardPrice: '5,790,000원~',
+  cardPrice: '6,500,000원~',
 };

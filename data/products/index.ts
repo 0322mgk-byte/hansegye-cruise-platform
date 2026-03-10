@@ -4,7 +4,7 @@ import type { ProductDefinition, ProductMeta } from '@/data/types';
 import { meta as alaskaMeta } from './alaska-cruise/meta';
 import { meta as northEuropeMeta } from './north-europe-cruise/meta';
 import { meta as westernMedMeta } from './western-mediterranean-cruise/meta';
-import { meta as arabiaMeta } from './arabia-cruise/meta';
+// import { meta as arabiaMeta } from './arabia-cruise/meta'; // 임시 비활성화
 import { meta as southernMedMeta } from './southern-mediterranean-cruise/meta';
 import { meta as okinawaTaiwanMeta } from './okinawa-taiwan-cruise/meta';
 
@@ -12,7 +12,7 @@ const productMetas: ProductMeta[] = [
   alaskaMeta,
   northEuropeMeta,
   westernMedMeta,
-  arabiaMeta,
+  // arabiaMeta, // 임시 비활성화
   southernMedMeta,
   okinawaTaiwanMeta,
 ];

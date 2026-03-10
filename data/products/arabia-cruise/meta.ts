@@ -12,5 +12,5 @@ export const meta: ProductMeta = {
   cardTitle: '아라비아 크루즈 7박 9일',
   cardShipName: '코스타 토스카나호 (Costa Toscana)',
   cardRoute: '두바이 > 오만 > 카타르',
-  cardPrice: '5,790,000원~',
+  cardPrice: '4,900,000원~',
 };
