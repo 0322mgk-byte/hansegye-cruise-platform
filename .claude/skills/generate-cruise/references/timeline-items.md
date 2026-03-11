@@ -31,7 +31,7 @@ Visual location pin on the timeline.
 { type: 'location-marker', label: '인천' }
 { type: 'location-marker', label: '밴쿠버', extraMarginTop: true }
 ```
-- Use `extraMarginTop: true` when this marker follows other items (not the first item)
+- Use `extraMarginTop: true` when this marker is not the first item in that day's `items` array
 
 ### 2. text
 General information with optional details and warnings.
@@ -212,7 +212,7 @@ Final message on the last day.
 | 항공편 출발/도착 | `text` (time + details) | 미제공 시 생략 |
 | 공항 미팅 | `text` (time) | 미제공 시 생략 |
 | 기항지 도시 + 관광지 | `tourist-spot` | 도시 개요 1개 + 관광지 N개 |
-| "전일 해상" / "종일 항해" | `cruise-at-sea` | |
+| "전일 해상" / "종일 항해" | `text` (고정 문구) + `cruise-at-sea` | "전일해상 이란?" 고정 문구를 cruise-at-sea 카드 앞에 반드시 배치 |
 | 승선 | `info-card` (boarding) | 레퍼런스 복사 |
 | 하선 | `info-card` (disembarkation) | 레퍼런스 복사 |
 | 출항 시간 | `departure-notice` | |
@@ -256,12 +256,11 @@ Final message on the last day.
 
 #### 출발일 예시
 
-**핵심: 사용자 일정의 ▣ 항목을 details 배열에 그대로 매핑한다.**
+**핵심: 사용자 원본에서 핵심 정보를 추출하여 알래스카의 형식/구조로 정규화한다.**
 
-사용자가 제공한 일정표에서 각 `[시간] 제목` 아래의 `▣ ...` 항목들이 해당 text 아이템의 `details` 배열 원소가 된다.
-AI가 임의로 항목을 추가/삭제/이동하지 않는다.
+"알래스카 패턴"이란 형식과 구조만을 의미한다 — 알래스카의 일정 내용(도시, 시간, 관광지 등)을 복사하는 것이 아니다. 도시명, 날짜, 시간, 관광지, 항공편, 호텔, 식사 등 일정 고유 정보는 전부 사용자가 제공한 새 크루즈 일정에서 가져온다. 형식만 알래스카처럼 간결하게 정리하는 것이다. 시간, 핵심 이벤트, 여행 필수 정보(교통편, 비행시간, 시차 등)를 추출하여 간결한 text 아이템으로 생성한다. 호텔 마케팅 카피, 사진 파일명, 상세 투어 타임테이블, 마케팅 해시태그 등은 걸러낸다.
 
-**단, 항공편 출발 아이템의 필수 표준 항목은 예외다** — 아래 "출발 아이템 필수 표준 항목" 참조.
+**항공편 출발 아이템의 필수 표준 항목은 항상 포함한다** — 아래 "출발 아이템 필수 표준 항목" 참조.
 
 **예시 — 사용자 데이터:**
 ```
@@ -319,10 +318,10 @@ items: [
 
 | 아이템 | 생성 조건 | details 규칙 |
 |--------|----------|-------------|
-| 미팅 | 사용자가 미팅 시간을 제공한 경우에만 | 사용자가 제공한 ▣ 항목 그대로 |
-| 출발 | 항공편 정보가 있을 때 | 사용자 ▣ 항목 + 필수 표준 항목 자동 보충 (아래 참조) |
-| 도착 | 같은 날 도착하는 경우 | 사용자가 ▣ 항목을 제공한 경우에만 details 포함, 없으면 details 생략 |
-| 호텔 | 도착 후 호텔 숙박 시 | note에 호텔 등급 정보 (사용자 제공 시) |
+| 미팅 | 사용자가 미팅 시간을 제공한 경우에만 | 핵심 안내만 추출 (예: 집결 장소/시간) |
+| 출발 | 항공편 정보가 있을 때 | 교통편 + 비행시간 + 필수 표준 항목 자동 보충 (아래 참조) |
+| 도착 | 같은 날 도착하는 경우 | 핵심 안내만 추출, 없으면 details 생략 |
+| 호텔 | 도착 후 호텔 숙박 시 | note에 호텔 등급 정보 (호텔 마케팅 카피는 제외) |
 
 **출발 아이템 필수 표준 항목:**
 
@@ -374,6 +373,7 @@ items: [
   { type: 'meal', text: '조식 (호텔식)' },
   { type: 'location-marker', label: '{항구도시}' },
   { type: 'text', time: '...', text: '{항구} 크루즈 터미널 이동', details: [...] },
+  { type: 'tourist-spot', modalId: '{shipid}', title: '[관광 정보] {선박명} ({English Name})', ... },  // ship-info 카드 — Agent S 결과 반영
   { type: 'info-card', modalId: 'boarding', ... },  // Copy from reference
   { type: 'departure-notice', time: '...', text: '{선박명} 출항', ... },
   { type: 'meal', text: '석식 (선내식)' },
@@ -385,7 +385,11 @@ items: [
 ```typescript
 items: [
   { type: 'meal', text: '조식 (선내식)' },
-  { type: 'location-marker', label: '해상', extraMarginTop: true },
+  { type: 'location-marker', label: '전일 해상' },
+  {
+    type: 'text',
+    text: '▣ 전일해상 이란?\n다음 기항지를 향해 온종일 바다 위를 항해하는 시간입니다. 다채로운 선내 이벤트와 수준 높은 공연이 쉴 틈 없이 펼쳐지며, 이동하는 순간조차 완벽한 여행이 되는 진정한 크루즈의 낭만을 경험하실 수 있습니다.',
+  },  // ← 고정 문구 — 모든 해상일에 cruise-at-sea 카드 앞에 반드시 포함
   { type: 'cruise-at-sea', modalId: 'cruiseatsea', ... },
   { type: 'meal', text: '중식 (선내식)' },
   { type: 'meal', text: '석식 (선내식)' },
@@ -408,7 +412,7 @@ items: [
 items: [
   { type: 'meal', text: '조식 (기내식)' },
   { type: 'location-marker', label: '인천', extraMarginTop: true },
-  { type: 'text', time: '00:00', text: '인천 국제 공항 도착', details: ['인천국제공항 도착 후 개별해산'], warning: '...' },
+  { type: 'text', time: '00:00', text: '인천 국제 공항 도착', details: ['인천국제공항 도착 후 개별해산'], warning: '현지사정(항공기, 크루즈 등) 의해 일정 및 일정순서, 식사 등이 변경될 수 있습니다.' },
   { type: 'closing-message', text: '한세계 여행사와 함께 즐거운 여행이 되셨길 바랍니다.' },
 ]
 ```
@@ -447,6 +451,7 @@ tourist-spot 모달에는 반드시 지도를 포함한다. `googleMapQuery`의 
 ```
 https://maps.google.com/maps?q={query}&t=&z=15&ie=UTF8&iwloc=&output=embed
 ```
+예: `googleMapQuery: 'Museum of the Future,Dubai,UAE'` → `googleMapEmbed: '...?q=Museum+of+the+Future,Dubai,UAE&...'`
 
 | 모달 타입 | 지도 포함 |
 |-----------|----------|

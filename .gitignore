@@ -44,3 +44,6 @@ next-env.d.ts
 # MCP server data
 .serena/
 .playwright-mcp/
+
+# cruise workspace (temporary agent results)
+.cruise-workspace/

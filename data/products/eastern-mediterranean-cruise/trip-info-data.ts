@@ -1,0 +1,67 @@
+import type { TripInfoData } from '@/data/types';
+
+export const tripInfoData: TripInfoData = {
+  title: "여행 주요 일정",
+  subtitle: "아테네에서 에게해까지 8박 11일의 항해",
+  labels: {
+    schedule: "여행 일정",
+    departKorea: "한국 출발",
+    arriveLocal: "현지 도착",
+    departLocal: "현지 출발",
+    arriveKorea: "한국 도착",
+    arriveLayover: "경유지 도착",
+    departLayover: "경유지 출발",
+    routeRegion: "여행 지역",
+    reservationStatus: "예약 현황",
+    reservationCountUnit: "명",
+    escort: "인솔자",
+    meetingPlace: "미팅 장소",
+  },
+  flights: {
+    outbound: [
+      {
+        airline: "카타르 항공",
+        flightCode: "",
+        departureTime: "17:30",
+        departureDate: "05/29 (금)",
+        arrivalTime: "21:30",
+        arrivalDate: "05/29 (금)",
+        duration: "총 약 10시간 소요",
+      },
+      {
+        airline: "카타르 항공",
+        flightCode: "",
+        departureTime: "03:50",
+        departureDate: "05/30 (토)",
+        arrivalTime: "08:30",
+        arrivalDate: "05/30 (토)",
+        duration: "총 약 4시간 40분 소요",
+      },
+    ],
+    inbound: [
+      {
+        airline: "카타르 항공",
+        flightCode: "",
+        departureTime: "16:20",
+        departureDate: "06/07 (일)",
+        arrivalTime: "20:40",
+        arrivalDate: "06/07 (일)",
+        duration: "총 약 3시간 20분 소요",
+      },
+      {
+        airline: "카타르 항공",
+        flightCode: "",
+        departureTime: "03:50",
+        departureDate: "06/08 (월)",
+        arrivalTime: "18:05",
+        arrivalDate: "06/08 (월)",
+        duration: "총 약 8시간 15분 소요",
+      },
+    ],
+  },
+  routeCities: ["인천", "도하(경유)", "아테네", "산토리니", "로도스", "보드럼", "해상", "미코노스", "아테네", "도하(경유)", "인천"],
+  reservationStatus: "출발확정",
+  reservationCount: "16",
+  escortInfo: "인솔자 1명이 동행합니다.",
+  meetingPlace: "인천 공항 집결",
+};

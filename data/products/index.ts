@@ -7,6 +7,8 @@ import { meta as westernMedMeta } from './western-mediterranean-cruise/meta';
 // import { meta as arabiaMeta } from './arabia-cruise/meta'; // 임시 비활성화
 import { meta as southernMedMeta } from './southern-mediterranean-cruise/meta';
 import { meta as okinawaTaiwanMeta } from './okinawa-taiwan-cruise/meta';
+import { meta as hawaiiMeta } from './hawaii-cruise/meta';
+import { meta as easternMedMeta } from './eastern-mediterranean-cruise/meta';
 
 const productMetas: ProductMeta[] = [
   alaskaMeta,
@@ -15,6 +17,8 @@ const productMetas: ProductMeta[] = [
   // arabiaMeta, // 임시 비활성화
   southernMedMeta,
   okinawaTaiwanMeta,
+  hawaiiMeta,
+  easternMedMeta,
 ];
 
 export function getAllProductMetas(): ProductMeta[] {
@@ -29,6 +33,8 @@ export async function getProductBySlug(slug: string): Promise<ProductDefinition 
     case 'arabia-cruise': return (await import('./arabia-cruise')).arabiaCruise;
     case 'southern-mediterranean-cruise': return (await import('./southern-mediterranean-cruise')).southernMediterraneanCruise;
     case 'okinawa-taiwan-cruise': return (await import('./okinawa-taiwan-cruise')).okinawaTaiwanCruise;
+    case 'hawaii-cruise': return (await import('./hawaii-cruise')).hawaiiCruise;
+    case 'eastern-mediterranean-cruise': return (await import('./eastern-mediterranean-cruise')).easternMediterraneanCruise;
     default: return null;
   }
 }

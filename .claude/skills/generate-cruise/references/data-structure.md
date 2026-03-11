@@ -23,6 +23,7 @@
 | `videoSources` | `[]` (빈 배열) | — |
 | `mobileVideoSources` | `[]` (빈 배열) | — |
 | `mobileVideoSrc` | `""` (빈 문자열) | — |
+| `posterImage` | `"/shared/placeholder.png"` | — |
 
 ### description 형식 (반드시 준수):
 ```
@@ -52,7 +53,7 @@
 
 | 필드 | 교체 규칙 |
 |------|----------|
-| `subtitle` | 사용자 데이터에서 추출 또는 기항지 조합 |
+| `subtitle` | `"{출발지}에서 {도착지}까지 N박 N일의 항해"` (예: `"밴쿠버에서 알래스카까지 8박 10일의 항해"`) |
 | `flights.outbound` | 새 항공편 FlightLeg 배열 |
 | `flights.inbound` | 새 항공편 FlightLeg 배열 |
 | `routeCities` | 새 기항지 배열 (해상 포함) |
@@ -91,8 +92,8 @@
 | 필드 | 교체 규칙 |
 |------|----------|
 | `description` | 알래스카 레퍼런스 값을 사용하지 않고 `"{새 선박명}에서 펼쳐지는 특별한 경험을 만나보세요."` 형식으로 교체 |
-| `facilities[].subtitle` | Agent S 조사 결과 |
-| `facilities[].description` | Agent S 조사 결과 |
+| `facilities[].subtitle` | Agent S 조사 결과. **20자 이내의 함축적 캐치프레이즈**로 작성 — 시설 고유 명칭(The Red Room 등)이나 구체적 스펙(255m, 1,300m² 등)은 subtitle에 넣지 않고 description에 배치. 한국 일반 소비자가 바로 이해할 수 있는 단어만 사용(생소한 외래어 금지) |
+| `facilities[].description` | Agent S 조사 결과. 시설 고유 명칭은 사용 가능하되, 그 외 생소한 외래어는 쉬운 한국어로 대체 |
 | `facilities[].alt` | `"{새 선박명} {카테고리명} 시설"` |
 | `facilities[].images` | `["/shared/placeholder.png"]` |
 
@@ -105,7 +106,7 @@
 
 ## Section 4: features-data.ts
 
-**작업 방식:** 레퍼런스 파일을 읽고 구조를 참고한 뒤, **Agent V 검증 완료된 객실 데이터**로 생성
+**작업 방식:** 레퍼런스 파일을 읽고 구조를 참고한 뒤, **Agent S 조사 객실 데이터**로 생성
 **레퍼런스:** `data/products/alaska-cruise/features-data.ts` (구조 참고용)
 
 ### 핵심 원칙: 공식 사이트 기반 동적 어메니티
@@ -119,8 +120,8 @@
 | 필드 | 교체 규칙 |
 |------|----------|
 | `description` | 알래스카 레퍼런스 값을 사용하지 않고 `"{새 선박명}의 객실을 소개합니다."` 형식으로 교체 |
-| `rooms[].description` | Agent V 검증 완료 데이터 |
-| `rooms[].amenities` | Agent V 검증 완료 데이터 — 공식 사이트 어메니티 기반으로 동적 생성 (아래 매핑 테이블 사용) |
+| `rooms[].description` | Agent S 조사 데이터 |
+| `rooms[].amenities` | Agent S 조사 데이터 — 공식 사이트 어메니티 기반으로 동적 생성 (아래 매핑 테이블 사용) |
 | `rooms[].image` | `"/shared/placeholder.png"` |
 
 ### 보존할 필드 (절대 수정 금지):
@@ -171,15 +172,15 @@
 
 ## Section 5: details-data.ts
 
-**작업 방식:** 레퍼런스 파일을 읽고 구조를 복사한 뒤, Agent V 검증 완료된 제원 데이터로 value만 교체
+**작업 방식:** 레퍼런스 파일을 읽고 구조를 복사한 뒤, Agent S 조사 제원 데이터로 value만 교체
 **레퍼런스:** `data/products/alaska-cruise/details-data.ts`
 
 ### 교체할 필드:
 
 `specs` 배열의 **8개 label은 고정** — value만 교체.
-**공식 사이트에서 확인할 수 없는 항목은 label은 유지하고 `value: ""`(빈 문자열)로 남긴다.** 부정확한 정보보다 비워두는 것이 낫다.
+Agent S 조사 결과의 value를 그대로 사용한다. Agent S가 보조 출처에서 보완한 값(예: `"약 65m"`, `"약 17층"`)도 그대로 반영한다. Agent S가 빈 문자열(`""`)로 반환한 항목만 빈 문자열을 유지한다.
 
-예시 — 높이를 확인할 수 없는 경우:
+예시 — Agent S가 빈 문자열로 반환한 경우:
 ```ts
 { label: "높이", value: "" },
 ```
