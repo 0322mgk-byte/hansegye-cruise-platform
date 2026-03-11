@@ -214,7 +214,7 @@ export default function Pricing({ data }: PricingProps) {
                                                         <tr key={row.key} className={idx < rows.length - 1 ? "border-b border-gray-300" : ""}>
                                                             <td className="px-3 py-2.5 border-r border-gray-300 whitespace-nowrap">
                                                                 <span className="font-semibold text-gray-700">{row.label}</span>
-                                                                <span className="text-sm text-gray-500 ml-1">({row.sub})</span>
+                                                                <span className="text-sm text-gray-500 ml-1">{row.sub}</span>
                                                             </td>
                                                             <td className="px-3 py-2.5 text-center border-r border-gray-300">
                                                                 <select
