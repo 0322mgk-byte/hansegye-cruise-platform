@@ -56,7 +56,7 @@
 | `subtitle` | `"{출발지}에서 {도착지}까지 N박 N일의 항해"` (예: `"밴쿠버에서 알래스카까지 8박 10일의 항해"`) |
 | `flights.outbound` | 새 항공편 FlightLeg 배열 |
 | `flights.inbound` | 새 항공편 FlightLeg 배열 |
-| `routeCities` | 새 기항지 배열 (해상 포함) |
+| `routeCities` | 새 기항지 배열 (해상 포함). **규칙: ① 한국 출발지(인천 등) 제외 ② 경유지(도하 등) 제외 ③ 연속 중복 도시는 하나만 표기 — 현지 여행 경로만 포함.** ※ 홈 카드의 `cardRoute`(SKILL.md)와는 별개 규칙 — routeCities는 상품 페이지 내 경로 표시용 |
 
 ### FlightLeg 구조:
 ```typescript

@@ -2,6 +2,13 @@
 
 Types defined in `data/types.ts`. Files: `schedule-days-data.ts` and `schedule-modals-data.ts`.
 
+## 목차
+
+- [Schedule Days Structure](#schedule-days-structure) — DayScheduleData 배열 구조 (9줄)
+- [10 TimelineItem Types](#10-timelineitem-types) — location-marker, text, tourist-spot, shore-excursion, info-card, cruise-at-sea, meal, hotel, departure-notice, closing-message (26줄)
+- [Day Composition: 빌딩 블록 조립 방식](#day-composition-빌딩-블록-조립-방식) — 블록 선택 기준, 배치 순서, 엣지 케이스, 일차별 예시 (200줄)
+- [5 ModalData Types](#5-modaldata-types) — tourist-spot, shore-excursion, ship-info, cruise-at-sea, info 모달 (422줄)
+
 ---
 
 ## Schedule Days Structure

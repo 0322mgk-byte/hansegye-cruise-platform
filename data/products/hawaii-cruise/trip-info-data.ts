@@ -39,7 +39,7 @@ export const tripInfoData: TripInfoData = {
       },
     ],
   },
-  routeCities: ["호놀룰루", "마우이", "마우이", "힐로", "카일루아 코나", "리후에", "리후에", "호놀룰루"],
+  routeCities: ["호놀룰루", "마우이", "힐로", "카일루아 코나", "리후에", "호놀룰루"],
   reservationStatus: "출발확정",
   reservationCount: "16",
   escortInfo: "인솔자 1명이 동행합니다.",

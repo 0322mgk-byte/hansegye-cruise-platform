@@ -59,7 +59,7 @@ export const tripInfoData: TripInfoData = {
       },
     ],
   },
-  routeCities: ["인천", "도하(경유)", "아테네", "산토리니", "로도스", "보드럼", "해상", "미코노스", "아테네", "도하(경유)", "인천"],
+  routeCities: ["아테네", "산토리니", "로도스", "보드럼", "해상", "미코노스", "아테네"],
   reservationStatus: "출발확정",
   reservationCount: "16",
   escortInfo: "인솔자 1명이 동행합니다.",
