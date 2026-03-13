@@ -6,67 +6,102 @@ interface TripInfoProps {
 }
 
 export default function TripInfo({ data, duration }: TripInfoProps) {
-    const { title, subtitle, labels, flights, routeCities, reservationStatus, reservationCount, escortInfo, meetingPlace } = data;
+    const { title, subtitle, labels, flights, scheduleOverview, airlineInfo, routeCities, reservationStatus, reservationCount, escortInfo, meetingPlace } = data;
 
-    const tripData = [
-        ...(flights ? [{
-            label: labels.schedule,
-            value: (
-                <div>
-                    <div className="px-5 py-2 md:py-4 border-b border-gray-300">
-                        <span className="font-normal leading-relaxed text-gray-600">{flights.outbound[0].departureDate} {flights.outbound[0].departureTime} 출발 &nbsp;&nbsp;|&nbsp;&nbsp; {duration} <br className="md:hidden" /><span className="hidden md:inline">&nbsp;&nbsp;&nbsp;&nbsp;</span>✈️ {flights.outbound[0].airline} {flights.outbound[0].flightCode}</span>
+    const scheduleRow = scheduleOverview ? [{
+        label: labels.schedule,
+        value: (
+            <div className="px-5 py-2 md:py-4 space-y-1.5">
+                {scheduleOverview.lines.map((line, i) => {
+                    const match = line.match(/^(•)\s*(.*)/);
+                    return match ? (
+                        <div key={i} className="flex items-start gap-2 font-normal leading-relaxed text-gray-600">
+                            <span className="text-gray-400 flex-shrink-0">•</span>
+                            <span>{match[2]}</span>
+                        </div>
+                    ) : (
+                        <div key={i} className="font-normal leading-relaxed text-gray-600">{line}</div>
+                    );
+                })}
+                {scheduleOverview.note && (
+                    <div className="font-normal leading-relaxed text-gray-600">{scheduleOverview.note}</div>
+                )}
+            </div>
+        )
+    }] : flights ? [{
+        label: labels.schedule,
+        value: (
+            <div>
+                <div className="px-5 py-2 md:py-4 border-b border-gray-300">
+                    <span className="font-normal leading-relaxed text-gray-600">{flights.outbound[0].departureDate && flights.outbound[0].departureTime ? <>{flights.outbound[0].departureDate} {flights.outbound[0].departureTime} 출발 &nbsp;&nbsp;|&nbsp;&nbsp; </> : null}{duration} <br className="md:hidden" /><span className="hidden md:inline">&nbsp;&nbsp;&nbsp;&nbsp;</span>✈️ {flights.outbound[0].airline}{flights.outbound[0].flightCode ? ` ${flights.outbound[0].flightCode}` : ""}</span>
+                </div>
+                <div className="px-5 py-2 md:py-4 space-y-1">
+                    {/* 모바일 */}
+                    <div className="md:hidden">
+                        {flights.outbound.map((leg, i) => {
+                            const isMulti = flights.outbound.length > 1;
+                            const departLabel = isMulti ? (i === 0 ? labels.departKorea : labels.departLayover ?? labels.departKorea) : labels.departKorea;
+                            const arriveLabel = isMulti ? (i === flights.outbound.length - 1 ? labels.arriveLocal : labels.arriveLayover ?? labels.arriveLocal) : labels.arriveLocal;
+                            return (
+                                <div key={`out-${i}`}>
+                                    <div className="font-normal leading-relaxed text-gray-600"><span className="mr-2">{departLabel}</span>{leg.departureDate} {leg.departureTime}</div>
+                                    <div className="font-normal leading-relaxed text-gray-600"><span className="mr-2">{arriveLabel}</span>{leg.arrivalDate} {leg.arrivalTime}</div>
+                                    <div className="text-gray-500 text-sm mt-0.5 mb-3">&rarr; {leg.duration}</div>
+                                </div>
+                            );
+                        })}
+                        {flights.inbound.map((leg, i) => {
+                            const isMulti = flights.inbound.length > 1;
+                            const departLabel = isMulti ? (i === 0 ? labels.departLocal : labels.departLayover ?? labels.departLocal) : labels.departLocal;
+                            const arriveLabel = isMulti ? (i === flights.inbound.length - 1 ? labels.arriveKorea : labels.arriveLayover ?? labels.arriveKorea) : labels.arriveKorea;
+                            return (
+                                <div key={`in-${i}`}>
+                                    <div className="font-normal leading-relaxed text-gray-600"><span className="mr-2">{departLabel}</span>{leg.departureDate} {leg.departureTime}</div>
+                                    <div className="font-normal leading-relaxed text-gray-600"><span className="mr-2">{arriveLabel}</span>{leg.arrivalDate} {leg.arrivalTime}</div>
+                                    <div className="text-gray-500 text-sm mt-0.5 mb-1">&rarr; {leg.duration}</div>
+                                </div>
+                            );
+                        })}
                     </div>
-                    <div className="px-5 py-2 md:py-4 space-y-1">
-                        {/* 모바일 */}
-                        <div className="md:hidden">
-                            {flights.outbound.map((leg, i) => {
-                                const isMulti = flights.outbound.length > 1;
-                                const departLabel = isMulti ? (i === 0 ? labels.departKorea : labels.departLayover ?? labels.departKorea) : labels.departKorea;
-                                const arriveLabel = isMulti ? (i === flights.outbound.length - 1 ? labels.arriveLocal : labels.arriveLayover ?? labels.arriveLocal) : labels.arriveLocal;
-                                return (
-                                    <div key={`out-${i}`}>
-                                        <div className="font-normal leading-relaxed text-gray-600"><span className="mr-2">{departLabel}</span>{leg.departureDate} {leg.departureTime}</div>
-                                        <div className="font-normal leading-relaxed text-gray-600"><span className="mr-2">{arriveLabel}</span>{leg.arrivalDate} {leg.arrivalTime}</div>
-                                        <div className="text-gray-500 text-sm mt-0.5 mb-3">&rarr; {leg.duration}</div>
-                                    </div>
-                                );
-                            })}
-                            {flights.inbound.map((leg, i) => {
-                                const isMulti = flights.inbound.length > 1;
-                                const departLabel = isMulti ? (i === 0 ? labels.departLocal : labels.departLayover ?? labels.departLocal) : labels.departLocal;
-                                const arriveLabel = isMulti ? (i === flights.inbound.length - 1 ? labels.arriveKorea : labels.arriveLayover ?? labels.arriveKorea) : labels.arriveKorea;
-                                return (
-                                    <div key={`in-${i}`}>
-                                        <div className="font-normal leading-relaxed text-gray-600"><span className="mr-2">{departLabel}</span>{leg.departureDate} {leg.departureTime}</div>
-                                        <div className="font-normal leading-relaxed text-gray-600"><span className="mr-2">{arriveLabel}</span>{leg.arrivalDate} {leg.arrivalTime}</div>
-                                        <div className="text-gray-500 text-sm mt-0.5 mb-1">&rarr; {leg.duration}</div>
-                                    </div>
-                                );
-                            })}
-                        </div>
-                        {/* 데스크탑 */}
-                        <div className="hidden md:block space-y-1 font-normal leading-relaxed text-gray-600">
-                            {flights.outbound.map((leg, i) => {
-                                const isMulti = flights.outbound.length > 1;
-                                const departLabel = isMulti ? (i === 0 ? labels.departKorea : labels.departLayover ?? labels.departKorea) : labels.departKorea;
-                                const arriveLabel = isMulti ? (i === flights.outbound.length - 1 ? labels.arriveLocal : labels.arriveLayover ?? labels.arriveLocal) : labels.arriveLocal;
-                                return (
-                                    <div key={`out-${i}`}>{departLabel} &nbsp;{leg.departureDate} {leg.departureTime} &nbsp;&nbsp;&rarr; &nbsp;&nbsp;{arriveLabel} &nbsp;{leg.arrivalDate} {leg.arrivalTime} &nbsp;&nbsp;&nbsp;{leg.duration}</div>
-                                );
-                            })}
-                            {flights.inbound.map((leg, i) => {
-                                const isMulti = flights.inbound.length > 1;
-                                const departLabel = isMulti ? (i === 0 ? labels.departLocal : labels.departLayover ?? labels.departLocal) : labels.departLocal;
-                                const arriveLabel = isMulti ? (i === flights.inbound.length - 1 ? labels.arriveKorea : labels.arriveLayover ?? labels.arriveKorea) : labels.arriveKorea;
-                                return (
-                                    <div key={`in-${i}`}>{departLabel} &nbsp;{leg.departureDate} {leg.departureTime} &nbsp;&nbsp;&rarr; &nbsp;&nbsp;{arriveLabel} &nbsp;{leg.arrivalDate} {leg.arrivalTime} &nbsp;&nbsp;&nbsp;{leg.duration}</div>
-                                );
-                            })}
-                        </div>
+                    {/* 데스크탑 */}
+                    <div className="hidden md:block space-y-1 font-normal leading-relaxed text-gray-600">
+                        {flights.outbound.map((leg, i) => {
+                            const isMulti = flights.outbound.length > 1;
+                            const departLabel = isMulti ? (i === 0 ? labels.departKorea : labels.departLayover ?? labels.departKorea) : labels.departKorea;
+                            const arriveLabel = isMulti ? (i === flights.outbound.length - 1 ? labels.arriveLocal : labels.arriveLayover ?? labels.arriveLocal) : labels.arriveLocal;
+                            return (
+                                <div key={`out-${i}`}>{departLabel}{leg.departureDate && <>&nbsp;{leg.departureDate}</>}{leg.departureTime && <> {leg.departureTime}</>} &nbsp;&nbsp;&rarr;&nbsp;&nbsp; {arriveLabel}{leg.arrivalDate && <>&nbsp;{leg.arrivalDate}</>}{leg.arrivalTime && <> {leg.arrivalTime}</>} &nbsp;&nbsp;&nbsp;{leg.duration}</div>
+                            );
+                        })}
+                        {flights.inbound.map((leg, i) => {
+                            const isMulti = flights.inbound.length > 1;
+                            const departLabel = isMulti ? (i === 0 ? labels.departLocal : labels.departLayover ?? labels.departLocal) : labels.departLocal;
+                            const arriveLabel = isMulti ? (i === flights.inbound.length - 1 ? labels.arriveKorea : labels.arriveLayover ?? labels.arriveKorea) : labels.arriveKorea;
+                            return (
+                                <div key={`in-${i}`}>{departLabel}{leg.departureDate && <>&nbsp;{leg.departureDate}</>}{leg.departureTime && <> {leg.departureTime}</>} &nbsp;&nbsp;&rarr;&nbsp;&nbsp; {arriveLabel}{leg.arrivalDate && <>&nbsp;{leg.arrivalDate}</>}{leg.arrivalTime && <> {leg.arrivalTime}</>} &nbsp;&nbsp;&nbsp;{leg.duration}</div>
+                            );
+                        })}
                     </div>
                 </div>
-            )
-        }] : []),
+            </div>
+        )
+    }] : [];
+
+    const airlineRow = airlineInfo ? [{
+        label: airlineInfo.label,
+        value: (
+            <div className="space-y-1.5">
+                <div className="font-normal leading-relaxed text-gray-600">{airlineInfo.text}</div>
+                {airlineInfo.note && (
+                    <div className="font-normal leading-relaxed text-gray-600">{airlineInfo.note}</div>
+                )}
+            </div>
+        )
+    }] : [];
+
+    const tripData = [
+        ...scheduleRow,
+        ...airlineRow,
         {
             label: labels.routeRegion,
             value: (

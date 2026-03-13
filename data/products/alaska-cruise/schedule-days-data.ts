@@ -4,7 +4,7 @@ export const scheduleDaysData: DayScheduleData[] = [
   // ── Day 1 ──
   {
     day: 1,
-    date: "08/03(월)",
+    date: "(DAY 01)",
     location: "인천 → 밴쿠버",
     description: "개스타운, 캐나다 플레이스, 스탠리 공원, 차이나타운",
     items: [
@@ -103,7 +103,7 @@ export const scheduleDaysData: DayScheduleData[] = [
   // ── Day 2 ──
   {
     day: 2,
-    date: "08/04(화)",
+    date: "(DAY 02)",
     location: "밴쿠버",
     description: "크루즈 체크인, 안전 훈련, 밴쿠버 출항",
     items: [
@@ -178,7 +178,7 @@ export const scheduleDaysData: DayScheduleData[] = [
   // ── Day 3 ──
   {
     day: 3,
-    date: "08/05(수)",
+    date: "(DAY 03)",
     location: "해상",
     description: "상세 내용을 확인해보세요",
     items: [
@@ -217,7 +217,7 @@ export const scheduleDaysData: DayScheduleData[] = [
   // ── Day 4 ──
   {
     day: 4,
-    date: "08/06(목)",
+    date: "(DAY 04)",
     location: "주노",
     description: "상세 내용을 확인해보세요",
     items: [
@@ -257,7 +257,7 @@ export const scheduleDaysData: DayScheduleData[] = [
   // ── Day 5 ──
   {
     day: 5,
-    date: "08/07(금)",
+    date: "(DAY 05)",
     location: "스캐그웨이",
     description: "상세 내용을 확인해보세요",
     items: [
@@ -297,7 +297,7 @@ export const scheduleDaysData: DayScheduleData[] = [
   // ── Day 6 ──
   {
     day: 6,
-    date: "08/08(토)",
+    date: "(DAY 06)",
     location: "엔디캇 암",
     description: "상세 내용을 확인해보세요",
     items: [
@@ -348,7 +348,7 @@ export const scheduleDaysData: DayScheduleData[] = [
   // ── Day 7 ──
   {
     day: 7,
-    date: "08/09(일)",
+    date: "(DAY 07)",
     location: "케치칸",
     description: "상세 내용을 확인해보세요",
     items: [
@@ -388,7 +388,7 @@ export const scheduleDaysData: DayScheduleData[] = [
   // ── Day 8 ──
   {
     day: 8,
-    date: "08/10(월)",
+    date: "(DAY 08)",
     location: "해상",
     description: "상세 내용을 확인해보세요",
     items: [
@@ -427,7 +427,7 @@ export const scheduleDaysData: DayScheduleData[] = [
   // ── Day 9 ──
   {
     day: 9,
-    date: "08/11(화)",
+    date: "(DAY 09)",
     location: "밴쿠버",
     description: "상세 내용을 확인해보세요",
     items: [
@@ -477,7 +477,7 @@ export const scheduleDaysData: DayScheduleData[] = [
   // ── Day 10 ──
   {
     day: 10,
-    date: "08/12(수)",
+    date: "(DAY 10)",
     location: "인천",
     description: "상세 내용을 확인해보세요",
     items: [

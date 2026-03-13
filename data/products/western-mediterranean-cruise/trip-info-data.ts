@@ -15,29 +15,18 @@ export const tripInfoData: TripInfoData = {
     escort: "인솔자",
     meetingPlace: "미팅 장소",
   },
-  flights: {
-    outbound: [
-      {
-        airline: "티웨이항공",
-        flightCode: "",
-        departureTime: "09:30",
-        departureDate: "06/06 (토)",
-        arrivalTime: "19:15",
-        arrivalDate: "06/06 (토)",
-        duration: "총 13시간 40분 소요",
-      },
+  scheduleOverview: {
+    title: "9박 10일 투어 가이드",
+    lines: [
+      "•  출국: 인천 → 현지 도착 (약 13시간 40분 소요)",
+      "•  귀국: 현지 출발 → 인천 (약 11시간 55분 소요)",
     ],
-    inbound: [
-      {
-        airline: "티웨이항공",
-        flightCode: "",
-        departureTime: "21:15",
-        departureDate: "06/14 (일)",
-        arrivalTime: "16:10",
-        arrivalDate: "06/15 (월)",
-        duration: "총 11시간 55분 소요",
-      },
-    ],
+    note: "※ 정확한 출발 날짜와 상세 동선은 하단 [상세 일정]에서 확인하실 수 있습니다",
+  },
+  airlineInfo: {
+    label: "항공 정보",
+    text: "✈️ 대한항공 또는 동급 외항사 예정",
+    note: "※ 출발 일정 및 항공사 사정에 따라 변동될 수 있습니다",
   },
   routeCities: ["로마", "팔레르모", "해상", "이비자", "바르셀로나", "마르세유", "제노아", "로마"],
   reservationStatus: "출발확정",

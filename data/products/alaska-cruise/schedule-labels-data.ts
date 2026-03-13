@@ -22,6 +22,7 @@ export const scheduleLabelsData: ScheduleLabels = {
 };
 
 export const scheduleMeta = {
-  dateRange: "2026년 8월 3일 — 8월 10일",
-  durationLabel: "8박 10일",
+  dateRange: "8박 10일간의 상세 여정 미리보기",
+  durationLabel: "",
+  digitalGuideUrl: "#",
 };

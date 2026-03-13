@@ -28,11 +28,11 @@ export default function HomePage() {
                 />
               </div>
               <div className="p-5">
-                <p className="text-sm font-medium text-[#0054a0]">{product.cardDepartureLabel}</p>
+                {product.cardDepartureLabel && <p className="text-sm font-medium text-[#0054a0]">{product.cardDepartureLabel}</p>}
                 <h2 className="mt-1 text-lg font-bold text-gray-900">{product.cardTitle}</h2>
-                <p className="mt-1 text-sm text-gray-600">선사: {product.cardShipName}</p>
+                <p className="mt-1 text-sm text-gray-600">{product.cardShipName}</p>
                 <p className="mt-2 text-sm text-gray-600">{product.cardRoute}</p>
-                <p className="mt-2 text-lg font-bold text-gray-900">{product.cardPrice}</p>
+                {product.cardPrice && <p className="mt-2 text-lg font-bold text-gray-900">{product.cardPrice}</p>}
               </div>
             </Link>
           ))}

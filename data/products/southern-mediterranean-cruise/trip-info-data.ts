@@ -15,27 +15,18 @@ export const tripInfoData: TripInfoData = {
     escort: "인솔자",
     meetingPlace: "미팅 장소",
   },
-  flights: {
-    outbound: [
-      {
-        airline: "대한항공",
-        departureTime: "13:40",
-        departureDate: "06/27 (토)",
-        arrivalTime: "19:40",
-        arrivalDate: "06/27 (토)",
-        duration: "총 12시간 10분 소요",
-      },
+  scheduleOverview: {
+    title: "8박 10일 투어 가이드",
+    lines: [
+      "•  출국: 인천 → 현지 도착 (약 12시간 소요)",
+      "•  귀국: 현지 출발 → 인천 (약 10시간 소요)",
     ],
-    inbound: [
-      {
-        airline: "대한항공",
-        departureTime: "21:20",
-        departureDate: "07/05 (일)",
-        arrivalTime: "13:25",
-        arrivalDate: "07/06 (월)",
-        duration: "총 10시간 05분 소요",
-      },
-    ],
+    note: "※ 정확한 출발 날짜와 상세 동선은 하단 [상세 일정]에서 확인하실 수 있습니다",
+  },
+  airlineInfo: {
+    label: "항공 정보",
+    text: "✈️ 대한항공 또는 동급 외항사 예정",
+    note: "※ 출발 일정 및 항공사 사정에 따라 변동될 수 있습니다",
   },
   routeCities: ["이스탄불", "미코노스", "헤라클리온", "로도스", "산토리니", "아테네", "해상", "이스탄불"],
   reservationStatus: "출발확정",

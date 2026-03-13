@@ -2,7 +2,7 @@ import type { TripInfoData } from '@/data/types';
 
 export const tripInfoData: TripInfoData = {
   title: "여행 주요 일정",
-  subtitle: "호놀룰루에서 하와이 4개 섬 8박 10일의 항해",
+  subtitle: "파리에서 시작하는 서유럽 5개국 9박 10일의 항해",
   labels: {
     schedule: "여행 일정",
     departKorea: "한국 출발",
@@ -16,10 +16,10 @@ export const tripInfoData: TripInfoData = {
     meetingPlace: "미팅 장소",
   },
   scheduleOverview: {
-    title: "8박 10일 투어 가이드",
+    title: "9박 10일 투어 가이드",
     lines: [
-      "•  출국: 인천 → 현지 도착 (약 8시간 소요)",
-      "•  귀국: 현지 출발 → 인천 (약 11시간 소요)",
+      "•  출국: 인천 → 현지 도착 (약 14시간 소요)",
+      "•  귀국: 현지 출발 → 인천 (약 12시간 15분 소요)",
     ],
     note: "※ 정확한 출발 날짜와 상세 동선은 하단 [상세 일정]에서 확인하실 수 있습니다",
   },
@@ -28,7 +28,7 @@ export const tripInfoData: TripInfoData = {
     text: "✈️ 대한항공 또는 동급 외항사 예정",
     note: "※ 출발 일정 및 항공사 사정에 따라 변동될 수 있습니다",
   },
-  routeCities: ["호놀룰루", "마우이", "힐로", "카일루아 코나", "리후에", "호놀룰루"],
+  routeCities: ["파리", "르아브르", "사우샘프턴", "해상", "함부르크", "해상", "제브뤼헤", "로테르담", "르아브르"],
   reservationStatus: "출발확정",
   reservationCount: "16",
   escortInfo: "인솔자 1명이 동행합니다.",

@@ -811,31 +811,36 @@ interface TimelineProps {
 }
 
 export const Timeline = ({ data }: TimelineProps) => {
-  const { labels, days, modals, dateRange, durationLabel } = data;
+  const { labels, days, modals, dateRange, durationLabel, digitalGuideUrl } = data;
   const sectionRef = useRef<HTMLDivElement>(null);
   const [openDays, setOpenDays] = useState<Set<number>>(new Set());
+  const [guideOpen, setGuideOpen] = useState(false);
 
   useEffect(() => {
     if (window.innerWidth < 768) {
       setOpenDays(new Set(days.map((d) => d.day)));
+      setGuideOpen(true);
     }
   }, []);
 
-  const mobileBtnAnchorRef = useRef<HTMLParagraphElement>(null);
+  const mobileBtnAnchorRef = useRef<HTMLHeadingElement>(null);
   const mobileBtnRef = useRef<HTMLDivElement>(null);
   const accordionWrapperRef = useRef<HTMLDivElement>(null);
-  const isAllDaysOpen = days.every((d) => openDays.has(d.day));
+  const isAllOpen = days.every((d) => openDays.has(d.day)) && (!digitalGuideUrl || guideOpen);
+  const isAllDaysOpen = isAllOpen;
 
   const toggleAllMobile = () => {
     const allDays = days.map((d) => d.day);
-    if (isAllDaysOpen) {
+    if (isAllOpen) {
       setOpenDays(new Set());
+      setGuideOpen(false);
       const headerHeight = 56;
       const offset = 12;
       const top = (sectionRef.current?.getBoundingClientRect().top ?? 0) + window.scrollY - headerHeight - offset;
       window.scrollTo({ top, behavior: "instant" });
     } else {
       setOpenDays(new Set(allDays));
+      setGuideOpen(true);
     }
   };
 
@@ -935,15 +940,14 @@ export const Timeline = ({ data }: TimelineProps) => {
   return (
     <div className="w-full bg-white">
       <div className="max-w-7xl mx-auto py-12 md:py-20 px-0 md:px-6 text-center">
-        <h2 className="text-2xl md:text-4xl font-bold text-gray-900 leading-tight tracking-normal">
+        <h2 ref={mobileBtnAnchorRef} className="text-2xl md:text-4xl font-bold text-gray-900 leading-tight tracking-normal">
           {labels.title}
         </h2>
-        <p
-          ref={mobileBtnAnchorRef}
-          className="mt-2 md:mt-3 text-base md:text-lg font-normal leading-relaxed text-gray-600"
-        >
-          {dateRange} ({durationLabel})
-        </p>
+        {dateRange && (
+          <p className="mt-2 md:mt-3 text-base md:text-lg font-normal leading-relaxed text-gray-600">
+            {dateRange}{durationLabel && ` (${durationLabel})`}
+          </p>
+        )}
 
         {/* Accordion Section */}
         <div ref={accordionWrapperRef} className="mt-6 md:mt-10 max-w-5xl mx-auto relative">
@@ -951,18 +955,19 @@ export const Timeline = ({ data }: TimelineProps) => {
           <button
             onClick={() => {
               const allDays = days.map((d) => d.day);
-              const allOpen = allDays.every((day) => openDays.has(day));
-              if (allOpen) {
+              if (isAllOpen) {
                 setOpenDays(new Set());
+                setGuideOpen(false);
               } else {
                 setOpenDays(new Set(allDays));
+                setGuideOpen(true);
               }
             }}
             className="absolute -top-8 right-0 hidden md:flex text-sm md:text-base text-gray-500 hover:text-gray-700 transition-colors cursor-pointer items-center gap-1"
           >
-            {days.every((d) => openDays.has(d.day)) ? labels.collapseAll : labels.expandAll}
+            {isAllOpen ? labels.collapseAll : labels.expandAll}
             <ChevronDown
-              className={`w-3.5 h-3.5 transition-transform duration-300 ${days.every((d) => openDays.has(d.day)) ? "rotate-180" : ""
+              className={`w-3.5 h-3.5 transition-transform duration-300 ${isAllOpen ? "rotate-180" : ""
                 }`}
             />
           </button>
@@ -990,6 +995,83 @@ export const Timeline = ({ data }: TimelineProps) => {
             </button>
           </div>
           <div ref={sectionRef} className="space-y-3 md:space-y-6">
+            {/* Digital Guide Accordion */}
+            {digitalGuideUrl && (
+              <div className="border-y border-gray-200 md:border md:border-gray-200 overflow-hidden">
+                <button
+                  onClick={() => setGuideOpen(!guideOpen)}
+                  className="w-full flex items-center hover:bg-gray-50 transition-colors"
+                >
+                  <div className="text-white px-4 md:px-6 py-3 md:py-4 flex flex-col items-center md:items-start min-w-[80px] md:min-w-[160px] justify-center" style={{ backgroundColor: "#0054a0" }}>
+                    <span className="text-base md:text-lg font-medium">실시간</span>
+                    <span className="hidden md:block text-base mt-1 opacity-90">NOTICE</span>
+                  </div>
+                  <div className="flex-1 bg-gray-100 px-4 md:px-6 py-3 md:py-4 flex items-center justify-between">
+                    {/* Mobile */}
+                    <span className="md:hidden text-base font-medium text-gray-700">
+                      출발일별 확정 일정
+                    </span>
+                    {/* Desktop */}
+                    <div className="hidden md:block text-left">
+                      <h3 className="text-lg font-medium text-gray-900 mb-1">출발일별 확정 일정</h3>
+                      <p className="text-base text-gray-600">실시간 업데이트되는 상세 일정표를 확인하세요</p>
+                    </div>
+                    <ChevronDown
+                      className={`w-5 h-5 text-gray-600 transition-transform ml-4 flex-shrink-0 ${guideOpen ? "rotate-180" : ""}`}
+                    />
+                  </div>
+                </button>
+                {guideOpen && (
+                  <div className="px-6 md:px-10 py-6 border-t border-gray-200">
+                    <div className="relative pl-10">
+                      <div className="absolute left-[5px] top-2 bottom-2 w-px bg-gray-300" />
+                      <ul className="space-y-3 md:space-y-5 text-left">
+                        {/* 안내드립니다 */}
+                        <li className="relative flex items-start gap-3 md:py-1">
+                          <span className="absolute -left-10 top-[9px] md:top-[13px] w-[10px] h-[10px] rounded-full bg-gray-300" />
+                          <div>
+                            <span className="text-lg font-bold text-gray-900">📢 안내드립니다</span>
+                            <div className="mt-2 ml-1 space-y-2 text-base text-gray-700">
+                              <p className="flex items-start gap-2"><span className="text-gray-400 flex-shrink-0">•</span><span>현재 보고 계신 일정은 전체적인 흐름을 파악하기 위한 표준 여정 가이드입니다.</span></p>
+                              <p className="flex items-start gap-2"><span className="text-gray-400 flex-shrink-0">•</span><span>확정된 출발 날짜와 항공 스케줄은 실시간 디지털 가이드에서 가장 정확하게 확인하실 수 있습니다.</span></p>
+                            </div>
+                          </div>
+                        </li>
+                        {/* 디지털 가이드북 포함 내용 */}
+                        <li className="relative flex items-start gap-3 !mt-5 md:!mt-10 md:py-1">
+                          <span className="absolute -left-10 top-[9px] md:top-[13px] w-[10px] h-[10px] rounded-full bg-gray-300" />
+                          <div>
+                            <span className="text-lg font-bold text-gray-900">📱 디지털 가이드북 포함 내용</span>
+                            <div className="mt-2 ml-1 space-y-2 text-base text-gray-700">
+                              <p className="flex items-start gap-2"><span className="text-gray-400 flex-shrink-0">•</span><span>확정 출발 날짜 및 상세 항공 스케줄</span></p>
+                              <p className="flex items-start gap-2"><span className="text-gray-400 flex-shrink-0">•</span><span>일자별/시간별 실시간 변동 일정 반영</span></p>
+                            </div>
+                          </div>
+                        </li>
+                        {/* CTA 버튼 */}
+                        <li className="relative flex items-start gap-3 pb-3">
+                          <span className="absolute -left-10 top-[17px] w-[10px] h-[10px] rounded-full bg-gray-300" />
+                          <div>
+                            <a
+                              href={digitalGuideUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-block text-white font-semibold text-base px-6 py-2.5 rounded-lg transition-colors"
+                              style={{ backgroundColor: "#0054a0" }}
+                              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#004080"}
+                              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#0054a0"}
+                            >
+                              👉 실시간 상세 일정 확인하기
+                            </a>
+                            <p className="mt-2 text-sm text-gray-500">※ 본 가이드는 고객님의 안전하고 정확한 여정을 위해 매일 업데이트됩니다.</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
             {scheduleData.map((item) => (
               <div
                 key={item.day}
@@ -1010,7 +1092,7 @@ export const Timeline = ({ data }: TimelineProps) => {
                   <div className="flex-1 bg-gray-100 px-4 md:px-6 py-3 md:py-4 flex items-center justify-between">
                     {/* Mobile: date + location */}
                     <span className="md:hidden text-base font-medium text-gray-700">
-                      {item.date} {item.location}
+                      {item.location}
                     </span>
                     {/* Desktop: location + description */}
                     <div className="hidden md:block text-left">

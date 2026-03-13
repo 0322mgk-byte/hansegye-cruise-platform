@@ -236,6 +236,16 @@ export interface TripInfoData {
     outbound: FlightLeg[];
     inbound: FlightLeg[];
   };
+  scheduleOverview?: {
+    title: string;
+    lines: string[];
+    note?: string;
+  };
+  airlineInfo?: {
+    label: string;
+    text: string;
+    note?: string;
+  };
   routeCities: string[];
   reservationStatus: string;
   reservationCount: string;
@@ -325,6 +335,7 @@ export interface ScheduleData {
   modals: ModalData[];
   dateRange: string;
   durationLabel: string;
+  digitalGuideUrl?: string;
 }
 
 export interface RoomTabPrice {

@@ -15,29 +15,18 @@ export const tripInfoData: TripInfoData = {
     escort: "인솔자",
     meetingPlace: "미팅 장소",
   },
-  flights: {
-    outbound: [
-      {
-        airline: "에어캐나다 or 대한항공",
-        flightCode: "AS172",
-        departureTime: "17:45",
-        departureDate: "08/03 (월)",
-        arrivalTime: "11:35",
-        arrivalDate: "08/03 (월)",
-        duration: "총 9시간 55분 소요",
-      },
+  scheduleOverview: {
+    title: "8박 10일 투어 가이드",
+    lines: [
+      "•  출국: 인천 → 경유지 → 현지 도착 (약 10시간 소요)",
+      "•  귀국: 현지 출발 → 경유지 → 인천 (약 11시간 35분 소요)",
     ],
-    inbound: [
-      {
-        airline: "에어캐나다 or 대한항공",
-        flightCode: "AS172",
-        departureTime: "00:00",
-        departureDate: "08/11 (화)",
-        arrivalTime: "00:00",
-        arrivalDate: "08/12 (수)",
-        duration: "총 11시간 35분 소요",
-      },
-    ],
+    note: "※ 정확한 출발 날짜와 상세 동선은 하단 [상세 일정]에서 확인하실 수 있습니다",
+  },
+  airlineInfo: {
+    label: "항공 정보",
+    text: "✈️ 대한항공 또는 동급 외항사 예정",
+    note: "※ 출발 일정 및 항공사 사정에 따라 변동될 수 있습니다",
   },
   routeCities: ["밴쿠버", "해상", "주노", "스캐그웨이", "엔디캇암", "캐치칸", "해상", "밴쿠버"],
   reservationStatus: "출발확정",

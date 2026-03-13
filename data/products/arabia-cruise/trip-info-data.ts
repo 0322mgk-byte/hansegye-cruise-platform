@@ -15,29 +15,18 @@ export const tripInfoData: TripInfoData = {
     escort: "인솔자",
     meetingPlace: "미팅 장소",
   },
-  flights: {
-    outbound: [
-      {
-        airline: "대한항공",
-        flightCode: "KE951",
-        departureTime: "12:45",
-        departureDate: "01/10 (토)",
-        arrivalTime: "18:40",
-        arrivalDate: "01/10 (토)",
-        duration: "총 10시간 55분 소요",
-      },
+  scheduleOverview: {
+    title: "7박 9일 투어 가이드",
+    lines: [
+      "•  출국: 인천 → 현지 도착 (약 11시간 소요)",
+      "•  귀국: 현지 출발 → 인천 (약 8시간 30분 소요)",
     ],
-    inbound: [
-      {
-        airline: "대한항공",
-        flightCode: "KE952",
-        departureTime: "21:00",
-        departureDate: "01/17 (토)",
-        arrivalTime: "10:30",
-        arrivalDate: "01/18 (일)",
-        duration: "총 8시간 30분 소요",
-      },
-    ],
+    note: "※ 정확한 출발 날짜와 상세 동선은 하단 [상세 일정]에서 확인하실 수 있습니다",
+  },
+  airlineInfo: {
+    label: "항공 정보",
+    text: "✈️ 대한항공 또는 동급 외항사 예정",
+    note: "※ 출발 일정 및 항공사 사정에 따라 변동될 수 있습니다",
   },
   routeCities: ["두바이", "무스카트", "해상", "도하", "아부다비", "두바이"],
   reservationStatus: "출발확정",

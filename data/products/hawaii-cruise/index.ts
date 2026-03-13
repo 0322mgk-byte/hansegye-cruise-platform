@@ -28,6 +28,7 @@ export const hawaiiCruise: ProductDefinition = {
       modals: scheduleModalsData,
       dateRange: scheduleMeta.dateRange,
       durationLabel: scheduleMeta.durationLabel,
+      digitalGuideUrl: scheduleMeta.digitalGuideUrl,
     },
     pricing: pricingData,
     productInfo: productInfoData,
