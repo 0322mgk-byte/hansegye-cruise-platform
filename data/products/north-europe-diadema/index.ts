@@ -14,7 +14,7 @@ import { productInfoData } from './product-info-data';
 import { tripSummaryData } from './trip-summary-data';
 import { checklistData, headerData, footerData, mobileBottomBarData } from './static-data';
 
-export const northEuropeCruise: ProductDefinition = {
+export const northEuropeDiadema: ProductDefinition = {
   meta,
   data: {
     hero: heroData,

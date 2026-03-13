@@ -1,7 +1,7 @@
 import type { ProductMeta } from '@/data/types';
 
 export const meta: ProductMeta = {
-  slug: 'southern-mediterranean-cruise',
+  slug: 'southern-med-fortuna',
   name: '코스타 포르투나호 남부 지중해 크루즈 8박 10일',
   shortDescription: '이스탄불 · 미코노스 · 크레타 · 로도스 · 산토리니 · 아테네',
   thumbnailImage: 'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/southern-mediterranean-cruise/og.webp',

@@ -1,7 +1,7 @@
 import type { ProductMeta } from '@/data/types';
 
 export const meta: ProductMeta = {
-  slug: 'western-europe-cruise',
+  slug: 'western-europe-preziosa',
   name: 'MSC 프레지오사호 서유럽 크루즈 9박 10일',
   shortDescription: '파리 · 사우샘프턴 · 함부르크 · 브뤼헤 · 로테르담',
   thumbnailImage: 'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-europe-cruise/og.webp',

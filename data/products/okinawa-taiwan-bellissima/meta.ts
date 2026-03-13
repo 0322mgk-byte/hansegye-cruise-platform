@@ -1,7 +1,7 @@
 import type { ProductMeta } from '@/data/types';
 
 export const meta: ProductMeta = {
-  slug: 'okinawa-taiwan-cruise',
+  slug: 'okinawa-taiwan-bellissima',
   name: 'MSC 벨리시마 오키나와/대만 크루즈 5박 6일',
   shortDescription: '대만 · 미야코 · 나하 · 이시가키 · 기륭',
   thumbnailImage: 'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/okinawa-taiwan-cruise/og.webp',

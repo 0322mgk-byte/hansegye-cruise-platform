@@ -25,12 +25,12 @@ description: >
 
 | 한글명 | slug | 약칭 |
 |--------|------|------|
-| 알래스카 | alaska-cruise | 알래스카, alaska |
-| 아라비아 | arabia-cruise | 아라비아, 두바이, arabia |
-| 북유럽 | north-europe-cruise | 북유럽, 노르웨이, north europe |
-| 오키나와/대만 | okinawa-taiwan-cruise | 오키나와, 대만, okinawa, taiwan |
-| 남지중해 / 남부 지중해 | southern-mediterranean-cruise | 남지중해, 산토리니, 에게해 |
-| 서지중해 / 서부 지중해 | western-mediterranean-cruise | 서지중해, 바르셀로나, 로마 |
+| 알래스카 | alaska-emerald-princess | 알래스카, alaska |
+| 아라비아 | arabia-toscana | 아라비아, 두바이, arabia |
+| 북유럽 | north-europe-diadema | 북유럽, 노르웨이, north europe |
+| 오키나와/대만 | okinawa-taiwan-bellissima | 오키나와, 대만, okinawa, taiwan |
+| 남지중해 / 남부 지중해 | southern-med-fortuna | 남지중해, 산토리니, 에게해 |
+| 서지중해 / 서부 지중해 | western-med-seaview | 서지중해, 바르셀로나, 로마 |
 
 상품명이 불명확하면 사용자에게 질문한다. 복수 상품 매칭 시 목록을 보여주고 선택을 요청한다.
 

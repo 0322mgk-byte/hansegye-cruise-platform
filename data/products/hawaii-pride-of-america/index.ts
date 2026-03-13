@@ -14,7 +14,7 @@ import { productInfoData } from './product-info-data';
 import { tripSummaryData } from './trip-summary-data';
 import { checklistData, headerData, footerData, mobileBottomBarData } from './static-data';
 
-export const okinawaTaiwanCruise: ProductDefinition = {
+export const hawaiiPrideOfAmerica: ProductDefinition = {
   meta,
   data: {
     hero: heroData,

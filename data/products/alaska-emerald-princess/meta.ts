@@ -1,7 +1,7 @@
 import type { ProductMeta } from '@/data/types';
 
 export const meta: ProductMeta = {
-  slug: 'alaska-cruise',
+  slug: 'alaska-emerald-princess',
   name: '프린세스 크루즈 에메랄드호 알래스카 8박 10일',
   shortDescription: '짐 싸는 고생, 바가지 끝! 30% 싸게 발코니에서 빙하 1열 직관',
   thumbnailImage: 'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/alaska-cruise/og.webp?v=3',

@@ -1,7 +1,7 @@
 import type { ProductMeta } from '@/data/types';
 
 export const meta: ProductMeta = {
-  slug: 'eastern-mediterranean-cruise',
+  slug: 'eastern-med-scarlet-lady',
   name: '스칼렛 레이디호 동부 지중해 크루즈 8박 11일',
   shortDescription: '아테네 · 산토리니 · 로도스 · 보드럼 · 미코노스',
   thumbnailImage: 'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/eastern-mediterranean-cruise/og.webp',

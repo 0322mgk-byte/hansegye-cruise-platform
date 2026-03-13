@@ -4,7 +4,7 @@
 
 ---
 
-## alaska-cruise (알래스카)
+## alaska-emerald-princess (알래스카)
 
 **선박**: 에메랄드 프린세스호 (Emerald Princess)
 **항로**: 밴쿠버 → 주노 → 스캐그웨이 → 엔디캇 암 → 케치칸
@@ -32,7 +32,7 @@
 
 ---
 
-## arabia-cruise (아라비아)
+## arabia-toscana (아라비아)
 
 **선박**: 코스타 토스카나호 (Costa Toscana)
 **항로**: 두바이 → 오만(무스카트) → 카타르(도하) → 아부다비
@@ -60,7 +60,7 @@
 
 ---
 
-## north-europe-cruise (북유럽)
+## north-europe-diadema (북유럽)
 
 **선박**: 코스타 디아데마호 (Costa Diadema)
 **항로**: 함부르크 → 코펜하겐 → 게이랑에르 → 베르겐 → 스타방에르
@@ -88,7 +88,7 @@
 
 ---
 
-## okinawa-taiwan-cruise (오키나와/대만)
+## okinawa-taiwan-bellissima (오키나와/대만)
 
 **선박**: MSC 벨리시마호 (MSC Bellissima)
 **항로**: 대만 → 미야코지마 → 나하 → 이시가키 → 기륭
@@ -116,7 +116,7 @@
 
 ---
 
-## southern-mediterranean-cruise (남부 지중해)
+## southern-med-fortuna (남부 지중해)
 
 **선박**: 코스타 포르투나호 (Costa Fortuna)
 **항로**: 이스탄불 → 미코노스 → 헤라클리온 → 로도스 → 산토리니 → 아테네
@@ -144,7 +144,7 @@
 
 ---
 
-## western-mediterranean-cruise (서부 지중해)
+## western-med-seaview (서부 지중해)
 
 **선박**: MSC 씨뷰호 (MSC Seaview)
 **항로**: 로마 → 팔레르모 → 이비자 → 바르셀로나 → 마르세유 → 제노아

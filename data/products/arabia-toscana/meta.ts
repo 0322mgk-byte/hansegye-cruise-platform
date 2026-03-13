@@ -1,7 +1,7 @@
 import type { ProductMeta } from '@/data/types';
 
 export const meta: ProductMeta = {
-  slug: 'arabia-cruise',
+  slug: 'arabia-toscana',
   name: '코스타 토스카나 아라비아 크루즈 7박 9일',
   shortDescription: '두바이 · 무스카트 · 도하 · 아부다비',
   thumbnailImage: 'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/arabia-cruise/og.webp?v=2',

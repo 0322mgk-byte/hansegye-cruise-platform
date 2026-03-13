@@ -1,6 +1,6 @@
 # Example Patterns from Alaska Reference
 
-Files that should be copied as-is or with minimal changes from the Alaska reference (`data/products/alaska-cruise/`).
+Files that should be copied as-is or with minimal changes from the Alaska reference (`data/products/alaska-emerald-princess/`).
 
 ---
 
@@ -8,7 +8,7 @@ Files that should be copied as-is or with minimal changes from the Alaska refere
 
 Copy this file exactly from the Alaska reference. No changes needed.
 
-**Source:** `data/products/alaska-cruise/trip-summary-data.ts` — 원본 파일을 직접 읽어서 복사할 것.
+**Source:** `data/products/alaska-emerald-princess/trip-summary-data.ts` — 원본 파일을 직접 읽어서 복사할 것.
 
 ---
 
@@ -16,7 +16,7 @@ Copy this file exactly from the Alaska reference. No changes needed.
 
 Copy this file exactly from the Alaska reference. No changes needed.
 
-**Source:** `data/products/alaska-cruise/static-data.ts` — 원본 파일을 직접 읽어서 복사할 것.
+**Source:** `data/products/alaska-emerald-princess/static-data.ts` — 원본 파일을 직접 읽어서 복사할 것.
 
 ---
 
@@ -101,9 +101,9 @@ export const {exportName}: ProductDefinition = {
 ```
 
 **Export name convention:** Convert slug to camelCase. Examples:
-- `alaska-cruise` → `alaskaCruise`
-- `north-europe-cruise` → `northEuropeCruise`
-- `western-mediterranean-cruise` → `westernMediterraneanCruise`
+- `alaska-emerald-princess` → `alaskaEmeraldPrincess`
+- `north-europe-diadema` → `northEuropeDiadema`
+- `western-med-seaview` → `westernMedSeaview`
 
 ---
 
@@ -240,7 +240,7 @@ Add 3 things:
 import type { ProductDefinition, ProductMeta } from '@/data/types';
 
 // Lightweight meta-only imports (no heavy schedule/modal data)
-import { meta as alaskaMeta } from './alaska-cruise/meta';
+import { meta as alaskaMeta } from './alaska-emerald-princess/meta';
 import { meta as newCruiseMeta } from './{new-slug}/meta';  // ← Add meta import
 
 const productMetas: ProductMeta[] = [
@@ -254,7 +254,7 @@ export function getAllProductMetas(): ProductMeta[] {
 
 export async function getProductBySlug(slug: string): Promise<ProductDefinition | null> {
   switch (slug) {
-    case 'alaska-cruise': return (await import('./alaska-cruise')).alaskaCruise;
+    case 'alaska-emerald-princess': return (await import('./alaska-emerald-princess')).alaskaEmeraldPrincess;
     case '{new-slug}': return (await import('./{new-slug}')).{exportName};  // ← Add case
     default: return null;
   }

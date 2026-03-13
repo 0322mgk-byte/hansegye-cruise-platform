@@ -1,7 +1,7 @@
 import type { ProductMeta } from '@/data/types';
 
 export const meta: ProductMeta = {
-  slug: 'north-europe-cruise',
+  slug: 'north-europe-diadema',
   name: '코스타 디아데마 북유럽 크루즈 8박 11일',
   shortDescription: '함부르크 · 코펜하겐 · 게이랑에르 · 베르겐 · 스타방에르',
   thumbnailImage: 'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/north-europe-cruise/og.webp?v=2',

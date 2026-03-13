@@ -5,7 +5,7 @@ description: >
   데이터 파일(.ts)의 경로를 R2 CDN URL로 교체하는 에셋 퍼블리싱 스킬.
   "에셋 퍼블리시", "이미지 R2에 올려줘", "public 폴더 최적화해서 업로드", "R2에 배포",
   "에셋 최적화", "CDN에 올려줘", "이미지 변환하고 올려줘", "상품 이미지 최적화", "에셋 배포"
-  같은 요청이나, 특정 크루즈 상품(예: alaska-cruise) 또는 특정 폴더(예: section3)의
+  같은 요청이나, 특정 크루즈 상품(예: alaska-emerald-princess) 또는 특정 폴더(예: section3)의
   에셋을 변환/업로드하고 싶을 때 트리거된다.
 ---
 
@@ -36,7 +36,7 @@ description: >
 
 | 파라미터 | 기본값 | 설명 |
 |---------|--------|------|
-| **상품명** | (필수) | 예: `alaska-cruise`, `north-europe-cruise` |
+| **상품명** | (필수) | 예: `alaska-emerald-princess`, `north-europe-diadema` |
 | **범위** | 상품 전체 | 상품 전체 또는 특정 폴더 (예: `section3`, `sectrion6/day1`) |
 | **이미지 포맷** | `webp` | 변환 대상 포맷: webp, avif |
 | **이미지 최대 크기** | `200KB` | 바이트 단위: `204800` |
@@ -162,22 +162,22 @@ node "{스킬루트}/scripts/batch-convert-video.js" "{대상경로}" {목표MB}
 **예시 — desktop/mobile 분기:**
 ```bash
 # hero-video desktop (12MB, 원본 해상도)
-node ".claude/skills/publish-asset/scripts/batch-convert-video.js" "public/products/arabia-cruise/hero-video/desktop" 12
+node ".claude/skills/publish-asset/scripts/batch-convert-video.js" "public/products/arabia-toscana/hero-video/desktop" 12
 
 # hero-video mobile (5MB, 480px)
-node ".claude/skills/publish-asset/scripts/batch-convert-video.js" "public/products/arabia-cruise/hero-video/mobile" 5 480
+node ".claude/skills/publish-asset/scripts/batch-convert-video.js" "public/products/arabia-toscana/hero-video/mobile" 5 480
 
 # section5 desktop (12MB, 원본 해상도)
-node ".claude/skills/publish-asset/scripts/batch-convert-video.js" "public/products/arabia-cruise/section5/desktop" 12
+node ".claude/skills/publish-asset/scripts/batch-convert-video.js" "public/products/arabia-toscana/section5/desktop" 12
 
 # section5 mobile (5MB, 480px)
-node ".claude/skills/publish-asset/scripts/batch-convert-video.js" "public/products/arabia-cruise/section5/mobile" 5 480
+node ".claude/skills/publish-asset/scripts/batch-convert-video.js" "public/products/arabia-toscana/section5/mobile" 5 480
 ```
 
 **예시 — 플랫 구조 (하위 폴더 없음):**
 ```bash
 # 기본값 (5MB, 원본 해상도)
-node ".claude/skills/publish-asset/scripts/batch-convert-video.js" "public/products/alaska-cruise/hero-video" 5
+node ".claude/skills/publish-asset/scripts/batch-convert-video.js" "public/products/alaska-emerald-princess/hero-video" 5
 ```
 
 ### 출력 JSON
@@ -231,12 +231,12 @@ node "{스킬루트}/scripts/upload-to-r2.js" "{프로젝트루트}" "{대상경
 
 **예시:**
 ```bash
-node ".claude/skills/publish-asset/scripts/upload-to-r2.js" "C:\AI_Project\cruise-schedule-web-page" "public/products/alaska-cruise/section3"
+node ".claude/skills/publish-asset/scripts/upload-to-r2.js" "C:\AI_Project\cruise-schedule-web-page" "public/products/alaska-emerald-princess/section3"
 ```
 
 - 스크립트는 `{프로젝트루트}/.env.local`에서 R2 인증 정보를 읽는다
 - 대상 경로 하위의 모든 파일을 `public/` 기준 상대경로로 R2에 업로드한다
-- 예: `public/products/alaska-cruise/section4/section4-b.webp` → R2 key: `products/alaska-cruise/section4/section4-b.webp`
+- 예: `public/products/alaska-emerald-princess/section4/section4-b.webp` → R2 key: `products/alaska-emerald-princess/section4/section4-b.webp`
 
 ### 출력 JSON
 

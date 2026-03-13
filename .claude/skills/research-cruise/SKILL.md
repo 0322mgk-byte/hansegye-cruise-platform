@@ -44,8 +44,9 @@ description: >
 
 ### slug 결정
 
-사용자 데이터에서 크루즈 지역명을 추출하여 slug를 결정한다: `{지역명 영문 소문자}-cruise`
-- 예: 하와이 → `hawaii-cruise`, 아라비아 → `arabia-cruise`, 북유럽 → `north-europe-cruise`
+사용자 데이터에서 크루즈 지역명과 선박명을 추출하여 slug를 결정한다: `{지역명}-{선박명}` (영문 소문자, 하이픈 구분)
+- `-cruise` 접미사는 사용하지 않는다. 지역과 선박명을 조합한다.
+- 예: 알래스카 + 에메랄드 프린세스 → `alaska-emerald-princess`, 아라비아 + 토스카나 → `arabia-toscana`, 북유럽 + 디아데마 → `north-europe-diadema`
 - slug는 workspace 경로(`.cruise-workspace/{slug}/`)와 이후 generate-cruise에서의 데이터 디렉토리 경로(`data/products/{slug}/`)에 사용된다.
 
 ### 데이터 추출
