@@ -7,7 +7,7 @@ export const meta: ProductMeta = {
   thumbnailImage: 'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-europe-cruise/og.webp',
   ogImage: 'https://pub-f396f9b021ba403fb605a64e3824e612.r2.dev/products/western-europe-cruise/og.webp',
   ogTitle: '매일 아침 다른 나라에서 눈뜨는 법',
-  ogDescription: '짐 한 번 풀면 유럽 5개국이 알아서 배달됩니다. 서유럽 크루즈 9박 10일',
+  ogDescription: '짐 한 번 풀면 프랑스 영국 벨기에 네덜란드 독일이 배달됩니다.',
   cardDepartureLabel: '',
   cardTitle: '서유럽 크루즈 9박 10일',
   cardShipName: 'MSC 프레지오사호 (MSC Preziosa)',
